@@ -1,0 +1,62 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Phone",
+            "id": "39a5f490-36c7-4477-9053-ac76507e027a",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "10278eda-03be-4fc7-b72f-94fa0616861e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ebd32e70-e62f-4898-8148-2418c6915421",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "HairStysel",
+            "id": "57e32f28-e049-4792-9436-66f01b74501f",
+            "actions": [
+                {
+                    "name": "Touchhair",
+                    "type": "Button",
+                    "id": "d0238fcb-0d02-46ca-b3f7-d7328001b7ac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "23a042b1-fe9e-4841-8817-843a80584936",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touchhair",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
