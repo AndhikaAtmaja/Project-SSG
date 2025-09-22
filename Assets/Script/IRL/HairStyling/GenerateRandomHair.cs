@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GenerateRandomHair : MonoBehaviour
 {
+    public static GenerateRandomHair Instance;
+
     [Header("Spawn Area")]
     public Collider2D AreaHair;
 
@@ -14,15 +16,18 @@ public class GenerateRandomHair : MonoBehaviour
     [SerializeField] private int safety;
     [SerializeField] private int minSpawned;
     [SerializeField] private int spawned;
-    [SerializeField] private int minHairCount = 5;
     [SerializeField] private float checkRadius = 0.5f;
     [SerializeField] private LayerMask headMask;
 
     [SerializeField] private List<GameObject> spawnedHairs;
 
-    private void Start()
+    private void Awake()
     {
-        StartGenerateHair();
+        if (Instance == null) Instance = this;
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void StartGenerateHair()

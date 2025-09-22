@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1083269354985381577}
   - component: {fileID: 8365834860529884444}
+  - component: {fileID: 2969862497412061291}
   - component: {fileID: -2308577741257196684}
+  - component: {fileID: -1342669017454344931}
   m_Layer: 0
   m_Name: Hair
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0394466, y: -1.7020864, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,6 +87,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!136 &2969862497412061291
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882399473149848897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-2308577741257196684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +122,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa89bce10cbd2654bafa734bd7cf9e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1342669017454344931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882399473149848897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13dedfe7e3980f7429e526d7c7e3a5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseColor: {r: 0.42352945, g: 0.42352945, b: 0.42352945, a: 0}
+  highlightColor: {r: 0.8037735, g: 0.8037735, b: 0.8037735, a: 0}
+  durationColor: 0.25
+  scaleUP: 1.5
+  durationScale: 0.2
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []

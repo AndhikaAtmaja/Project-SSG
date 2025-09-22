@@ -24,7 +24,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     ""name"": ""PlayerInput"",
     ""maps"": [
         {
-            ""name"": ""Phone"",
+            ""name"": ""Minigame"",
             ""id"": ""39a5f490-36c7-4477-9053-ac76507e027a"",
             ""actions"": [
                 {
@@ -50,50 +50,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""HairStysel"",
-            ""id"": ""57e32f28-e049-4792-9436-66f01b74501f"",
-            ""actions"": [
-                {
-                    ""name"": ""Touchhair"",
-                    ""type"": ""Button"",
-                    ""id"": ""d0238fcb-0d02-46ca-b3f7-d7328001b7ac"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""23a042b1-fe9e-4841-8817-843a80584936"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Touchhair"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Phone
-        m_Phone = asset.FindActionMap("Phone", throwIfNotFound: true);
-        m_Phone_Click = m_Phone.FindAction("Click", throwIfNotFound: true);
-        // HairStysel
-        m_HairStysel = asset.FindActionMap("HairStysel", throwIfNotFound: true);
-        m_HairStysel_Touchhair = m_HairStysel.FindAction("Touchhair", throwIfNotFound: true);
+        // Minigame
+        m_Minigame = asset.FindActionMap("Minigame", throwIfNotFound: true);
+        m_Minigame_Click = m_Minigame.FindAction("Click", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
     {
-        UnityEngine.Debug.Assert(!m_Phone.enabled, "This will cause a leak and performance issues, PlayerInput.Phone.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_HairStysel.enabled, "This will cause a leak and performance issues, PlayerInput.HairStysel.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Minigame.enabled, "This will cause a leak and performance issues, PlayerInput.Minigame.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -152,103 +120,53 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Phone
-    private readonly InputActionMap m_Phone;
-    private List<IPhoneActions> m_PhoneActionsCallbackInterfaces = new List<IPhoneActions>();
-    private readonly InputAction m_Phone_Click;
-    public struct PhoneActions
+    // Minigame
+    private readonly InputActionMap m_Minigame;
+    private List<IMinigameActions> m_MinigameActionsCallbackInterfaces = new List<IMinigameActions>();
+    private readonly InputAction m_Minigame_Click;
+    public struct MinigameActions
     {
         private @PlayerInput m_Wrapper;
-        public PhoneActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Click => m_Wrapper.m_Phone_Click;
-        public InputActionMap Get() { return m_Wrapper.m_Phone; }
+        public MinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Click => m_Wrapper.m_Minigame_Click;
+        public InputActionMap Get() { return m_Wrapper.m_Minigame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PhoneActions set) { return set.Get(); }
-        public void AddCallbacks(IPhoneActions instance)
+        public static implicit operator InputActionMap(MinigameActions set) { return set.Get(); }
+        public void AddCallbacks(IMinigameActions instance)
         {
-            if (instance == null || m_Wrapper.m_PhoneActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PhoneActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_MinigameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MinigameActionsCallbackInterfaces.Add(instance);
             @Click.started += instance.OnClick;
             @Click.performed += instance.OnClick;
             @Click.canceled += instance.OnClick;
         }
 
-        private void UnregisterCallbacks(IPhoneActions instance)
+        private void UnregisterCallbacks(IMinigameActions instance)
         {
             @Click.started -= instance.OnClick;
             @Click.performed -= instance.OnClick;
             @Click.canceled -= instance.OnClick;
         }
 
-        public void RemoveCallbacks(IPhoneActions instance)
+        public void RemoveCallbacks(IMinigameActions instance)
         {
-            if (m_Wrapper.m_PhoneActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_MinigameActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPhoneActions instance)
+        public void SetCallbacks(IMinigameActions instance)
         {
-            foreach (var item in m_Wrapper.m_PhoneActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_MinigameActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PhoneActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_MinigameActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PhoneActions @Phone => new PhoneActions(this);
-
-    // HairStysel
-    private readonly InputActionMap m_HairStysel;
-    private List<IHairStyselActions> m_HairStyselActionsCallbackInterfaces = new List<IHairStyselActions>();
-    private readonly InputAction m_HairStysel_Touchhair;
-    public struct HairStyselActions
-    {
-        private @PlayerInput m_Wrapper;
-        public HairStyselActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Touchhair => m_Wrapper.m_HairStysel_Touchhair;
-        public InputActionMap Get() { return m_Wrapper.m_HairStysel; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(HairStyselActions set) { return set.Get(); }
-        public void AddCallbacks(IHairStyselActions instance)
-        {
-            if (instance == null || m_Wrapper.m_HairStyselActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_HairStyselActionsCallbackInterfaces.Add(instance);
-            @Touchhair.started += instance.OnTouchhair;
-            @Touchhair.performed += instance.OnTouchhair;
-            @Touchhair.canceled += instance.OnTouchhair;
-        }
-
-        private void UnregisterCallbacks(IHairStyselActions instance)
-        {
-            @Touchhair.started -= instance.OnTouchhair;
-            @Touchhair.performed -= instance.OnTouchhair;
-            @Touchhair.canceled -= instance.OnTouchhair;
-        }
-
-        public void RemoveCallbacks(IHairStyselActions instance)
-        {
-            if (m_Wrapper.m_HairStyselActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IHairStyselActions instance)
-        {
-            foreach (var item in m_Wrapper.m_HairStyselActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_HairStyselActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public HairStyselActions @HairStysel => new HairStyselActions(this);
-    public interface IPhoneActions
+    public MinigameActions @Minigame => new MinigameActions(this);
+    public interface IMinigameActions
     {
         void OnClick(InputAction.CallbackContext context);
-    }
-    public interface IHairStyselActions
-    {
-        void OnTouchhair(InputAction.CallbackContext context);
     }
 }
