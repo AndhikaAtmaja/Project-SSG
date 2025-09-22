@@ -25,7 +25,7 @@ public class ToothBrush : MonoBehaviour, IPickable
 
     public void OnDrag(Vector2 newPosition)
     {
-        throw new System.NotImplementedException();
+        transform.position = newPosition;
     }
 
     public void OnDrop()
