@@ -29,5 +29,6 @@ public class MakeUpTools : MonoBehaviour, IPickable
     public void OnPickUp()
     {
         Debug.Log($"Player pick {gameObject.name}");
+        //change curso
     }
 }
