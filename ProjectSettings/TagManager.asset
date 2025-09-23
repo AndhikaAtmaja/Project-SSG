@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Point
   - ToothBrush
+  - AreaBrushing
   layers:
   - Default
   - TransparentFX

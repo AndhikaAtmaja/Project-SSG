@@ -12,11 +12,6 @@ public class ToothBrush : MonoBehaviour, IPickable
         transform.position = ToothBrushPalace.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void OnPickUp()
     {

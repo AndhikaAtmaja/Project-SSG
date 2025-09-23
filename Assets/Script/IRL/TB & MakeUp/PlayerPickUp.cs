@@ -49,6 +49,7 @@ public class PlayerPickUp : MonoBehaviour
                 }
             }
         }
+
         else if (contex.canceled && isHolding)
         {
             if (currentPickable != null)
@@ -58,6 +59,5 @@ public class PlayerPickUp : MonoBehaviour
             currentPickable = null;
             isHolding = false;
         }
-
     }
 }
