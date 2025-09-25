@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class ToothBurshManager : MonoBehaviour
 {
-    public static ToothBurshManager Instance;
+    public static ToothBurshManager instance;
 
     [Header("Config ToothBrush Minigame")]
     [SerializeField] private int totalStroke;
-    [SerializeField] private int playerStroke; 
+    [SerializeField] private int playerStroke;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (instance == null) instance = this;
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (playerStroke >= totalStroke & !ToothBrush.instance.GetIsPickUp())
+        {
+            SceneManagement.instance.OnChangeScene("BedRoom", "BathRoom");
         }
     }
 

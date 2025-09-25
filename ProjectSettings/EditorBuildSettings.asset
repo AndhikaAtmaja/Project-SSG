@@ -6,7 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test-MiniGame.unity
+    path: Assets/Scenes/Test-WakeUp.unity
+    guid: d3859f9d86e9c4e4d81c7ba3cd1b318f
+  - enabled: 1
+    path: Assets/Scenes/Test-Bedroom.unity
+    guid: c6fb1a98b1f2a9d4295f6d413bd1fad1
+  - enabled: 1
+    path: Assets/Scenes/Test-ToothBrush.unity
+    guid: 377a72cd357c10b42a8d175e4b7f13ed
+  - enabled: 0
+    path: Assets/Scenes/Test-Scene/Test-MiniGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b047acd7f3422ae40b6f00a73d96daa4, type: 3}

@@ -2,13 +2,22 @@
     "name": "PlayerInput",
     "maps": [
         {
-            "name": "Minigame",
+            "name": "Interact",
             "id": "39a5f490-36c7-4477-9053-ac76507e027a",
             "actions": [
                 {
                     "name": "Click",
                     "type": "Button",
                     "id": "10278eda-03be-4fc7-b72f-94fa0616861e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "interact",
+                    "type": "Button",
+                    "id": "2afe495f-0cbe-4bd2-868a-2ec1f5bb881c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -26,6 +35,67 @@
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6d30f3c-f539-4c38-b358-804ce690b99c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Movement",
+            "id": "f349f140-b4b3-4aba-a27f-ddb3283ad3cc",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "8c3d58f9-f32b-4a04-a5e1-0332520910a0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "f9a0e819-2414-44e1-8eac-9b0516db3a9d",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "0d861ee1-3f61-4c25-9913-08c7d6a90fe5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e96a083c-2076-462c-a709-f865af029338",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

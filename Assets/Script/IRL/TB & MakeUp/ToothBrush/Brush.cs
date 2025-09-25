@@ -13,6 +13,6 @@ public class Brush : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("AreaBrushing"))
-            ToothBurshManager.Instance.BrushingTooth();
+            ToothBurshManager.instance.BrushingTooth();
     }
 }

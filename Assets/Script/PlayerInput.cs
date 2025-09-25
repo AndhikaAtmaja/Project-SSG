@@ -24,13 +24,22 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     ""name"": ""PlayerInput"",
     ""maps"": [
         {
-            ""name"": ""Minigame"",
+            ""name"": ""Interact"",
             ""id"": ""39a5f490-36c7-4477-9053-ac76507e027a"",
             ""actions"": [
                 {
                     ""name"": ""Click"",
                     ""type"": ""Button"",
                     ""id"": ""10278eda-03be-4fc7-b72f-94fa0616861e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""2afe495f-0cbe-4bd2-868a-2ec1f5bb881c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,20 +57,86 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6d30f3c-f539-4c38-b358-804ce690b99c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Movement"",
+            ""id"": ""f349f140-b4b3-4aba-a27f-ddb3283ad3cc"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""8c3d58f9-f32b-4a04-a5e1-0332520910a0"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""f9a0e819-2414-44e1-8eac-9b0516db3a9d"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""0d861ee1-3f61-4c25-9913-08c7d6a90fe5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e96a083c-2076-462c-a709-f865af029338"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Minigame
-        m_Minigame = asset.FindActionMap("Minigame", throwIfNotFound: true);
-        m_Minigame_Click = m_Minigame.FindAction("Click", throwIfNotFound: true);
+        // Interact
+        m_Interact = asset.FindActionMap("Interact", throwIfNotFound: true);
+        m_Interact_Click = m_Interact.FindAction("Click", throwIfNotFound: true);
+        m_Interact_interact = m_Interact.FindAction("interact", throwIfNotFound: true);
+        // Movement
+        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+        m_Movement_Movement = m_Movement.FindAction("Movement", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
     {
-        UnityEngine.Debug.Assert(!m_Minigame.enabled, "This will cause a leak and performance issues, PlayerInput.Minigame.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Interact.enabled, "This will cause a leak and performance issues, PlayerInput.Interact.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Movement.enabled, "This will cause a leak and performance issues, PlayerInput.Movement.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -120,53 +195,112 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Minigame
-    private readonly InputActionMap m_Minigame;
-    private List<IMinigameActions> m_MinigameActionsCallbackInterfaces = new List<IMinigameActions>();
-    private readonly InputAction m_Minigame_Click;
-    public struct MinigameActions
+    // Interact
+    private readonly InputActionMap m_Interact;
+    private List<IInteractActions> m_InteractActionsCallbackInterfaces = new List<IInteractActions>();
+    private readonly InputAction m_Interact_Click;
+    private readonly InputAction m_Interact_interact;
+    public struct InteractActions
     {
         private @PlayerInput m_Wrapper;
-        public MinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Click => m_Wrapper.m_Minigame_Click;
-        public InputActionMap Get() { return m_Wrapper.m_Minigame; }
+        public InteractActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Click => m_Wrapper.m_Interact_Click;
+        public InputAction @interact => m_Wrapper.m_Interact_interact;
+        public InputActionMap Get() { return m_Wrapper.m_Interact; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MinigameActions set) { return set.Get(); }
-        public void AddCallbacks(IMinigameActions instance)
+        public static implicit operator InputActionMap(InteractActions set) { return set.Get(); }
+        public void AddCallbacks(IInteractActions instance)
         {
-            if (instance == null || m_Wrapper.m_MinigameActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_MinigameActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_InteractActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_InteractActionsCallbackInterfaces.Add(instance);
             @Click.started += instance.OnClick;
             @Click.performed += instance.OnClick;
             @Click.canceled += instance.OnClick;
+            @interact.started += instance.OnInteract;
+            @interact.performed += instance.OnInteract;
+            @interact.canceled += instance.OnInteract;
         }
 
-        private void UnregisterCallbacks(IMinigameActions instance)
+        private void UnregisterCallbacks(IInteractActions instance)
         {
             @Click.started -= instance.OnClick;
             @Click.performed -= instance.OnClick;
             @Click.canceled -= instance.OnClick;
+            @interact.started -= instance.OnInteract;
+            @interact.performed -= instance.OnInteract;
+            @interact.canceled -= instance.OnInteract;
         }
 
-        public void RemoveCallbacks(IMinigameActions instance)
+        public void RemoveCallbacks(IInteractActions instance)
         {
-            if (m_Wrapper.m_MinigameActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_InteractActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IMinigameActions instance)
+        public void SetCallbacks(IInteractActions instance)
         {
-            foreach (var item in m_Wrapper.m_MinigameActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_InteractActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_MinigameActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_InteractActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public MinigameActions @Minigame => new MinigameActions(this);
-    public interface IMinigameActions
+    public InteractActions @Interact => new InteractActions(this);
+
+    // Movement
+    private readonly InputActionMap m_Movement;
+    private List<IMovementActions> m_MovementActionsCallbackInterfaces = new List<IMovementActions>();
+    private readonly InputAction m_Movement_Movement;
+    public struct MovementActions
+    {
+        private @PlayerInput m_Wrapper;
+        public MovementActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Movement_Movement;
+        public InputActionMap Get() { return m_Wrapper.m_Movement; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+        public void AddCallbacks(IMovementActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MovementActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MovementActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+        }
+
+        private void UnregisterCallbacks(IMovementActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+        }
+
+        public void RemoveCallbacks(IMovementActions instance)
+        {
+            if (m_Wrapper.m_MovementActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMovementActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MovementActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MovementActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MovementActions @Movement => new MovementActions(this);
+    public interface IInteractActions
     {
         void OnClick(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IMovementActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - ToothBrush
   - AreaBrushing
   - PlayerFace
+  - Interact
   layers:
   - Default
   - TransparentFX
