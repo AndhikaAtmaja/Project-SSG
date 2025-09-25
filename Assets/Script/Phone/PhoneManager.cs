@@ -12,7 +12,6 @@ public class PhoneManager : MonoBehaviour
 
     [SerializeField] private GameObject currPhoneScreen;
 
-    
 
     private void Awake()
     {
@@ -27,9 +26,15 @@ public class PhoneManager : MonoBehaviour
         }
     }
 
-    public void OpenPhone()
+    private void Start()
+    {
+        OnGetOpenPhone();
+    }
+
+    public void OnGetOpenPhone()
     {
         currPhoneScreen = PhoneScreens[0];
+        isPhoneOpen = true;
     }
 
     public void ChangePhoneScreen(string ScreenName)

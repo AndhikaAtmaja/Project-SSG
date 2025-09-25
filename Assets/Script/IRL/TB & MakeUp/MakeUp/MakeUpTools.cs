@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class MakeUpTools : MonoBehaviour, IPickable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnDrag(Vector2 newPosition)
-    {
-        
-    }
-
-    public void OnDrop()
-    {
-        Debug.Log($"Player drop {gameObject.name}");
-    }
+    public GameObject brush;
 
     public void OnPickUp()
     {
         Debug.Log($"Player pick {gameObject.name}");
         //change curso
+        Cursor.visible = false;
+        if (brush != null)
+        {
+            brush.SetActive(true);
+        }
+    }
+
+    public void OnDrag(Vector2 newPosition)
+    {
+        brush.transform.position = newPosition;
+    }
+
+    public void OnDrop()
+    {
+        Debug.Log($"Player drop {gameObject.name}");
+        Cursor.visible = true;
+        brush.SetActive(false);
     }
 }
