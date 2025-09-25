@@ -10,6 +10,7 @@ public class MakeUpBrush : MonoBehaviour
         if (collision.CompareTag("PlayerFace"))
         {
             Debug.Log("Make up the player face!");
+            MakeUpManager.instance.AddApplyPlayer();
         }
     }
 
