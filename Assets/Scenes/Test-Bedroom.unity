@@ -345,7 +345,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 248001964}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: GetChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

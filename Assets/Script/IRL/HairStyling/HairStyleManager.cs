@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HairStyleManager : MonoBehaviour
 {
     [Header("Config && status HairStyle MiniGame")]
-    private int totalHair;
+    private List<GameObject> hairs;
+    private int playerCount;
+    [SerializeField] private GameObject backButton;
 
     public static HairStyleManager Instance;
     private void Awake()
@@ -17,13 +20,44 @@ public class HairStyleManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        StartMiniGame();
-    }
-
     public void StartMiniGame()
     {
-        GenerateRandomHair.Instance.StartGenerateHair();
+        //GenerateRandomHair.Instance.StartGenerateHair();
+        Debug.Log($"There {hairs.Count} need apply to get style!");
     }
+
+    public void AddPlayerCount()
+    {
+        playerCount++;
+        Debug.Log($"{playerCount}/{hairs.Count}");
+
+        if (playerCount >= hairs.Count)
+        {
+            backButton.SetActive(true);
+        }
+    }
+
+    #region Automation total hair in-game
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLoadedScene;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLoadedScene;
+    }
+
+    private void OnLoadedScene(Scene scene, LoadSceneMode mode)
+    {
+        if (hairs == null)
+            hairs = new List<GameObject>();
+
+        hairs.Clear();
+
+        GameObject[] hair = GameObject.FindGameObjectsWithTag("hair");
+        hairs.AddRange(hair);
+        StartMiniGame();
+    }
+    #endregion
 }

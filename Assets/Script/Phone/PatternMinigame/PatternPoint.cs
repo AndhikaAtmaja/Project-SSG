@@ -9,17 +9,19 @@ public class PatternPoint : MonoBehaviour
     [SerializeField] private float speedRotation;
     [SerializeField] private GameObject ConnectToPoint;
     [SerializeField] private bool isSelected;
+    [SerializeField] private PlayerPattern _playerPattern;
 
     private Image img;
 
     private void Start()
     {
         img = GetComponent<Image>();
+        _playerPattern = GameObject.FindWithTag("PlayerPattern").GetComponent<PlayerPattern>();
     }
 
     private void Update()
     {
-/*        if (isSelected)
+        /*if (isSelected)
         {
             AutoRotatePoint();
         }*/
@@ -28,7 +30,7 @@ public class PatternPoint : MonoBehaviour
     public void ClickPoint()
     {
         isSelected = true;
-        PlayerPattern.Instance.AddFirstPoint(gameObject);
+        _playerPattern.AddFirstPoint(gameObject);
         img.color = Color.red;
     }
 

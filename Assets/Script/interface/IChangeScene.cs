@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IChangeScene 
 {
-    void ChangeScene();
+    void GetChangeScene();
 }

@@ -13,7 +13,7 @@ public class GenerateRandomHair : MonoBehaviour
     [SerializeField] private List<GameObject> prefabsHairs;
 
     [Header("Settings && config")]
-    [SerializeField] private int safety;
+    [SerializeField] private int maxSafety;
     [SerializeField] private int minSpawned;
     [SerializeField] private int spawned;
     [SerializeField] private float checkRadius = 0.5f;
@@ -34,10 +34,12 @@ public class GenerateRandomHair : MonoBehaviour
     {
         ResetSpawnHairs(); //reset
 
+        int safety = 0;
+
         //generate game object at least 5 inside Area Hair
-        while (spawned < minSpawned && safety > 0)
+        while (spawned < minSpawned && safety < maxSafety)
         {
-            safety--;
+            safety++;
 
             //Generate Random Position inside Bound
             Bounds areaBound = AreaHair.bounds;
@@ -57,11 +59,22 @@ public class GenerateRandomHair : MonoBehaviour
                 spawnedHairs.Add(newHair);
                 spawned++;
             }
+
+            // If we fail too many times, break to avoid freeze
+            if (safety >= maxSafety && spawned < minSpawned)
+            {
+                Debug.LogWarning($"Stopped early: spawned {spawned}/{minSpawned} hairs.");
+                break;
+            }
         }
     }
 
     public void ResetSpawnHairs()
     {
+        foreach (var hair in spawnedHairs)
+            Destroy(hair);
         spawnedHairs.Clear();
+
+        spawned = 0;
     }
 }

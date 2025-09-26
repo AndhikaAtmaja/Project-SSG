@@ -14,21 +14,6 @@ public class PlayerPattern : MonoBehaviour
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private bool isDrag;
 
-    public static PlayerPattern Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Debug.LogError("There are to Phone Manager is this game!");
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
         raycaster = FindObjectOfType<GraphicRaycaster>();

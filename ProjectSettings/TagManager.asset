@@ -9,6 +9,11 @@ TagManager:
   - AreaBrushing
   - PlayerFace
   - MakeUpTool
+  - hair
+  - Interact
+  - QuestList
+  - QuestDB
+  - PlayerPattern
   layers:
   - Default
   - TransparentFX

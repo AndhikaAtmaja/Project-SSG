@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alarm : IChangeScene
+public class Alarm : MonoBehaviour
 {
-    [SerializeField] private string nextScene;
-    [SerializeField] private string spawn;
+    [SerializeField] private CheckDurationCutscene checkDurationCutscene;
+    [SerializeField] private GameObject alarm;
 
-    public void ChangeScene()
+    private void Update()
     {
-        SceneManagement.instance.OnChangeScene(nextScene, spawn);
+        if (checkDurationCutscene.GetCutSceneDone())
+        {
+            alarm.SetActive(true);
+        }
     }
 }

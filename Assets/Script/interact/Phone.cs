@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Phone : MonoBehaviour, IChangeScene
 {
-    public void ChangeScene()
+    public void GetChangeScene()
     {
         if (GameManager.instance.GetCurrentScene() == "Test-Bedroom")
         {
