@@ -29,5 +29,16 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogueChatBox(DialogueSO dialogueData)
     {
         _generateLine.SetDialogueData(dialogueData);
+        isDialogueActive = true;
+    }
+
+    public void EndDialogue()
+    {
+        isDialogueActive = false;
+    }
+
+    public bool GetsDialogueActive()
+    {
+        return isDialogueActive;
     }
 }

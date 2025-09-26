@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class GenerateLine : MonoBehaviour
 {
@@ -12,6 +10,12 @@ public class GenerateLine : MonoBehaviour
 
     private Queue<DialogueSO.DialogueLines> paragraphs;
     [SerializeField] private DialogueChatBox chatBox;
+
+    private void Update()
+    {
+        if (DialogueManager.instance.GetsDialogueActive())
+            OnGenerateLine();
+    }
 
     public void SetDialogueData(DialogueSO dialogue)
     {
@@ -33,7 +37,7 @@ public class GenerateLine : MonoBehaviour
         //check if paragrah is empty or not
         if (paragraphs.Count == 0)
         {
-            //EndDialogue();
+            DialogueManager.instance.EndDialogue();
             return;
         }
 
