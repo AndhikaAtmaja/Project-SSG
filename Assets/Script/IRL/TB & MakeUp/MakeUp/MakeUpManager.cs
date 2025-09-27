@@ -36,7 +36,7 @@ public class MakeUpManager : MonoBehaviour
     
     public void DoneMakeUp()
     {
-        SceneManagement.instance.OnChangeScene("Bedroom", "MakeUp");
+        SceneManagement.instance.OnChangeScene("Bedroom-2", "MakeUp");
         Cursor.visible = false;
     }
 

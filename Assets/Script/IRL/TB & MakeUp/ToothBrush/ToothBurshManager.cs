@@ -23,7 +23,7 @@ public class ToothBurshManager : MonoBehaviour
     {
         if (playerStroke >= totalStroke & !ToothBrush.instance.GetIsPickUp())
         {
-            SceneManagement.instance.OnChangeScene("BedRoom", "BathRoom");
+            SceneManagement.instance.OnChangeScene("BedRoom-1", "BathRoom");
         }
     }
 

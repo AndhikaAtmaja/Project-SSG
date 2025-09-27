@@ -344,8 +344,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 248001968}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 248001964}
+        m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: GetChangeScene
         m_Mode: 1
         m_Arguments:
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Phone
+  nextScene: Phone-1
   spawn: 
 --- !u!1 &426535940
 GameObject:
