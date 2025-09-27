@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Bedroom
-  spawn: 
+  spawn: MakeUp
 --- !u!1001 &1947452180
 PrefabInstance:
   m_ObjectHideFlags: 0

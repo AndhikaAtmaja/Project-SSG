@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Bedroom
-  spawn: Bed
+  nextScene: Hairstyel
+  spawn: 
 --- !u!1 &426535940
 GameObject:
   m_ObjectHideFlags: 0

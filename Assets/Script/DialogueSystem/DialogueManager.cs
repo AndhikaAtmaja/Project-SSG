@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueChatBox _dialogueChatBox;
 
     [Header("Test")]
-    public DialogueSO testDialogue;
+    public DialogueSO currDialogue;
 
     private void Awake()
     {
@@ -21,20 +21,15 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start()
-    {
-        StartDialogueChatBox(testDialogue);
-    }
-
     private void Update()
     {
         if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
             _dialogueChatBox.OnChatDialogue();
     }
 
-    public void StartDialogueChatBox(DialogueSO dialogueData)
+    public void StartDialogueChatBox()
     {
-        _dialogueChatBox.SetDialogueData(dialogueData);
+        _dialogueChatBox.SetDialogueData(currDialogue);
         isDialogueActive = true;
     }
 

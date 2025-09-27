@@ -8,46 +8,77 @@ public class DialogueChatBox : MonoBehaviour
     [SerializeField] private GenerateChatBox _generateChatBox;
     [SerializeField] private GenerateLine _generateLine;
     [SerializeField] private GenerateChoiceButton _generateChoiceButton;
-    private Queue<DialogueSO.DialogueLines> dialogues;
+    [SerializeField] private DialogueLineChecker _dialogueLineChecker;
+
+    private DialogueSO currentDialogue;
+    private int currentIndex = 0;
+    private bool waitingForChoice = false;
 
     public void SetDialogueData(DialogueSO dialogue)
     {
-        if (dialogues == null)
-            dialogues = new Queue<DialogueSO.DialogueLines>();
+        List<string> existingLines = _dialogueLineChecker.GetExistingDialogueLines();
 
-        dialogues.Clear();
-
-        foreach (var line in dialogue.lines)
+        int resumeIndex = 0;
+        for (int i = 0; i < dialogue.lines.Length; i++)
         {
-            dialogues.Enqueue(line);
+            if (existingLines.Contains(dialogue.lines[i].dialogueLine))
+                resumeIndex++;
+            else
+                break;
         }
+
+        currentDialogue = dialogue;
+        currentIndex = resumeIndex;
 
         OnChatDialogue();
     }
 
     public void OnChatDialogue()
     {
-        if (dialogues.Count <= 0)
+        if (waitingForChoice) 
+            return;          // don't skip a choice
+
+        if (currentDialogue == null) 
             return;
 
-        var dialogue = dialogues.Dequeue();
-        _generateLine.OnGenerateLine(dialogue);
+        if (currentIndex >= currentDialogue.lines.Length) 
+            return;
 
-        if (dialogue.choices.Length > 0)
+        var line = currentDialogue.lines[currentIndex];
+        
+        _generateLine.OnGenerateLine(line);
+        ShowChatBox();
+
+        if (line.choices.Length > 0)
         {
-            _generateChoiceButton.OnGenerateChoiceBox(dialogue);
+            waitingForChoice = true;
+            _generateChoiceButton.OnGenerateChoiceBox(line);
+            
         }
+        else
+        {
+            _generateChoiceButton.ResetGenerateChoiceBox();
+            currentIndex++;
+        }
+    }
+
+    public void ShowChatBox()
+    {
+        _generateChatBox.OnGenerateChatBox(currentDialogue.lines[currentIndex].speakerName, currentDialogue.lines[currentIndex].dialogueLine);
     }
 
     public void OnPlayerChoose(DialogueSO.ChoiceData choice)
     {
+        waitingForChoice = false;
         if (choice.nextDialogue != null)
+        {
             SetDialogueData(choice.nextDialogue);
-    }
-
-    public void ShowDialogueChatBox(DialogueSO.DialogueLines dialogue)
-    {
-        Debug.Log($"{dialogue.speakerName} : {dialogue.dialogueLine}");
-        _generateChatBox.OnGenerateChatBox(dialogue.speakerName, dialogue.dialogueLine);
+            DialogueManager.instance.currDialogue = choice.nextDialogue;
+        }
+            
+        else
+        {
+            OnChatDialogue();
+        }
     }
 }

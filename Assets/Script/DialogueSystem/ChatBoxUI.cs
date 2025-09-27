@@ -13,4 +13,9 @@ public class ChatBoxUI : MonoBehaviour
     {
        messageText.text = message;
     }
+
+    public string GetMessageText()
+    {
+        return messageText.text;
+    }
 }

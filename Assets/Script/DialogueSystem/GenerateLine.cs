@@ -15,7 +15,6 @@ public class GenerateLine : MonoBehaviour
     {
         _currSpeedType = defaultSpeedType;
 
-        chatBox.ShowDialogueChatBox(dialogue);
     }
 
     public bool GetisWritting()
