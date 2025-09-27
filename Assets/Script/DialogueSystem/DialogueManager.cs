@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
  
     [Header("Status & config Dialogue")]
     [SerializeField] private bool isDialogueActive;
-    [SerializeField] private GenerateLine _generateLine;
+    [SerializeField] private DialogueChatBox _dialogueChatBox;
 
     [Header("Test")]
     public DialogueSO testDialogue;
@@ -26,9 +26,15 @@ public class DialogueManager : MonoBehaviour
         StartDialogueChatBox(testDialogue);
     }
 
+    private void Update()
+    {
+        if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
+            _dialogueChatBox.OnChatDialogue();
+    }
+
     public void StartDialogueChatBox(DialogueSO dialogueData)
     {
-        _generateLine.SetDialogueData(dialogueData);
+        _dialogueChatBox.SetDialogueData(dialogueData);
         isDialogueActive = true;
     }
 

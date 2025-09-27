@@ -10,11 +10,21 @@ public class DialogueSO : ScriptableObject
     public struct DialogueLines
     {
         public string speakerName;
-        [TextArea(5, 10)] public string dialogueTEXT;
+        [TextArea(5, 10)] public string dialogueLine;
         public Sprite imageChar;
+
+        public bool hasChoice;
+        public ChoiceData[] choices;
 
         public bool triggerCutscene;
         public string cutsceneID;
+    }
+
+    [System.Serializable]
+    public struct ChoiceData
+    {
+        public string choiceText;
+        public DialogueSO nextDialogue;
     }
 
     public DialogueLines[] lines;
