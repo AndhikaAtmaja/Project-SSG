@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 36441137}
   - component: {fileID: 36441136}
+  - component: {fileID: 36441138}
   m_Layer: 0
   m_Name: ToothBursh-Manager
   m_TagString: Untagged
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalStroke: 5
   playerStroke: 0
+  _changeScene: {fileID: 36441138}
 --- !u!4 &36441137
 Transform:
   m_ObjectHideFlags: 0
@@ -236,6 +238,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 508551688}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36441138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36441135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Bedroom-1
+  spawn: BathRoom
 --- !u!1 &155622449
 GameObject:
   m_ObjectHideFlags: 0

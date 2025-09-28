@@ -23,6 +23,8 @@ public class QuestList : MonoBehaviour
             return;
         }
 
+        currQuestID = Mathf.Clamp(currQuestID, 0, listOfQuests.Count);
+
         // Skip completed quests
         while (currQuestID < listOfQuests.Count && listOfQuests[currQuestID].isDone)
         {
@@ -31,19 +33,23 @@ public class QuestList : MonoBehaviour
 
         if (currQuestID >= listOfQuests.Count)
         {
-            //Debug.Log("All quests are done!");
-        }
-        else
-        {
-            Debug.Log($"Quest {currQuestID} : {listOfQuests[currQuestID].name}");
+            Debug.Log("All quests are done!");
+            return;
         }
 
+        Debug.Log($"Quest {currQuestID} : {listOfQuests[currQuestID].name}");
         UpdateQuestList?.Invoke();
     }
 
     public void OnCheckQuest(bool isDone)
     {
         Debug.Log("Get call!");
+        if (listOfQuests == null || currQuestID < 0 || currQuestID >= listOfQuests.Count)
+        {
+            Debug.LogWarning("No valid current quest to update.");
+            return;
+        }
+
         if (!listOfQuests[currQuestID].isDone)
         {
             listOfQuests[currQuestID].isDone = isDone;
