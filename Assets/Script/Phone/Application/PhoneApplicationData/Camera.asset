@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd790396f23e71349abea651b02002ce, type: 3}
-  m_Name: PhotoEdit
+  m_Name: Camera
   m_EditorClassIdentifier: 
   ApplicationIcon: {fileID: 0}
-  ApplicationName: 
+  ApplicationName: Camera
