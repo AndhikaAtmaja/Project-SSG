@@ -15,5 +15,6 @@ public class Upload : MonoBehaviour
             photoContent = photo.GetPhotoImage();
 
         generatePost.OnGenerateContentPost(photoContent.sprite);
+        photo.ResetPhoto();
     }
 }

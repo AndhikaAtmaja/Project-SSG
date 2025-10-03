@@ -23,6 +23,11 @@ public class Photo : MonoBehaviour
         photoImage.sprite = photo;
     }
 
+    public void ResetPhoto()
+    {
+        photoImage.sprite = null;
+    }
+
     public Image GetPhotoImage()
     {
         return photoImage;

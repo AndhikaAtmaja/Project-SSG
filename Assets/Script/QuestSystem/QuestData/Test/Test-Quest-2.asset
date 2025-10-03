@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: New Quest
   questImage: {fileID: 0}
-  isDone: 1
+  nextScene: 
+  isDone: 0

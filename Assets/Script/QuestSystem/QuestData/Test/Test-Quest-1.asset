@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: OpenOpen
   questImage: {fileID: 657295634, guid: 554b29642273eab46b53df3bac728fd6, type: 3}
-  isDone: 1
+  nextScene: 
+  isDone: 0

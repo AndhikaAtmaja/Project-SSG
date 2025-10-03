@@ -9,6 +9,7 @@ public class MakeUpManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> MakeUpTools;
     [SerializeField] private int applyPlayer;
+    [SerializeField] private GameObject BackButton;
 
     private void Awake()
     {
@@ -36,8 +37,10 @@ public class MakeUpManager : MonoBehaviour
     
     public void DoneMakeUp()
     {
-        SceneManagement.instance.OnChangeScene("Bedroom-2", "MakeUp");
-        Cursor.visible = false;
+        //Show Button
+        /*SceneManagement.instance.OnChangeScene("Bedroom-2", "MakeUp");
+        Cursor.visible = false;*/
+        BackButton.SetActive( true );
     }
 
     public void AddApplyPlayer()
