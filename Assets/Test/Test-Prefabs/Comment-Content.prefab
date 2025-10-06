@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photoProfile: {fileID: 3091840409248449803}
-  nameProfile: {fileID: 1551309375576487996}
-  comment: {fileID: 1727079437259895553}
+  nameProfileUI: {fileID: 1551309375576487996}
+  commentProfileUI: {fileID: 1727079437259895553}
 --- !u!1 &4257580733129443880
 GameObject:
   m_ObjectHideFlags: 0

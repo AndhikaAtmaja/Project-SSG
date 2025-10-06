@@ -8,7 +8,7 @@ public class CommentManager : MonoBehaviour
     public static CommentManager Instance;
 
     [SerializeField] private CommentList _commentList;
-    [SerializeField] private GenerateComment _generateComment;
+    [SerializeField] private List<GenerateComment> _generateComment;
 
     private void Awake()
     {
@@ -20,13 +20,37 @@ public class CommentManager : MonoBehaviour
         }
     }
 
-    public void StartGenerateComment()
+    private void Start()
     {
-        List<CommentSO> comments = _commentList.GetCommentDatas();
+        
+    }
 
-        for (int i = 0; i < comments.Count; i++)
+    public void GenerateCommentsForPost(PostComment post)
+    {
+        List<CommentSO> AllComments = _commentList.GetCommentDatas();
+
+        if (AllComments.Count == 0)
         {
-            _generateComment.OnRandomPeapolGenerateComment(comments[i].nameCommenter, comments[i].commentLine);
+            Debug.LogWarning("WARNING There are no AllComments loaded!");
+            return; 
         }
+
+        (int min, int max) = post.GetCommentRange();
+        int commentCount = Random.Range(min, max);
+
+        List<CommentSO> shuffled = new List<CommentSO>(AllComments);
+        for (int i = 0; i < shuffled.Count; i++)
+        {
+            CommentSO tempComment = shuffled[i];
+            int randomIndex = Random.Range(i, shuffled.Count);
+            shuffled[i] = shuffled[randomIndex];
+            shuffled[randomIndex] = tempComment;
+        }
+
+        // Take only some
+        List<CommentSO> selected = shuffled.GetRange(0, Mathf.Min(commentCount, shuffled.Count));
+
+        // Send to the post
+        post.SetComments(selected);
     }
 }

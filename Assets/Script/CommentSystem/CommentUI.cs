@@ -11,7 +11,7 @@ public class CommentUI : MonoBehaviour
 
     public void SetComment(string nameProfile, string comment)
     {
-        nameProfileUI.text = name;
+        nameProfileUI.text = nameProfile;
         commentProfileUI.text = comment;
     }
 }

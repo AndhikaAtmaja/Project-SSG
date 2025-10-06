@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml.Linq;
 using UnityEngine;
 
 public class CommentList : MonoBehaviour
@@ -16,24 +14,19 @@ public class CommentList : MonoBehaviour
 
     public void ReadCommentData()
     {
-        string gameFolder = Application.dataPath + "/Script/AI";
-        string commentFolderPath = Path.Combine(gameFolder, DataComment);
+         string dataCommentPath = "DataComments";
 
-        if (!Directory.Exists(commentFolderPath)){
-            Debug.LogWarning("Folder does not exist: " + commentFolderPath);
-            return;
-        }
-
-        CommentSO[] loadedComments = Resources.LoadAll<CommentSO>(commentFolderPath);
-
-        if (loadedComments.Length == 0)
-        {
-            Debug.Log("No screenshots found!");
-            return;
-        }
+        CommentSO[] loadedComments = Resources.LoadAll<CommentSO>(dataCommentPath);
 
         comments.Clear();
         comments.AddRange(loadedComments);
+
+        Debug.Log($"Loaded {comments.Count} comments!");
+        /*foreach (CommentSO comment in loadedComments)
+        {
+            Debug.Log($"{comment.nameCommenter}: {comment.commentLine}"); 
+        }*/
+
     }
 
     public List<CommentSO> GetCommentDatas()

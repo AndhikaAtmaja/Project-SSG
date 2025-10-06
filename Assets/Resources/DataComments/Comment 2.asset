@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Comment 2
   m_EditorClassIdentifier: 
   nameCommenter: CloudWatcher
-  comment: "Interesting look today. You seem different \u2014 maybe it\u2019s the
-    lighting or just your mood."
+  commentLine: "Interesting look today. You seem different \u2014 maybe it\u2019s
+    the lighting or just your mood."

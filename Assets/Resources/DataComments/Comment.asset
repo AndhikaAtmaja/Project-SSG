@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Comment
   m_EditorClassIdentifier: 
   nameCommenter: RealSunnyVibes
-  comment: "You look amazing! Don\u2019t let anyone tell you otherwise \u2014 your
-    vibe is genuine and that\u2019s what really matters"
+  commentLine: "You look amazing! Don\u2019t let anyone tell you otherwise \u2014
+    your vibe is genuine and that\u2019s what really matters."

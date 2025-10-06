@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcd77b83730ed3840b6e9e2dbac38c2b, type: 3}
-  m_Name: Comment 3
+  m_Name: Comment 1
   m_EditorClassIdentifier: 
-  nameCommenter: KindSoul_07
-  comment: "Your face tells a story, and that\u2019s beautiful. Keep being you, even
-    if some people don\u2019t understand it."
+  nameCommenter: PixelCritic99
+  commentLine: "Not gonna lie, that angle isn\u2019t doing you any favors, but hey\u2026
+    confidence is key, right?"
