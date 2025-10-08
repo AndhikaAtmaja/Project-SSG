@@ -15,6 +15,7 @@ TagManager:
   - QuestDB
   - PlayerPattern
   - AreaPhoto
+  - MainScroll
   layers:
   - Default
   - TransparentFX
