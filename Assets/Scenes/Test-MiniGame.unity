@@ -355,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalStroke: 5
   playerStroke: 0
+  _changeScene: {fileID: 0}
 --- !u!4 &36441137
 Transform:
   m_ObjectHideFlags: 0
@@ -404,7 +405,7 @@ MonoBehaviour:
   AreaHair: {fileID: 903023255}
   prefabsHairs:
   - {fileID: 8882399473149848897, guid: 1643ac74f4f0f744085ed3b4e3c1f353, type: 3}
-  safety: 100
+  maxSafety: 0
   minSpawned: 5
   spawned: 0
   checkRadius: 0.5
@@ -432,7 +433,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -990,7 +991,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1211,7 +1212,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1937,7 +1938,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2630,6 +2631,7 @@ MonoBehaviour:
   - {fileID: 1570502759}
   - {fileID: 1370259893}
   isCorrect: 0
+  _playerPattern: {fileID: 0}
 --- !u!4 &897994047
 Transform:
   m_ObjectHideFlags: 0
@@ -2718,7 +2720,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3117,7 +3119,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3772,7 +3774,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3996,6 +3998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f562e940acb39f49be12b9f0899f9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backButton: {fileID: 0}
 --- !u!1001 &1359652327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4767,7 +4770,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5776,6 +5779,7 @@ MonoBehaviour:
   speedRotation: 0
   ConnectToPoint: {fileID: 0}
   isSelected: 0
+  _playerPattern: {fileID: 0}
 --- !u!114 &1890898745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,7 +6201,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6619,7 +6623,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6704,6 +6708,7 @@ MonoBehaviour:
   speedRotation: 0
   ConnectToPoint: {fileID: 0}
   isSelected: 0
+  _playerPattern: {fileID: 0}
 --- !u!114 &502665613403094826
 MonoBehaviour:
   m_ObjectHideFlags: 0
