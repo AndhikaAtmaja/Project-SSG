@@ -9,6 +9,7 @@ public class PlayerPattern : MonoBehaviour
 {
     [SerializeField] private List<GameObject> PlayerOrderPattern = new List<GameObject>();
 
+    [SerializeField] private SwipeToUnlock _swipeToUnlock;
     [SerializeField] private GraphicRaycaster raycaster;
     [SerializeField] private PointerEventData pointerEventData;
     [SerializeField] private EventSystem eventSystem;
@@ -34,16 +35,19 @@ public class PlayerPattern : MonoBehaviour
         {
             if (PhoneManager.Instance.CurrPhoneScreen().name == "Phone-LockScreen")
             {
-                if (context.started)
+                if (_swipeToUnlock.GetUnlock() == true)
                 {
-                    // Mouse Hold, Input pattern
-                    isDrag = true;
-                }
-                else if (context.canceled)
-                {
-                    // Mouse released, check pattern
-                    isDrag = false;
-                    PatternMGManager.Instance.CheckPatternOrder(PlayerOrderPattern);
+                    if (context.started)
+                    {
+                        // Mouse Hold, Input pattern
+                        isDrag = true;
+                    }
+                    else if (context.canceled)
+                    {
+                        // Mouse released, check pattern
+                        isDrag = false;
+                        PatternMGManager.Instance.CheckPatternOrder(PlayerOrderPattern);
+                    }
                 }
             }
         }

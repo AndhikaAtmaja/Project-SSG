@@ -21,6 +21,11 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        StartDialogueChatBox();
+    }
+
     private void Update()
     {
         if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
