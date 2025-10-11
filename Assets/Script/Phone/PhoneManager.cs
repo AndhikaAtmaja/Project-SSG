@@ -41,7 +41,7 @@ public class PhoneManager : MonoBehaviour
     {
         for (int i = 0; i < PhoneScreens.Count; i++)
         {
-            if (PhoneScreens[i].name == "Phone-" + ScreenName)
+            if (PhoneScreens[i].name == ScreenName)
             {
                 GameObject nextScreen = PhoneScreens[i];
                 currPhoneScreen.SetActive(false);

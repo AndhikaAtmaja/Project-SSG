@@ -33,7 +33,7 @@ public class PlayerPattern : MonoBehaviour
     {
         if (PhoneManager.Instance.GetPhoneStatus())
         {
-            if (PhoneManager.Instance.CurrPhoneScreen().name == "Phone-LockScreen")
+            if (PhoneManager.Instance.CurrPhoneScreen().name == "New-Phone-LockScreen")
             {
                 if (_swipeToUnlock.GetUnlock() == true)
                 {

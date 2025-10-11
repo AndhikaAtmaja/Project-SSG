@@ -9,6 +9,7 @@ public class PatternMGManager : MonoBehaviour
     [SerializeField] private List<GameObject> RightOrderPattern;
     [SerializeField] private bool isCorrect;
     [SerializeField] private PlayerPattern _playerPattern;
+    [SerializeField] private GameObject _nextScreenPhone;
 
     public static PatternMGManager Instance;
 
@@ -42,7 +43,7 @@ public class PatternMGManager : MonoBehaviour
         if (isCorrect && CountPlayerPattern == RightOrderPattern.Count)
         {
             Debug.Log("Change to Home page Phone");
-            PhoneManager.Instance.ChangePhoneScreen("HomePage");
+            PhoneManager.Instance.ChangePhoneScreen(_nextScreenPhone.name);
             QuestManager.instance.GetCheckQuest(isCorrect);
             ResetPatternPassword();
         }

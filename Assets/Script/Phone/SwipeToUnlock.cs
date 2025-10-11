@@ -7,9 +7,10 @@ using UnityEngine.EventSystems;
 public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [Header("References")]
-    [SerializeField] private RectTransform panel;
+    [SerializeField] private RectTransform panelRT;
     [SerializeField] private RectTransform maskArea;
-    [SerializeField] private GameObject Password;
+    [SerializeField] private GameObject passwordGO;
+    [SerializeField] private GameObject panelGO;
 
     [Header("Settings")]
     [SerializeField] private float unlockThreshold = 300f;
@@ -22,7 +23,7 @@ public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     // Start is called before the first frame update
     void Start()
     {
-        startPos = panel.anchoredPosition;
+        startPos = panelRT.anchoredPosition;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -36,7 +37,7 @@ public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         if (unlock)
             return;
 
-        Vector2 newPos = panel.anchoredPosition + new Vector2(0, eventData.delta.y);
+        Vector2 newPos = panelRT.anchoredPosition + new Vector2(0, eventData.delta.y);
         
         if (swipeUp)
             newPos.y = Mathf.Max(startPos.y, newPos.y);
@@ -48,7 +49,7 @@ public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         float limit = maskArea.rect.height;
         newPos.y = Mathf.Clamp(newPos.y, startPos.y, startPos.y + limit);
 
-        panel.anchoredPosition = newPos;
+        panelRT.anchoredPosition = newPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -56,7 +57,7 @@ public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         if (unlock)
             return;
 
-        float distance = Mathf.Abs(panel.anchoredPosition.y - startPos.y);
+        float distance = Mathf.Abs(panelRT.anchoredPosition.y - startPos.y);
 
         if (distance >= unlockThreshold)
         {
@@ -70,18 +71,19 @@ public class SwipeToUnlock : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     IEnumerator SnapBack()
     {
-        while (Vector2.Distance(panel.anchoredPosition, startPos) > 0.1f)
+        while (Vector2.Distance(panelRT.anchoredPosition, startPos) > 0.1f)
         {
-            panel.anchoredPosition = Vector2.Lerp(panel.anchoredPosition, startPos, Time.deltaTime * snapSpeed);
+            panelRT.anchoredPosition = Vector2.Lerp(panelRT.anchoredPosition, startPos, Time.deltaTime * snapSpeed);
             yield return null;
         }
-        panel.anchoredPosition = startPos;
+        panelRT.anchoredPosition = startPos;
     }
 
     private void Unlock()
     {
         unlock = true;
-        Password.SetActive(true);
+        passwordGO.SetActive(true);
+        panelGO.SetActive(false);
         Debug.Log("Unlocked!");
     }
 

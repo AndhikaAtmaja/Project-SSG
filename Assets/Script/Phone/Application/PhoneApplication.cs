@@ -22,7 +22,7 @@ public class PhoneApplication : MonoBehaviour
 
     public void OpenApplication()
     {
-        PhoneManager.Instance.ChangePhoneScreen(ApplicationData.ApplicationName);
+        PhoneManager.Instance.ChangePhoneScreen($"New-Phone-{ApplicationData.ApplicationName}");
     }
 
 }
