@@ -69,7 +69,6 @@ public class SwipeToScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         StartCoroutine(SmoothMove(panelRT, new Vector2(0, newTargetY)));
     }
 
-
     IEnumerator SmoothMove(RectTransform target, Vector2 targetPos)
     {
         isAnimating = true;
@@ -88,5 +87,10 @@ public class SwipeToScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         isAnimating = false;
 
         Debug.Log($"Changed to content {currentContent}");
+    }
+
+    public void SetTotalContentFeeds(int totalFeeds)
+    {
+        totalContentFeeds = totalFeeds;
     }
 }
