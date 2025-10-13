@@ -9,12 +9,12 @@ public class Upload : MonoBehaviour
     [SerializeField] private Photo photo;
     [SerializeField] private Image photoContent;
 
-    public void OnUploadPhoto()
+    public void OnUploadPhoto(string caption)
     {
         if (photoContent == null)
             photoContent = photo.GetPhotoImage();
 
-        generatePost.OnGenerateContentPost(photoContent.sprite);
+        generatePost.OnGenerateContentPost(photoContent.sprite, caption);
         photo.ResetPhoto();
     }
 }

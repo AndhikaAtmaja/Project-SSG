@@ -7,7 +7,7 @@ public class GeneratePost : MonoBehaviour
     [SerializeField] private GameObject contentPostPrefab;
     [SerializeField] private Transform containerContentPost;
 
-    public void OnGenerateContentPost(Sprite photoContent)
+    public void OnGenerateContentPost(Sprite photoContent, string caption)
     {
         GameObject newPostContent = Instantiate(contentPostPrefab, containerContentPost);
 
@@ -15,6 +15,7 @@ public class GeneratePost : MonoBehaviour
         if (newPost != null)
         {
             newPost.SetPhotoPostContent(photoContent);
+            newPost.SetCaptionContentFeed(caption);
         }
         Debug.Log("Try upload post");
     }

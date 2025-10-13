@@ -6,6 +6,11 @@ public class PhoneData : MonoBehaviour
     [SerializeField] private string FilePathCapture;
     [SerializeField] private GeneratePhotoBox generatePhotoBox;
 
+    private void Start()
+    {
+        GetCaputeData();
+    }
+
     public void GetCaputeData()
     {
         string gameFolder = Application.dataPath + "/Capture";
