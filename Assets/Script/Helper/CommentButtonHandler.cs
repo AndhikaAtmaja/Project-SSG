@@ -5,27 +5,8 @@ using UnityEngine.UI;
 
 public class CommentButtonHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject commentSection;
-    [SerializeField] private ScrollRect mainScroll;
-    [SerializeField] private bool isCommentOpen;
-
-    private void Start()
+   public void OnOpenCommentSection()
     {
-        if (mainScroll == null)
-        {
-            mainScroll = GameObject.FindWithTag("MainScroll").GetComponent<ScrollRect>();
-        }
+        CommentManager.Instance.OpeningCommentSection();
     }
-
-    public void OnToggleComment()
-    {
-        isCommentOpen = !isCommentOpen;
-
-        if (mainScroll != null)
-            mainScroll.enabled = !isCommentOpen;
-
-        if (commentSection != null)
-            commentSection.SetActive(isCommentOpen);
-    }
-
 }

@@ -3037,6 +3037,7 @@ GameObject:
   - component: {fileID: 3083004108999553331}
   - component: {fileID: 3847393481396995582}
   - component: {fileID: 5460219946879519806}
+  - component: {fileID: 4435466190077132683}
   m_Layer: 5
   m_Name: Comment
   m_TagString: Untagged
@@ -3145,7 +3146,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3847393481396995582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4435466190077132683}
+        m_TargetAssemblyTypeName: CommentButtonHandler, Assembly-CSharp
+        m_MethodName: OnOpenCommentSection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4435466190077132683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233846624110594532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89264f850afd131458caadf144f489a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7251647708082924382
 GameObject:
   m_ObjectHideFlags: 0

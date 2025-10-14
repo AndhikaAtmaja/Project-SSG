@@ -17,6 +17,7 @@ public class GeneratePost : MonoBehaviour
             newPost.SetPhotoPostContent(photoContent);
             newPost.SetCaptionContentFeed(caption);
         }
+        SosialMediaManager.instance.AddContentFeedToList(newPostContent);
         Debug.Log("Try upload post");
     }
 }

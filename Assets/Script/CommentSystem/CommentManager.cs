@@ -7,6 +7,11 @@ public class CommentManager : MonoBehaviour
 {
     public static CommentManager Instance;
 
+    [Header("Status")]
+    [SerializeField] private bool isCommentSectionOpen;
+
+    [Header("Refencese")]
+    [SerializeField] private GameObject commentSection;
     [SerializeField] private CommentList _commentList;
     [SerializeField] private List<GenerateComment> _generateComment;
 
@@ -20,9 +25,11 @@ public class CommentManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void OpeningCommentSection()
     {
-        
+        isCommentSectionOpen = !isCommentSectionOpen;
+
+        commentSection.SetActive(isCommentSectionOpen);
     }
 
     public void GenerateCommentsForPost(PostComment post)

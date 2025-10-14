@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -16,13 +17,17 @@ public class SosialMediaManager : MonoBehaviour
     [SerializeField] private SosialMedia[] sosialMedias;
     [SerializeField] private SosialMedia _currSosialMedias;
 
+    [Header("Sosial Media Feeds")]
+    [SerializeField] private List<GameObject> listContentFeeds;
+    [SerializeField] private UpdateContentFeed _updateContentFeeds;
+    [SerializeField] private Transform _listContentFeeds;
+
     [Header("Refenrences")]
     [SerializeField] private SwipeToScroll _swipeToScroll;
     [SerializeField] private CountTotalFeed _countTotalFeed;
     [SerializeField] private Photo _photoUI;
     public Photo PhotoUI => _photoUI;
-
-    public static SosialMediaManager instance;
+        public static SosialMediaManager instance;
 
     private void Awake()
     {
@@ -124,4 +129,45 @@ public class SosialMediaManager : MonoBehaviour
         Debug.Log($"total Feeds = {_countTotalFeed.CountTotalFeeds()}");
         RefreshAllSosialMedia();
     }
+
+    public void ClearListofContentFeed()
+    {
+        listContentFeeds.Clear();
+    }
+
+    public void AddContentFeedToList(GameObject contentFeed)
+    {
+        if (contentFeed == null)
+        {
+            Debug.LogWarning("Trying to add null contentFeed!");
+            return;
+        }
+
+        // Prevent duplicates
+        if (listContentFeeds.Contains(contentFeed))
+        {
+            Debug.Log("Feed already exists in the list!");
+            return;
+        }
+
+        // Insert at top (index 0)
+        listContentFeeds.Insert(0, contentFeed);
+        contentFeed.transform.SetParent(_listContentFeeds, false);
+        contentFeed.transform.SetSiblingIndex(0);
+
+        // Update scroll system
+        _swipeToScroll.SetTotalContentFeeds(listContentFeeds.Count);
+
+        Debug.Log($"[Feed Added] Total feeds now: {listContentFeeds.Count}");
+    }
+
+    public void ClearAllFeeds()
+    {
+        foreach (var feed in listContentFeeds)
+        {
+            Destroy(feed);
+        }
+        listContentFeeds.Clear();
+    }
+
 }
