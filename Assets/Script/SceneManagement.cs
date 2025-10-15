@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement instance;
-    private string nextScene;
     private string nextSpawn;
 
     private void Awake()
@@ -38,7 +37,6 @@ public class SceneManagement : MonoBehaviour
 
     public void ResetDataScene()
     {
-        nextScene = "";
         nextSpawn = "";
     }
 }

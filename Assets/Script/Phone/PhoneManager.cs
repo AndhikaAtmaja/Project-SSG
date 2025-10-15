@@ -11,6 +11,7 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private List<GameObject> PhoneScreens;
 
     [SerializeField] private GameObject currPhoneScreen;
+    [SerializeField] private GameObject _buttonAccessibility;
 
 
     private void Awake()
@@ -34,11 +35,17 @@ public class PhoneManager : MonoBehaviour
     public void OnGetOpenPhone()
     {
         currPhoneScreen = PhoneScreens[0];
+
+        if (PhoneScreens[0])
+            _buttonAccessibility.SetActive(false);
+
         isPhoneOpen = true;
     }
 
     public void ChangePhoneScreen(string ScreenName)
     {
+        Debug.Log("get call");
+        
         for (int i = 0; i < PhoneScreens.Count; i++)
         {
             if (PhoneScreens[i].name == ScreenName)
@@ -49,6 +56,12 @@ public class PhoneManager : MonoBehaviour
                 currPhoneScreen.SetActive(true);
             }
         }
+        OnSetButtonAccessibility();
+    }
+
+    public void OnSetButtonAccessibility()
+    {
+        _buttonAccessibility.SetActive(true);
     }
 
     public GameObject CurrPhoneScreen()
