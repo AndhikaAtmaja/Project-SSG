@@ -11,13 +11,15 @@ public class GeneratePost : MonoBehaviour
     {
         GameObject newPostContent = Instantiate(contentPostPrefab, containerContentPost);
 
+        newPostContent.transform.SetSiblingIndex(0);
+
         PostContentUI newPost = newPostContent.GetComponent<PostContentUI>();
         if (newPost != null)
         {
             newPost.SetPhotoPostContent(photoContent);
             newPost.SetCaptionContentFeed(caption);
         }
-        SosialMediaManager.instance.AddContentFeedToList(newPostContent);
+        SosialMediaManager.instance.updateContentFeed.AddNewContentFeedToList(newPostContent);
         Debug.Log("Try upload post");
     }
 }

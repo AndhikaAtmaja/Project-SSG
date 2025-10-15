@@ -18,12 +18,14 @@ public class SosialMediaManager : MonoBehaviour
     [SerializeField] private SosialMedia _currSosialMedias;
 
     [Header("Sosial Media Feeds")]
-    [SerializeField] private List<GameObject> listContentFeeds;
     [SerializeField] private UpdateContentFeed _updateContentFeeds;
-    [SerializeField] private Transform _listContentFeeds;
+    public UpdateContentFeed updateContentFeed => _updateContentFeeds;
+    
 
     [Header("Refenrences")]
     [SerializeField] private SwipeToScroll _swipeToScroll;
+    public SwipeToScroll swipeToScroll => _swipeToScroll;
+
     [SerializeField] private CountTotalFeed _countTotalFeed;
     [SerializeField] private Photo _photoUI;
     public Photo PhotoUI => _photoUI;
@@ -41,7 +43,7 @@ public class SosialMediaManager : MonoBehaviour
 
     public void UpdateSosialMedia()
     {
-        if (_swipeToScroll == null || _countTotalFeed == null)
+        if (_updateContentFeeds == null)
         {
             Debug.LogWarning("We are missing SwipeToScroll or CountTotalFeed!");
             return;
@@ -50,6 +52,7 @@ public class SosialMediaManager : MonoBehaviour
         RefreshAllSosialMedia();
 
         _swipeToScroll.SetTotalContentFeeds(_countTotalFeed.CountTotalFeeds());
+        Debug.Log($"total Feeds = {_countTotalFeed.CountTotalFeeds()}");
     }
 
     public void RefreshAllSosialMedia()
@@ -126,48 +129,7 @@ public class SosialMediaManager : MonoBehaviour
             return;
         }
 
-        Debug.Log($"total Feeds = {_countTotalFeed.CountTotalFeeds()}");
-        RefreshAllSosialMedia();
+        _updateContentFeeds.SetContentFeeds();
+
     }
-
-    public void ClearListofContentFeed()
-    {
-        listContentFeeds.Clear();
-    }
-
-    public void AddContentFeedToList(GameObject contentFeed)
-    {
-        if (contentFeed == null)
-        {
-            Debug.LogWarning("Trying to add null contentFeed!");
-            return;
-        }
-
-        // Prevent duplicates
-        if (listContentFeeds.Contains(contentFeed))
-        {
-            Debug.Log("Feed already exists in the list!");
-            return;
-        }
-
-        // Insert at top (index 0)
-        listContentFeeds.Insert(0, contentFeed);
-        contentFeed.transform.SetParent(_listContentFeeds, false);
-        contentFeed.transform.SetSiblingIndex(0);
-
-        // Update scroll system
-        _swipeToScroll.SetTotalContentFeeds(listContentFeeds.Count);
-
-        Debug.Log($"[Feed Added] Total feeds now: {listContentFeeds.Count}");
-    }
-
-    public void ClearAllFeeds()
-    {
-        foreach (var feed in listContentFeeds)
-        {
-            Destroy(feed);
-        }
-        listContentFeeds.Clear();
-    }
-
 }
