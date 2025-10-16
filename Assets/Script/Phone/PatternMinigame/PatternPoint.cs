@@ -8,7 +8,7 @@ public class PatternPoint : MonoBehaviour
     [Header("Config Point")]
     [SerializeField] private float speedRotation;
     [SerializeField] private GameObject ConnectToPoint;
-    [SerializeField] private bool isSelected;
+    //[SerializeField] private bool isSelected;
     [SerializeField] private PlayerPattern _playerPattern;
 
     private Image img;
@@ -29,7 +29,7 @@ public class PatternPoint : MonoBehaviour
 
     public void ClickPoint()
     {
-        isSelected = true;
+        //isSelected = true;
         _playerPattern.AddFirstPoint(gameObject);
         img.color = Color.red;
     }
@@ -40,7 +40,7 @@ public class PatternPoint : MonoBehaviour
         {
             ConnectToPoint = point;
             img.color = Color.yellow;
-            Debug.Log($"this {gameObject.name} is succes connect to {point.name}");
+            //Debug.Log($"this {gameObject.name} is succes connect to {point.name}");
         }
     }
 

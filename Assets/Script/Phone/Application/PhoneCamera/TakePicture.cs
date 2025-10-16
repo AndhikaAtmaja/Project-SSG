@@ -6,6 +6,7 @@ using UnityEngine;
 public class TakePicture : MonoBehaviour
 {
     [SerializeField] private RectTransform captureArea;
+    [SerializeField] private PhoneData _phoneData;
     public void OnTakePicture()
     {
         //Take screenshot inside Capture Area
@@ -49,5 +50,7 @@ public class TakePicture : MonoBehaviour
         Debug.Log("Saved screenshot to: " + path);
         Destroy(tex);
         Debug.Log("Succes Taking picture");
+
+        _phoneData.ReloadScreenshots();
     }
 }

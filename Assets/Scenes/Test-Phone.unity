@@ -2615,6 +2615,7 @@ Transform:
   - {fileID: 1818564797}
   - {fileID: 782781280}
   - {fileID: 447330969}
+  - {fileID: 169767814}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160578823
@@ -2802,6 +2803,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.35302734}
   m_SizeDelta: {x: 0, y: -1.4449997}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &169767813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169767814}
+  - component: {fileID: 169767815}
+  m_Layer: 0
+  m_Name: Phone - FileWatcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169767814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169767813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 159464709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &169767815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169767813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7093d2af7477d64d969e9fedb861f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &172608543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4533,7 +4578,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondButtonAccessibility: {fileID: 1013214808}
-  mainButtonAccessibility: {fileID: 0}
+  mainButtonAccessibility: {fileID: 279414375}
+  animDuration: 0.3
+  scalePunch: 0.1
 --- !u!1 &285704109
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,7 +7161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79.48, y: 111.4}
+  m_AnchoredPosition: {x: 85, y: 151.7}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &508544715
@@ -8595,6 +8642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   captureArea: {fileID: 308751706}
+  _phoneData: {fileID: 0}
 --- !u!1001 &594344250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10893,8 +10941,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9187683edb1a7d44ea04b06055ab0181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FilePathCapture: Screenshots
+  FolderPathCapture: Screenshots
   generatePhotoBox: {fileID: 447330970}
+  screenshotFolder: 
 --- !u!1 &784912402
 GameObject:
   m_ObjectHideFlags: 0
@@ -18585,6 +18634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   captureArea: {fileID: 1527929880}
+  _phoneData: {fileID: 782781281}
 --- !u!1 &1460364058
 GameObject:
   m_ObjectHideFlags: 0
@@ -23633,7 +23683,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRotation: 0
   ConnectToPoint: {fileID: 0}
-  isSelected: 0
   _playerPattern: {fileID: 0}
 --- !u!114 &1890898745
 MonoBehaviour:
@@ -26048,12 +26097,13 @@ MonoBehaviour:
   - nameArea: SosialMedia-Upload
     isOpen: 0
     sosialMediaGO: {fileID: 251774792}
-  _currSosialMedias:
+  _currSosialMedia:
     nameArea: 
     isOpen: 0
     sosialMediaGO: {fileID: 0}
   _updateContentFeeds: {fileID: 157599239}
   _swipeToScroll: {fileID: 2093050877}
+  _phoneData: {fileID: 782781281}
   _countTotalFeed: {fileID: 337966422}
   _photoUI: {fileID: 369272909}
 --- !u!1 &2026235977
@@ -27495,7 +27545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRotation: 0
   ConnectToPoint: {fileID: 0}
-  isSelected: 0
   _playerPattern: {fileID: 0}
 --- !u!114 &502665613403094826
 MonoBehaviour:

@@ -17,4 +17,10 @@ public class GeneratePhotoBox : MonoBehaviour
             photoBox.SetPhotoImage(photoSprite);
         }
     }
+
+    public void ClearPhotoBox()
+    {
+        foreach (Transform child in transform)
+            Destroy(child.gameObject);
+    }
 }

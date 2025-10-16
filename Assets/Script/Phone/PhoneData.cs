@@ -1,51 +1,69 @@
 using UnityEngine;
 using System.IO;
+using System.Collections;
 
 public class PhoneData : MonoBehaviour
 {
-    [SerializeField] private string FilePathCapture;
+    [SerializeField] private string FolderPathCapture;
     [SerializeField] private GeneratePhotoBox generatePhotoBox;
+
+    [SerializeField] private string screenshotFolder;
 
     private void Start()
     {
-        GetCaputeData();
+        screenshotFolder = Path.Combine(Application.dataPath, "Capture", FolderPathCapture);
+        StartCoroutine(RefreshScreenshots());
     }
 
-    public void GetCaputeData()
+    public IEnumerator RefreshScreenshots()
     {
-        string gameFolder = Application.dataPath + "/Capture";
-        string screenshotFolder = Path.Combine(gameFolder, FilePathCapture);
-
-        //Read File
         if (!Directory.Exists(screenshotFolder))
         {
             Debug.LogWarning("Folder does not exist: " + screenshotFolder);
-            return;
+            yield break;
         }
 
-        // get all PNG files in the folder
         string[] files = Directory.GetFiles(screenshotFolder, "*.png");
 
         if (files.Length == 0)
         {
             Debug.Log("No screenshots found!");
-            return;
+            yield break;
         }
 
-        // loop through files
         foreach (string file in files)
         {
-            Debug.Log("Found screenshot: " + file);
+            bool loaded = false;
 
-            byte[] imageData = File.ReadAllBytes(file);
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(imageData);
+            for (int i = 0; i < 10 && !loaded; i++)
+            {
+                bool ioError = false;
 
-            // Convert Texture2D -> Sprite
-            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                try
+                {
+                    byte[] imageData = File.ReadAllBytes(file);
+                    Texture2D tex = new Texture2D(2, 2);
+                    tex.LoadImage(imageData);
+                    Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                    generatePhotoBox.OnGeneratePhotoBox(sprite);
+                    Debug.Log("Loaded screenshot: " + Path.GetFileName(file));
+                    loaded = true;
+                }
+                catch (IOException)
+                {
+                    ioError = true;
+                    Debug.LogWarning($"Retrying to read {Path.GetFileName(file)}...");
+                }
 
-            // Pass sprite to GeneratePhotoBox
-            generatePhotoBox.OnGeneratePhotoBox(sprite);
+                if (ioError)
+                    yield return new WaitForSeconds(0.2f);
+            }
         }
+    }
+
+    public void ReloadScreenshots()
+    {
+        StopAllCoroutines();
+        StartCoroutine(RefreshScreenshots());
     }
 }

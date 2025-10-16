@@ -42,7 +42,7 @@ public class PatternMGManager : MonoBehaviour
 
         if (isCorrect && CountPlayerPattern == RightOrderPattern.Count)
         {
-            Debug.Log("Change to Home page Phone");
+            //Debug.Log("Change to Home page Phone");
             PhoneManager.Instance.ChangePhoneScreen(_nextScreenPhone.name);
             QuestManager.instance.GetCheckQuest(isCorrect);
             ResetPatternPassword();

@@ -15,7 +15,7 @@ public class SosialMediaManager : MonoBehaviour
 {
     [Header("Sosial Media Area")]
     [SerializeField] private SosialMedia[] sosialMedias;
-    [SerializeField] private SosialMedia _currSosialMedias;
+    [SerializeField] private SosialMedia _currSosialMedia;
 
     [Header("Sosial Media Feeds")]
     [SerializeField] private UpdateContentFeed _updateContentFeeds;
@@ -25,7 +25,7 @@ public class SosialMediaManager : MonoBehaviour
     [Header("Refenrences")]
     [SerializeField] private SwipeToScroll _swipeToScroll;
     public SwipeToScroll swipeToScroll => _swipeToScroll;
-
+    [SerializeField] private PhoneData _phoneData;
     [SerializeField] private CountTotalFeed _countTotalFeed;
     [SerializeField] private Photo _photoUI;
     public Photo PhotoUI => _photoUI;
@@ -62,7 +62,7 @@ public class SosialMediaManager : MonoBehaviour
             if (i == 0)
             {
                 sosialMedias[i].sosialMediaGO.SetActive(sosialMedias[i].isOpen = true);
-                _currSosialMedias = sosialMedias[i];
+                _currSosialMedia = sosialMedias[i];
             }
             else
                 sosialMedias[i].sosialMediaGO.SetActive(sosialMedias[i].isOpen = false);
@@ -84,7 +84,7 @@ public class SosialMediaManager : MonoBehaviour
         for (int i = 0; i < sosialMedias.Length; i++)
         {
             // If this one is the currently open one, close it
-            if (_currSosialMedias.nameArea == sosialMedias[i].nameArea)
+            if (_currSosialMedia.nameArea == sosialMedias[i].nameArea)
             {
                 if (sosialMedias[i].nameArea == "SosialMedia-Upload")
                 {
@@ -108,7 +108,7 @@ public class SosialMediaManager : MonoBehaviour
         {
             sosialMedias[newIndex].sosialMediaGO.SetActive(true);
             sosialMedias[newIndex].isOpen = sosialMedias[newIndex].sosialMediaGO.activeSelf;
-            _currSosialMedias = sosialMedias[newIndex];
+            _currSosialMedia = sosialMedias[newIndex];
         }
         else
         {
@@ -118,7 +118,7 @@ public class SosialMediaManager : MonoBehaviour
 
     public SosialMedia GetCurrSosialMedias()
     {
-        return _currSosialMedias;
+        return _currSosialMedia;
     }
 
     private void Start()
@@ -130,6 +130,5 @@ public class SosialMediaManager : MonoBehaviour
         }
 
         _updateContentFeeds.SetContentFeeds();
-
     }
 }
