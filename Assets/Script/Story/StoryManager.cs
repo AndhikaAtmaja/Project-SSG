@@ -53,4 +53,9 @@ public class StoryManager : MonoBehaviour
 
         _questList.SetQuestDataByChapter(currChapter.quests);
     }
+
+    public StoryChapterSO GetStoryChapter()
+    {
+        return currChapter;
+    }
 }

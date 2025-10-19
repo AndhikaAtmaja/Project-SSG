@@ -3,11 +3,11 @@ using UnityEngine;
 
 public enum QuestObjectiveType
 {
-    TalkToNPC,
+    OpenChapterBook,
     OpenCamera,
     TakePhoto,
-    EnterZone,
-    CollectItem
+    OpenSosialMedia,
+    OpenMessage
 }
 
 [System.Serializable]

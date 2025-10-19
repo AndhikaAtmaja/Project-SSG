@@ -12,6 +12,7 @@ public class PhoneManager : MonoBehaviour
 
     [SerializeField] private GameObject currPhoneScreen;
     [SerializeField] private GameObject _buttonAccessibility;
+    [SerializeField] private GameObject _notification;
 
 
     private void Awake()
@@ -71,4 +72,5 @@ public class PhoneManager : MonoBehaviour
     {
         return isPhoneOpen;
     }
+
 }

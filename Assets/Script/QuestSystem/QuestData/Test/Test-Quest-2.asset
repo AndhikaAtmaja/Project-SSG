@@ -19,5 +19,5 @@ MonoBehaviour:
   objectives:
   - description: Open the camera
     type: 1
-    isCompleted: 1
-  isDone: 1
+    isCompleted: 0
+  isDone: 0

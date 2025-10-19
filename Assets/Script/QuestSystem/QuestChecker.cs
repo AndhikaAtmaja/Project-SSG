@@ -56,14 +56,18 @@ public class QuestChecker : MonoBehaviour
             case "camera":
                 CheckObjective(QuestObjectiveType.OpenCamera);
                 break;
-/*
-            case "gallery":
-                CheckObjective(QuestObjectiveType.OpenGallery);
+
+            case "ChapterBook":
+                CheckObjective(QuestObjectiveType.OpenChapterBook);
                 break;
 
             case "message":
-                CheckObjective(QuestObjectiveType.OpenMessage);
-                break;*/
+                CheckObjective(QuestObjectiveType.OpenMessage); 
+                break;
+
+            case "SosialMedia":
+                CheckObjective(QuestObjectiveType.OpenSosialMedia); 
+                break;
         }
     }
 }
