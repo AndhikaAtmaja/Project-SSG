@@ -7,14 +7,14 @@ public class GeneratePhotoBox : MonoBehaviour
     public GameObject PhotoBoxPrefab;
     [SerializeField] private Transform photoBoxArea;
 
-    public void OnGeneratePhotoBox(Sprite photoSprite)
+    public void OnGeneratePhotoBox(Sprite photoSprite, string filePath)
     {
         GameObject newPhotoBox = Instantiate(PhotoBoxPrefab, photoBoxArea);
 
         PhotoBox photoBox = newPhotoBox.GetComponent<PhotoBox>();
         if (photoBox != null)
         {
-            photoBox.SetPhotoImage(photoSprite);
+            photoBox.SetPhotoImage(photoSprite, filePath);
         }
     }
 

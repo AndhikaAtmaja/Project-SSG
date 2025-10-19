@@ -6,6 +6,8 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance;
     [SerializeField] private QuestList _questList;
+    [SerializeField] private GameObject questBox;
+    [SerializeField] private QuestSO currQuest;
 
     private void Awake()
     {

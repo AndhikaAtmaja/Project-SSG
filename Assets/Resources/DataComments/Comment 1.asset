@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Comment 1
   m_EditorClassIdentifier: 
   nameCommenter: PixelCritic99
-  commentLine: "Not gonna lie, that angle isn\u2019t doing you any favors, but hey\u2026
-    confidence is key, right?"
+  typeGenerate: 0
+  PostiveComment: "He\u2019s trying his best to understand life, and honestly? Same"
+  NeutralComment: "A classic meme face \u2014 pretty common on the internet."
+  NegativeComment: "I\u2019ve seen this meme a hundred times already, not that funny
+    anymore."

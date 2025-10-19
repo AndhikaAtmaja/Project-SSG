@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Comment
   m_EditorClassIdentifier: 
   nameCommenter: RealSunnyVibes
-  commentLine: "You look amazing! Don\u2019t let anyone tell you otherwise \u2014
-    your vibe is genuine and that\u2019s what really matters."
+  typeGenerate: 0
+  PostiveComment: Aww, that face is pure confusion and cuteness combined!
+  NeutralComment: "Looks like the cat\u2019s really thinking hard about something."
+  NegativeComment: "What\u2019s even going on here? That cat looks so lost lol."

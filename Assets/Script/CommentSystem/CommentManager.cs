@@ -25,11 +25,10 @@ public class CommentManager : MonoBehaviour
         }
     }
 
-    public void OpeningCommentSection()
+    public bool OpeningCommentSection()
     {
         isCommentSectionOpen = !isCommentSectionOpen;
-
-        commentSection.SetActive(isCommentSectionOpen);
+        return isCommentSectionOpen;
     }
 
     public void GenerateCommentsForPost(PostComment post)

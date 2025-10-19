@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Comment 3
   m_EditorClassIdentifier: 
   nameCommenter: KindSoul_07
-  commentLine: "Your face tells a story, and that\u2019s beautiful. Keep being you,
-    even if some people don\u2019t understand it."
+  typeGenerate: 0
+  PostiveComment: "This deserves to be framed \u2014 the perfect \u2018huh?\u2019
+    energy"
+  NeutralComment: Pretty relatable expression ngl
+  NegativeComment: Low effort meme. Seen better.

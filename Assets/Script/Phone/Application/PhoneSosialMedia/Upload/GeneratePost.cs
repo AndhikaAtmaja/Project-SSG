@@ -7,7 +7,7 @@ public class GeneratePost : MonoBehaviour
     [SerializeField] private GameObject contentPostPrefab;
     [SerializeField] private Transform containerContentPost;
 
-    public void OnGenerateContentPost(Sprite photoContent, string caption)
+    public void OnGenerateContentPost(Sprite photoContent, string caption, string filePath)
     {
         GameObject newPostContent = Instantiate(contentPostPrefab, containerContentPost);
 
@@ -16,8 +16,7 @@ public class GeneratePost : MonoBehaviour
         PostContentUI newPost = newPostContent.GetComponent<PostContentUI>();
         if (newPost != null)
         {
-            newPost.SetPhotoPostContent(photoContent);
-            newPost.SetCaptionContentFeed(caption);
+            newPost.SetPhotoPostContent(photoContent, caption, filePath);
         }
         SosialMediaManager.instance.updateContentFeed.AddNewContentFeedToList(newPostContent);
         Debug.Log("Try upload post");

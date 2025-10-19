@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PhoneData : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PhoneData : MonoBehaviour
     [SerializeField] private GeneratePhotoBox generatePhotoBox;
 
     [SerializeField] private string screenshotFolder;
+
+    private HashSet<string> loadedFiles = new HashSet<string>();
 
     private void Start()
     {
@@ -33,6 +36,10 @@ public class PhoneData : MonoBehaviour
 
         foreach (string file in files)
         {
+            //  Skip files that are already loaded
+            if (loadedFiles.Contains(file))
+                continue;
+
             bool loaded = false;
 
             for (int i = 0; i < 10 && !loaded; i++)
@@ -44,9 +51,18 @@ public class PhoneData : MonoBehaviour
                     byte[] imageData = File.ReadAllBytes(file);
                     Texture2D tex = new Texture2D(2, 2);
                     tex.LoadImage(imageData);
-                    Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                    generatePhotoBox.OnGeneratePhotoBox(sprite);
-                    Debug.Log("Loaded screenshot: " + Path.GetFileName(file));
+                    Sprite sprite = Sprite.Create(
+                        tex,
+                        new Rect(0, 0, tex.width, tex.height),
+                        new Vector2(0.5f, 0.5f)
+                    );
+
+                    //  Pass the full file path
+                    generatePhotoBox.OnGeneratePhotoBox(sprite, file);
+                    Debug.Log($"Loaded new screenshot: {file}");
+
+                    //  Mark this file as loaded
+                    loadedFiles.Add(file);
                     loaded = true;
                 }
                 catch (IOException)

@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 public class QuestUI : MonoBehaviour
 {
-    [SerializeField] private GameObject questBox;
+    [SerializeField] private GameObject questBackGround;
     [SerializeField] private Image questImage;
 
     //data base
-    private QuestList _questList;
+    [SerializeField] private QuestList _questList;
     [SerializeField] private QuestDataBase _questDB;
 
-    private void Awake()
+    private void Start()
     {
         _questList = GameObject.FindGameObjectWithTag("QuestList").GetComponent<QuestList>();
         _questList.UpdateQuestList.AddListener(UpdateQuestUI);
@@ -20,29 +20,46 @@ public class QuestUI : MonoBehaviour
 
     public void UpdateQuestUI()
     {
-        if (_questDB == null || questImage == null)
+        if (questBackGround == null)
         {
-            if (_questDB == null)
-                Debug.Log("Quest UI lost reference with data base");
-            else if (questImage == null)
-                Debug.Log("Quest UI lost reference with image");
+            Debug.LogWarning("QuestUI: questBackGround not assigned!");
             return;
         }
 
-        string questID = _questList.GetCurrQuestID();
-        QuestSO quest = _questDB.FindQuestData(questID);
+        QuestSO currentQuest = _questList.GetCurrentQuest();
 
-        if (quest != null && quest.questImage != null)
+        // If there are no more quests, hide everything
+        if (currentQuest == null)
         {
-            if (!quest.GetisDone())
+            questBackGround.SetActive(false);
+            questImage.sprite = null;
+            Debug.Log("QuestUI: All quests completed, hiding quest UI.");
+            return;
+        }
+
+        QuestSO quest = _questDB.FindQuestData(_questList.GetCurrentQuest().questID);
+
+        if (quest != null)
+        {
+            if (quest.isDone)
             {
-                questBox.SetActive(true);
+                questBackGround.SetActive(false);
+                questImage.sprite = null;
+                Debug.Log($"QuestUI: Quest '{quest.questName}' is done, hiding UI.");
+            }
+            else
+            {
+                // Show the current quest info
+                questBackGround.SetActive(true);
                 questImage.sprite = quest.questImage;
             }
         }
         else
         {
-            questBox.SetActive(false);
+            // If quest data not found in DB, hide UI
+            questBackGround.SetActive(false);
+            questImage.sprite = null;
+            Debug.LogWarning("QuestUI: Quest data not found in database!");
         }
     }
 }

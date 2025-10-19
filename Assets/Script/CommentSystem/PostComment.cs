@@ -24,7 +24,7 @@ public class PostComment : MonoBehaviour
         foreach (var comment in myComments)
         {
             {
-                _generateComment.OnRandomPeapolGenerateComment(comment.nameCommenter, comment.commentLine);
+                _generateComment.OnRandomPeapolGenerateComment(comment.nameCommenter, comment.NeutralComment);
             }
         }
     }

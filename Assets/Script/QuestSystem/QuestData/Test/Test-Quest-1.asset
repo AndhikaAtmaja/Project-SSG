@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
   m_Name: Test-Quest-1
   m_EditorClassIdentifier: 
-  questID: OpenOpen
+  questID: OP-1
+  questName: Open Password
   questImage: {fileID: 657295634, guid: 554b29642273eab46b53df3bac728fd6, type: 3}
   nextScene: 
-  isDone: 0
+  objectives: []
+  isDone: 1

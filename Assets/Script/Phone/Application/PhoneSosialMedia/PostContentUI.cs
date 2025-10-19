@@ -12,15 +12,13 @@ public class PostContentUI : MonoBehaviour
 
     [Header("Content")]
     [SerializeField] private Image photoPostContent;
+    [SerializeField] private string photoPath;
     [SerializeField] private TextMeshProUGUI captionContentFeed;
 
-    public void SetPhotoPostContent(Sprite photoPost)
+    public void SetPhotoPostContent(Sprite photoPost, string caption, string filePath)
     {
         photoPostContent.sprite = photoPost;
-    }
-
-    public void SetCaptionContentFeed(string caption)
-    {
         captionContentFeed.text = caption;
+        photoPath = filePath;
     }
 }

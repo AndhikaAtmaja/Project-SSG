@@ -10,10 +10,12 @@ public class Photo : MonoBehaviour
     public event Action<bool> OnPhotoFillChanged;
     [SerializeField] private bool isPhotoBeenFill;
     [SerializeField] private GameObject UploadButton;
+    [SerializeField] private string photoPath;
 
-    public void SetPhotoImage(Sprite photo)
+    public void SetPhotoImage(Sprite photo, string filePath)
     {
         photoImage.sprite = photo;
+        photoPath = filePath;
         isPhotoBeenFill = true;
         OnPhotoFillChanged?.Invoke(isPhotoBeenFill);
     }
@@ -21,6 +23,7 @@ public class Photo : MonoBehaviour
     public void ResetPhoto()
     {
         photoImage.sprite = null;
+        photoPath = null;
         isPhotoBeenFill = false;
         OnPhotoFillChanged?.Invoke(isPhotoBeenFill);
     }
@@ -28,6 +31,11 @@ public class Photo : MonoBehaviour
     public bool IsPhotoBeenFill()
     {
         return isPhotoBeenFill;
+    }
+
+    public string GetFilePath()
+    {
+        return photoPath;
     }
 
     public Image GetPhotoImage()

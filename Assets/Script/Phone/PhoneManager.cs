@@ -44,8 +44,6 @@ public class PhoneManager : MonoBehaviour
 
     public void ChangePhoneScreen(string ScreenName)
     {
-        Debug.Log("get call");
-        
         for (int i = 0; i < PhoneScreens.Count; i++)
         {
             if (PhoneScreens[i].name == ScreenName)

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Test-Quest-Bedroom
   m_EditorClassIdentifier: 
   questID: 
+  questName: 
   questImage: {fileID: 0}
   nextScene: 
+  objectives: []
   isDone: 0

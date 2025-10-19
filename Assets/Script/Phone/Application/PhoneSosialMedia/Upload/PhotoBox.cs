@@ -7,6 +7,7 @@ public class PhotoBox : MonoBehaviour
 {
     [SerializeField] private Image photoImage;
     [SerializeField] private Photo photoUI;
+    [SerializeField] private string photoPath;
 
     private void Awake()
     {
@@ -17,9 +18,11 @@ public class PhotoBox : MonoBehaviour
         }
     }
 
-    public void SetPhotoImage(Sprite photo)
+    public void SetPhotoImage(Sprite photo, string filePath)
     {
         photoImage.sprite = photo;
+        photoPath = filePath;
+
         photoImage.preserveAspect = true;
     }
 
@@ -27,7 +30,7 @@ public class PhotoBox : MonoBehaviour
     {
         if (photoUI != null)
         {
-            photoUI.SetPhotoImage(photoImage.sprite);
+            photoUI.SetPhotoImage(photoImage.sprite, photoPath);
         }
     }
 }

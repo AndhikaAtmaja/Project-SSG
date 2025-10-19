@@ -6,7 +6,6 @@ public class QuestDataBase : MonoBehaviour
 {
     [SerializeField] private List<QuestSO> questdData;
 
-
     public QuestSO FindQuestData(string questID)
     {
         for (int i = 0; i < questdData.Count; i++)

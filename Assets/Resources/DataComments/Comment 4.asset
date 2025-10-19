@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Comment 4
   m_EditorClassIdentifier: 
   nameCommenter: ShadowEcho
-  commentLine: "You really post anything, huh? Guess everyone\u2019s trying to get
-    attention these days."
+  typeGenerate: 0
+  PostiveComment: "I love how expressive cats can be, this one\u2019s gold"
+  NeutralComment: That cat looks mildly confused
+  NegativeComment: Why does everyone keep posting this weird cat

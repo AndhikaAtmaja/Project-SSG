@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class CommentButtonHandler : MonoBehaviour
 {
+    [SerializeField] private GameObject commentSection;
    public void OnOpenCommentSection()
     {
-        CommentManager.Instance.OpeningCommentSection();
+        commentSection.SetActive(CommentManager.Instance.OpeningCommentSection());
     }
 }
