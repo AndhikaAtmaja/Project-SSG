@@ -17,4 +17,4 @@ MonoBehaviour:
   questImage: {fileID: 657295634, guid: 554b29642273eab46b53df3bac728fd6, type: 3}
   nextScene: 
   objectives: []
-  isDone: 1
+  isDone: 0
