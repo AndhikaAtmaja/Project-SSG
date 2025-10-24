@@ -16,6 +16,7 @@ TagManager:
   - PlayerPattern
   - AreaPhoto
   - MainScroll
+  - PhoneUI
   layers:
   - Default
   - TransparentFX

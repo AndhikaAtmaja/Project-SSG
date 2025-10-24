@@ -36,6 +36,7 @@ public class StoryManager : MonoBehaviour
             {
                 currChapter = chapters[i];
                 SetQuestList();
+                SetDialogue();
             }
             else
             {
@@ -52,6 +53,11 @@ public class StoryManager : MonoBehaviour
         }
 
         _questList.SetQuestDataByChapter(currChapter.quests);
+    }
+
+    private void SetDialogue()
+    {
+        DialogueManager.instance.currDialogue = currChapter.dialogues[0];
     }
 
     public StoryChapterSO GetStoryChapter()

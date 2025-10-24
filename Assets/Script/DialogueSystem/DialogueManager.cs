@@ -10,8 +10,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private bool isDialogueActive;
     [SerializeField] private DialogueChatBox _dialogueChatBox;
 
-    [Header("Test")]
-    public DialogueSO currDialogue;
+    [SerializeField] public DialogueSO currDialogue { private get; set; }
 
     private void Awake()
     {
@@ -19,11 +18,6 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
-    }
-
-    private void Start()
-    {
-        StartDialogueChatBox();
     }
 
     private void Update()
@@ -34,6 +28,19 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogueChatBox()
     {
+        if (currDialogue == null)
+        {
+            Debug.Log("There are no dialogue");
+            return;
+        }
+
+        if (currDialogue != null)
+        {
+            int totalDialoge;
+            totalDialoge = currDialogue.lines.Length;
+            Debug.Log($"{currDialogue.name} is have {totalDialoge}");
+        }
+
         _dialogueChatBox.SetDialogueData(currDialogue);
         isDialogueActive = true;
     }
@@ -41,6 +48,11 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
+    }
+
+    public DialogueSO GetCurrentDialoge()
+    {
+        return currDialogue;
     }
 
     public bool GetsDialogueActive()

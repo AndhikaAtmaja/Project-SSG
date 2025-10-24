@@ -17,7 +17,7 @@ public class PlayerPattern : MonoBehaviour
 
     private void Start()
     {
-        raycaster = FindObjectOfType<GraphicRaycaster>();
+        raycaster = GameObject.FindWithTag("PhoneUI").GetComponent<GraphicRaycaster>();
         eventSystem = FindObjectOfType<EventSystem>();
     }
 
