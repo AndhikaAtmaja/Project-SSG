@@ -60,8 +60,12 @@ public class StoryManager : MonoBehaviour
         DialogueManager.instance.currDialogue = currChapter.dialogues[0];
     }
 
-    public StoryChapterSO GetStoryChapter()
+    private void CheckChapter()
     {
-        return currChapter;
+        // check the curr chapter is done or not
+        if (currChapter.isChapterDone)
+        {
+            Debug.Log($"{currChapter} is done go next chapter!");
+        }
     }
 }
