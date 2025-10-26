@@ -6,6 +6,13 @@ public class ButtonDilaoge : MonoBehaviour
 {
     public void OnButtonClick()
     {
-        DialogueManager.instance.StartDialogueChatBox();
+        if (!DialogueManager.instance.GetsDialogueActive())
+        {
+            DialogueManager.instance.StartDialogueChatBox();
+        }
+        else
+        {
+            DialogueManager.instance.EndDialogue();
+        }
     }
 }

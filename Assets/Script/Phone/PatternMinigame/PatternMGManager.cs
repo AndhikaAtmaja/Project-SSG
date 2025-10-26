@@ -44,7 +44,7 @@ public class PatternMGManager : MonoBehaviour
         {
             //Debug.Log("Change to Home page Phone");
             PhoneManager.Instance.ChangePhoneScreen(_nextScreenPhone.name);
-            QuestManager.instance.GetCheckQuest(isCorrect);
+            QuestManager.instance.GetCheckQuest("OP-1", isCorrect);
             ResetPatternPassword();
         }
         else

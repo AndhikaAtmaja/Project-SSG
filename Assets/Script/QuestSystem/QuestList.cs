@@ -43,7 +43,7 @@ public class QuestList : MonoBehaviour
         UpdateQuestList?.Invoke();
     }
 
-    public void OnCheckQuest(bool isDone)
+    public void OnCheckQuest(string questID, bool isDone)
     {
         if (listOfQuests == null || currQuestID < 0 || currQuestID >= listOfQuests.Count)
         {
@@ -51,7 +51,10 @@ public class QuestList : MonoBehaviour
             return;
         }
 
-        listOfQuests[currQuestID].isDone = isDone;
+        if (questID == listOfQuests[currQuestID].questID)
+        {
+            listOfQuests[currQuestID].isDone = isDone;
+        }
         CheckListQuest();
     }
 

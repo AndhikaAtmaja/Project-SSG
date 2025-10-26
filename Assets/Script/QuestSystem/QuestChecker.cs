@@ -38,7 +38,7 @@ public class QuestChecker : MonoBehaviour
         {
             currentQuest.isDone = true;
             Debug.Log($"Quest '{currentQuest.questName}' completed!");
-            questList.OnCheckQuest(currentQuest.isDone);
+            questList.OnCheckQuest(currentQuest.questID ,currentQuest.isDone);
         }
     }
 

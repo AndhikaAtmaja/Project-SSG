@@ -22,8 +22,8 @@ public class QuestManager : MonoBehaviour
         _questList = GameObject.FindGameObjectWithTag("QuestList").GetComponent<QuestList>();
     }
 
-    public void GetCheckQuest(bool isDone)
+    public void GetCheckQuest(string questID, bool isDone)
     {
-        _questList.OnCheckQuest(isDone);
+        _questList.OnCheckQuest(questID,isDone);
     }
 }

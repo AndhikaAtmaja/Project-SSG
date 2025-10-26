@@ -74,8 +74,5 @@ public class DialogueManager : MonoBehaviour
         return currDialogue;
     }
 
-    public bool GetsDialogueActive()
-    {
-        return isDialogueActive;
-    }
+    public bool GetsDialogueActive() => isDialogueActive;
 }
