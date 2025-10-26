@@ -28,4 +28,5 @@ public class DialogueSO : ScriptableObject
     }
 
     public DialogueLines[] lines;
+    public bool isDialogueDone;
 }

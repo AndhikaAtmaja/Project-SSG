@@ -29,6 +29,7 @@ public class QuestChecker : MonoBehaviour
                 obj.isCompleted = true;
                 updated = true;
                 Debug.Log($"Objective '{obj.description}' completed!");
+                StoryManager.instance.CheckChapter();
             }
         }
 
@@ -57,15 +58,15 @@ public class QuestChecker : MonoBehaviour
                 CheckObjective(QuestObjectiveType.OpenCamera);
                 break;
 
-            case "ChapterBook":
+            case "chapterbook":
                 CheckObjective(QuestObjectiveType.OpenChapterBook);
                 break;
 
-            case "message":
+            case "massage":
                 CheckObjective(QuestObjectiveType.OpenMessage); 
                 break;
 
-            case "SosialMedia":
+            case "sosialmedia":
                 CheckObjective(QuestObjectiveType.OpenSosialMedia); 
                 break;
         }

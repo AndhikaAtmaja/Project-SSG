@@ -27,9 +27,4 @@ public class QuestSO : ScriptableObject
     public string nextScene;
     public List<QuestObjective> objectives = new List<QuestObjective>();
     public bool isDone;
-
-    public bool GetisDone()
-    {
-        return isDone;
-    }
 }

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameChapter: Chapter-1
   quests:
-  - {fileID: 11400000, guid: cca40b625df2af44b92fa8f20871fa3a, type: 2}
+  - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
   dialogues:
   - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
+  - {fileID: 11400000, guid: c7b8af4100d2157489df23a83af90ddd, type: 2}
   isChapterDone: 0

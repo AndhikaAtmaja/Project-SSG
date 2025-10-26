@@ -25,23 +25,24 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void SelectedChapter(string chapetName)
+    public void SelectedChapter(string chapterName)
     {
-        if (chapters.Count < 0)
-            Debug.Log("There are no chapter been inster!");
-
-        for (int i = 0; i < chapters.Count; i++)
+        if (chapters == null || chapters.Count == 0)
         {
-            if (chapters[i].nameChapter == chapetName)
-            {
-                currChapter = chapters[i];
-                SetQuestList();
-                SetDialogue();
-            }
-            else
-            {
-                Debug.Log("There are no chapter with that name!");
-            }
+            Debug.LogWarning("No chapters assigned!");
+            return;
+        }
+
+        StoryChapterSO found = chapters.Find(c => c.nameChapter == chapterName);
+        if (found != null)
+        {
+            currChapter = found;
+            SetQuestList();
+            SetDialogue();
+        }
+        else
+        {
+            Debug.LogWarning($"No chapter found with the name '{chapterName}'");
         }
     }
 
@@ -57,15 +58,37 @@ public class StoryManager : MonoBehaviour
 
     private void SetDialogue()
     {
-        DialogueManager.instance.currDialogue = currChapter.dialogues[0];
+        DialogueManager.instance.ChangeCurrentDialogue(currChapter.dialogues[0]);
     }
 
-    private void CheckChapter()
+    public void CheckChapter()
     {
-        // check the curr chapter is done or not
-        if (currChapter.isChapterDone)
+        if (currChapter == null) return;
+
+        if (QuestIsDone() && DialogueIsDone())
         {
-            Debug.Log($"{currChapter} is done go next chapter!");
+            currChapter.isChapterDone = true;
+            Debug.Log($"Chapter '{currChapter.nameChapter}' completed! Move to next chapter.");
         }
+    }
+
+    private bool QuestIsDone()
+    {
+        foreach (var quest in currChapter.quests)
+        {
+            if (!quest.isDone)
+                return false;
+        }
+        return true;
+    }
+
+    private bool DialogueIsDone()
+    {
+        foreach (var dialogue in currChapter.dialogues)
+        {
+            if (!dialogue.isDialogueDone)
+                return false;
+        }
+        return true;
     }
 }

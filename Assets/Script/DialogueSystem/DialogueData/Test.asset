@@ -31,3 +31,4 @@ MonoBehaviour:
       nextDialogue: {fileID: 11400000, guid: 236604808028e2a4680af3e9215bc409, type: 2}
     triggerCutscene: 0
     cutsceneID: 
+  isDialogueDone: 0

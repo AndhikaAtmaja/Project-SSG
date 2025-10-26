@@ -3248,6 +3248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDialogueActive: 0
   _dialogueChatBox: {fileID: 1545068817}
+  totalLines: 0
+  currDialogue: {fileID: 0}
 --- !u!1 &240589292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7195,6 +7197,7 @@ MonoBehaviour:
   listOfQuests:
   - {fileID: 11400000, guid: 2089470e3cf432f42804a4dd7200ee76, type: 2}
   - {fileID: 11400000, guid: 021abae82de2ede4f922d07ab0b2171b, type: 2}
+  - {fileID: 11400000, guid: cca40b625df2af44b92fa8f20871fa3a, type: 2}
   currQuestID: 0
   UpdateQuestList:
     m_PersistentCalls:
@@ -10611,6 +10614,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2089470e3cf432f42804a4dd7200ee76, type: 2}
   - {fileID: 11400000, guid: 021abae82de2ede4f922d07ab0b2171b, type: 2}
   - {fileID: 11400000, guid: cca40b625df2af44b92fa8f20871fa3a, type: 2}
+  - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
 --- !u!4 &1236028891
 Transform:
   m_ObjectHideFlags: 0
@@ -12434,6 +12438,7 @@ MonoBehaviour:
   _generateLine: {fileID: 610151194}
   _generateChoiceButton: {fileID: 1979261468}
   _dialogueLineChecker: {fileID: 1174790269}
+  currentIndex: 0
 --- !u!1001 &1550379553
 PrefabInstance:
   m_ObjectHideFlags: 0

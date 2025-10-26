@@ -11,7 +11,7 @@ public class DialogueChatBox : MonoBehaviour
     [SerializeField] private DialogueLineChecker _dialogueLineChecker;
 
     private DialogueSO currentDialogue;
-    private int currentIndex = 0;
+    [SerializeField] private int currentIndex = 0;
     private bool waitingForChoice = false;
 
     public void SetDialogueData(DialogueSO dialogue)
@@ -39,7 +39,7 @@ public class DialogueChatBox : MonoBehaviour
             return;          // don't skip a choice
 
         if (currentDialogue == null) 
-            return;
+            return ;
 
         if (currentIndex >= currentDialogue.lines.Length) 
             return;
@@ -53,7 +53,8 @@ public class DialogueChatBox : MonoBehaviour
         {
             waitingForChoice = true;
             _generateChoiceButton.OnGenerateChoiceBox(line);
-            
+            currentIndex++;
+
         }
         else
         {
@@ -73,12 +74,15 @@ public class DialogueChatBox : MonoBehaviour
         if (choice.nextDialogue != null)
         {
             SetDialogueData(choice.nextDialogue);
-            DialogueManager.instance.currDialogue = choice.nextDialogue;
+            DialogueManager.instance.ChangeCurrentDialogue(choice.nextDialogue);
+            DialogueManager.instance.StartDialogueChatBox();
         }
-            
         else
         {
             OnChatDialogue();
         }
     }
+
+    public int GetCurrentIndex() => currentIndex;
+    public bool EndDialogueLine() => waitingForChoice;
 }
