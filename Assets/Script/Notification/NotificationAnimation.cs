@@ -1,8 +1,8 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NotificationAnimation : MonoBehaviour
 {
@@ -16,13 +16,15 @@ public class NotificationAnimation : MonoBehaviour
 
     private Tween currentTween;
 
+    [SerializeField] public static event Action<string> ShowCharacterEmotion;
+
     private void Start()
     {
         // Start hidden
         HideNotification();
     }
 
-    public void ShowNotification(string name, string message)
+    public void ShowNotification(string name, string message, string emotion)
     {
         Debug.Log($"{name} : {message}");
 
@@ -38,6 +40,7 @@ public class NotificationAnimation : MonoBehaviour
            .Append(panel.DOAnchorPosY(hiddenY, slideDuration).SetEase(Ease.InBack));
 
         currentTween = seq;
+        ShowCharacterEmotion?.Invoke(emotion);
     }
 
     public void HideNotification()
