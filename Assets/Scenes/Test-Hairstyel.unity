@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Bedroom
+  nextScene: Bedroom-1
   spawn: MakeUp
 --- !u!1001 &1947452180
 PrefabInstance:
