@@ -6,8 +6,10 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager instance;
 
-    [SerializeField] private List<StoryChapterSO> chapters;
-    [SerializeField] private StoryChapterSO currChapter;
+    [Header("Story Progress")]
+    [SerializeField] private List<StoryChapterSO> allChapters;
+    private int ChapterIndex;
+    private int StepIndex;
 
     [Header("Refences")]
     [SerializeField] private QuestList _questList;
@@ -25,70 +27,85 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    public StoryStep currentStep => allChapters[ChapterIndex].chapterSteps[StepIndex];
+
     public void SelectedChapter(string chapterName)
     {
-        if (chapters == null || chapters.Count == 0)
+        if (allChapters == null || allChapters.Count == 0)
         {
-            Debug.LogWarning("No chapters assigned!");
+            Debug.LogWarning("No allChapters assigned!");
             return;
         }
 
-        StoryChapterSO found = chapters.Find(c => c.nameChapter == chapterName);
-        if (found != null)
+        if (ChapterIndex < 0)
         {
-            currChapter = found;
-            SetQuestList();
-            SetDialogue();
+            Debug.LogError("Chapter not found: " + chapterName);
+            return;
         }
-        else
-        {
-            Debug.LogWarning($"No chapter found with the name '{chapterName}'");
-        }
+
+        StepIndex = 0;
+        LoadCurrentStep();
     }
 
-    private void SetQuestList()
+    private void LoadCurrentStep()
     {
-        if (_questList == null)
-        {
-            _questList = GameObject.FindWithTag("QuestList").GetComponent<QuestList>();
-        }
+        StoryStep step = currentStep;
 
-        _questList.SetQuestDataByChapter(currChapter.quests);
-    }
+        Debug.Log($"Total Step is {allChapters[ChapterIndex].chapterSteps.Count}");
+        Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
 
-    private void SetDialogue()
-    {
-        DialogueManager.instance.ChangeCurrentDialogue(currChapter.dialogues[0]);
+        if (currentStep.quests.Count > 0)
+            QuestManager.instance.FillQuest(step.quests);
+
+        if (currentStep.dialogues.Count > 0)
+            DialogueManager.instance.ChangeCurrentDialogue(step.dialogues[0]);
     }
 
     public void CheckChapter()
     {
-        if (currChapter == null) return;
+        StoryStep step = currentStep;
 
-        if (QuestIsDone() && DialogueIsDone())
+        step.QuestChecker();
+        step.DialogueChecker();
+
+        if (step.GetAllQuestDone() && step.GetAllDialogueDone())
         {
-            currChapter.isChapterDone = true;
-            Debug.Log($"Chapter '{currChapter.nameChapter}' completed! Move to next chapter.");
+            NextStep();
         }
     }
 
-    private bool QuestIsDone()
+    private void NextStep()
     {
-        foreach (var quest in currChapter.quests)
+        Debug.Log($"Proceed to next step");
+        StoryChapterSO chapter = allChapters[ChapterIndex];
+
+        StepIndex++;
+        Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
+        
+        // If still inside this chapter
+        if (StepIndex < chapter.chapterSteps.Count)
         {
-            if (!quest.isDone)
-                return false;
+            LoadCurrentStep();
+            return;
         }
-        return true;
+
+        // If last step, move chapter
+        NextChapter();
     }
 
-    private bool DialogueIsDone()
+    private void NextChapter()
     {
-        foreach (var dialogue in currChapter.dialogues)
+        Debug.Log("Proceed to next NextChapter");
+
+        ChapterIndex++;
+
+        if (ChapterIndex >= allChapters.Count)
         {
-            if (!dialogue.isDialogueDone)
-                return false;
+            Debug.Log("All Chapters Complete! Story Finished.");
+            return;
         }
-        return true;
+
+        StepIndex = 0;
+        LoadCurrentStep();
     }
 }

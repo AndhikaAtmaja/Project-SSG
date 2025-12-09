@@ -20,4 +20,4 @@ MonoBehaviour:
   - description: Open the app Massager
     type: 4
     isCompleted: 1
-  isDone: 1
+  IsCompleted: 1

@@ -12,10 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
   m_Name: Chapter-1
   m_EditorClassIdentifier: 
-  nameChapter: Chapter-1
-  quests:
-  - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
-  dialogues:
-  - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
-  - {fileID: 11400000, guid: c7b8af4100d2157489df23a83af90ddd, type: 2}
+  nameChapter: Chapter-0
+  chapterSteps:
+  - nameStep: Notif Friend
+    setpID: FN-00
+    quests:
+    - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Go to Bed
+    setpID: FN-00
+    quests:
+    - {fileID: 11400000, guid: abdbe323e2dd5bf46aea570c8dd250ce, type: 2}
+    dialogues: []
+    AllQuestDone: 0
+    AllDialogueDone: 0
   isChapterDone: 0

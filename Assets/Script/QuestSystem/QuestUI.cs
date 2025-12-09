@@ -28,12 +28,12 @@ public class QuestUI : MonoBehaviour
 
         QuestSO currentQuest = _questList.GetCurrentQuest();
 
-        // If there are no more quests, hide everything
+        // If there are no more questChapter, hide everything
         if (currentQuest == null)
         {
             questBackGround.SetActive(false);
             questImage.sprite = null;
-            Debug.Log("QuestUI: All quests completed, hiding quest UI.");
+            Debug.Log("QuestUI: All questChapter completed, hiding quest UI.");
             return;
         }
 
@@ -41,7 +41,7 @@ public class QuestUI : MonoBehaviour
 
         if (quest != null)
         {
-            if (quest.isDone)
+            if (quest.IsCompleted)
             {
                 questBackGround.SetActive(false);
                 questImage.sprite = null;

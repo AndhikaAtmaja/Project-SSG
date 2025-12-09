@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
   m_Name: Test-Quest-Bedroom
   m_EditorClassIdentifier: 
-  questID: 
-  questName: 
+  questID: BTB-00
+  questName: Back to Bedroom
   questImage: {fileID: 0}
   nextScene: 
   objectives: []
-  isDone: 0
+  IsCompleted: 0

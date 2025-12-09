@@ -26,15 +26,15 @@ public class QuestList : MonoBehaviour
         currQuestID = Mathf.Clamp(currQuestID, 0, listOfQuests.Count - 1);
         //currQuestID = 0;
 
-        // Skip completed quests
-        while (currQuestID < listOfQuests.Count && listOfQuests[currQuestID].isDone)
+        // Skip completed questChapter
+        while (currQuestID < listOfQuests.Count && listOfQuests[currQuestID].IsCompleted)
         {
             currQuestID++;
         }
 
         if (currQuestID >= listOfQuests.Count)
         {
-            Debug.Log("All quests are done!");
+            Debug.Log("All questChapter are done!");
             UpdateQuestList?.Invoke();
             return;
         }
@@ -53,7 +53,7 @@ public class QuestList : MonoBehaviour
 
         if (questID == listOfQuests[currQuestID].questID)
         {
-            listOfQuests[currQuestID].isDone = isDone;
+            listOfQuests[currQuestID].IsCompleted = isDone;
         }
         CheckListQuest();
     }
@@ -70,18 +70,13 @@ public class QuestList : MonoBehaviour
 
     public void SetQuestDataByChapter(List<QuestSO> listQuests)
     {
-        ClearCurrentQuestList();
+        listOfQuests.Clear();
 
-        for(int i = 0; i < listQuests.Count; i++)
+        for (int i = 0; i < listQuests.Count; i++)
         {
             listOfQuests.Add(listQuests[i]);
         }
 
         CheckListQuest();
-    }
-
-    private void ClearCurrentQuestList()
-    {
-        listOfQuests.Clear();
     }
 }

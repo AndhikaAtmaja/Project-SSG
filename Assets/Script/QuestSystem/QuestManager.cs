@@ -26,4 +26,15 @@ public class QuestManager : MonoBehaviour
     {
         _questList.OnCheckQuest(questID,isDone);
     }
+
+    public void FillQuest(List<QuestSO> quests)
+    {
+        if (_questList == null)
+        {
+            Debug.LogWarning("Not Assign the QuestList");
+            return;
+        }
+
+        _questList.SetQuestDataByChapter(quests);
+    }
 }

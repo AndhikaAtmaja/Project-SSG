@@ -26,5 +26,5 @@ public class QuestSO : ScriptableObject
     public Sprite questImage;
     public string nextScene;
     public List<QuestObjective> objectives = new List<QuestObjective>();
-    public bool isDone;
+    public bool IsCompleted;
 }

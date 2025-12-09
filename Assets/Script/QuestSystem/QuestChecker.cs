@@ -36,9 +36,9 @@ public class QuestChecker : MonoBehaviour
         // Check if all objectives in this quest are done
         if (updated && currentQuest.objectives.TrueForAll(o => o.isCompleted))
         {
-            currentQuest.isDone = true;
+            currentQuest.IsCompleted = true;
             Debug.Log($"Quest '{currentQuest.questName}' completed!");
-            questList.OnCheckQuest(currentQuest.questID ,currentQuest.isDone);
+            questList.OnCheckQuest(currentQuest.questID ,currentQuest.IsCompleted);
         }
     }
 

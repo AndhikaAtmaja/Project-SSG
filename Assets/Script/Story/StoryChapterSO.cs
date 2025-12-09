@@ -6,8 +6,7 @@ using UnityEngine;
 public class StoryChapterSO : ScriptableObject
 {
     public string nameChapter;
-    public List<QuestSO> quests;
-    public List<DialogueSO> dialogues;
+    public List<StoryStep> chapterSteps;
 
     public bool isChapterDone;
 

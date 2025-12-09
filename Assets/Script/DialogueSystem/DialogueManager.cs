@@ -8,10 +8,14 @@ public class DialogueManager : MonoBehaviour
  
     [Header("Status & config Dialogue")]
     [SerializeField] private bool isDialogueActive;
-    [SerializeField] private DialogueChatBox _dialogueChatBox;
     [SerializeField] private int totalLines;
-
     [SerializeField] private DialogueSO currDialogue;
+
+    [SerializeField] private int _currentIndexDialogue;
+
+    [Header("Refencee")]
+    [SerializeField] private DialogueLineChecker _dialogueLineChecker;
+    [SerializeField] private DialogueChatBox _dialogueChatBox;
 
     private void Awake()
     {
@@ -25,7 +29,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
-            HandleDailogueLine();
+            HandleDialogueLine();
         }
     }
 
@@ -37,7 +41,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        _dialogueChatBox.SetDialogueData(currDialogue);
+        HandleDialogueLine();
         isDialogueActive = true;
     }
 
@@ -46,32 +50,70 @@ public class DialogueManager : MonoBehaviour
         currDialogue = dialogue;
         isDialogueActive = false;
         totalLines = currDialogue.lines.Length;
+        _currentIndexDialogue = 0;
+
+        SetDialogueData(dialogue);
     }
 
-    public void HandleDailogueLine()
+    public void SetDialogueData(DialogueSO dialogue)
+    {
+        List<string> existingLines = _dialogueLineChecker.GetExistingDialogueLines();
+
+        int resumeIndex = 0;
+        for (int i = 0; i < dialogue.lines.Length; i++)
+        {
+            if (existingLines.Contains(dialogue.lines[i].dialogueLine))
+                resumeIndex++;
+            else
+                break;
+        }
+
+        _currentIndexDialogue = resumeIndex;
+    }
+
+    public void NextLine()
+    {
+        // Move to next line
+        _currentIndexDialogue++;
+    }
+
+    public void HandleDialogueLine()
     {
         if (currDialogue == null) return;
 
-        _dialogueChatBox.OnChatDialogue();
-
-        if (_dialogueChatBox.GetCurrentIndex() >= currDialogue.lines.Length)
+        if (_currentIndexDialogue >= currDialogue.lines.Length)
         {
-            currDialogue.isDialogueDone = true;
             EndDialogue();
+            return;
+        }
+
+        DialogueSO.DialogueLines currentLine = currDialogue.lines[_currentIndexDialogue];
+
+        switch (currentLine.dialogueType)
+        {
+            case DialogueSO.DialogueType.ChatBox:
+                _dialogueChatBox.ShowLine(currentLine);
+                break;
+
+            case DialogueSO.DialogueType.BubbleChat:
+                break;
+
+            case DialogueSO.DialogueType.DialogueBox:
+                break;
+
+            default:
+                Debug.LogWarning($"there are no dialogue type with name : {currDialogue.lines[_currentIndexDialogue].dialogueType.ToString()}!");
+                break;
         }
     }
 
     public void EndDialogue()
     {
         Debug.Log($"Dialogue '{currDialogue.name}' completed!");
+        currDialogue.isDialogueDone= true;
         isDialogueActive = false;
         totalLines = 0;
         StoryManager.instance.CheckChapter();
-    }
-
-    public DialogueSO GetCurrentDialoge()
-    {
-        return currDialogue;
     }
 
     public bool GetsDialogueActive() => isDialogueActive;

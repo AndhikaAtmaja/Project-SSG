@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Player
+    dialogueType: 0
     dialogueLine: let's go to outsite :D
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -21,6 +22,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Player-2
+    dialogueType: 0
     dialogueLine: Sure
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -28,6 +30,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Player-2
+    dialogueType: 0
     dialogueLine: Where we going?
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -35,6 +38,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Player
+    dialogueType: 0
     dialogueLine: to the park near school :D
     imageChar: {fileID: 0}
     hasChoice: 0

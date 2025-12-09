@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Player
+    dialogueType: 0
     dialogueLine: Hey
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -21,14 +22,61 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Player-2
-    dialogueLine: Hello
+    dialogueType: 0
+    dialogueLine: Yo
     imageChar: {fileID: 0}
-    hasChoice: 1
+    hasChoice: 0
     choices:
-    - choiceText: Want go out?
-      nextDialogue: {fileID: 11400000, guid: c7b8af4100d2157489df23a83af90ddd, type: 2}
-    - choiceText: Want play FPS? at my home?
-      nextDialogue: {fileID: 11400000, guid: 236604808028e2a4680af3e9215bc409, type: 2}
+    - choiceText: Play out side
+      nextDialogue: {fileID: 11400000}
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  - speakerName: Player
+    dialogueType: 0
+    dialogueLine: let's go to outsite :D
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Player-2
+    dialogueType: 0
+    dialogueLine: Sure
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Player-2
+    dialogueType: 0
+    dialogueLine: Where we going?
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Player
+    dialogueType: 0
+    dialogueLine: to the park near school :D
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Player-2
+    dialogueType: 0
+    dialogueLine: Okey, lets go then
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Player
+    dialogueType: 0
+    dialogueLine: yeay
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  isDialogueDone: 1

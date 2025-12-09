@@ -20,4 +20,4 @@ MonoBehaviour:
   - description: Open the app Chapter Book
     type: 0
     isCompleted: 1
-  isDone: 1
+  IsCompleted: 1
