@@ -16,6 +16,12 @@ public class QuestList : MonoBehaviour
         CheckListQuest();
     }
 
+    public void StartQuest()
+    {
+        ResetAllQuests();
+        CheckListQuest();
+    }
+
     private void CheckListQuest()
     {
         if (listOfQuests.Count == 0)

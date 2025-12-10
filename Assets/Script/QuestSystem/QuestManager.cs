@@ -40,4 +40,9 @@ public class QuestManager : MonoBehaviour
 
         _questList.SetQuestDataByChapter(quests);
     }
+
+    public void ShowQuets()
+    {
+        _questList.StartQuest();
+    }
 }

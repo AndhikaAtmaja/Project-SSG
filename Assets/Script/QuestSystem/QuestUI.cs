@@ -16,6 +16,8 @@ public class QuestUI : MonoBehaviour
         _questList.UpdateQuestList.AddListener(UpdateQuestUI);
 
         _questDB = GameObject.FindGameObjectWithTag("QuestDB").GetComponent<QuestDataBase>();
+
+        QuestManager.instance.ShowQuets();
     }
 
     public void UpdateQuestUI()
