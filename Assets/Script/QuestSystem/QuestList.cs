@@ -12,6 +12,7 @@ public class QuestList : MonoBehaviour
 
     private void Start()
     {
+        ResetAllQuests();
         CheckListQuest();
     }
 
@@ -77,6 +78,19 @@ public class QuestList : MonoBehaviour
             listOfQuests.Add(listQuests[i]);
         }
 
+        ResetAllQuests();
         CheckListQuest();
+    }
+
+    private void ResetAllQuests()
+    {
+        foreach (var quest in listOfQuests)
+        {
+            quest.IsCompleted = false;
+            foreach (var objective in quest.objectives)
+            {
+                objective.isCompleted = false;
+            }
+        }
     }
 }

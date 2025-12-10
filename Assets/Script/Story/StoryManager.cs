@@ -8,6 +8,7 @@ public class StoryManager : MonoBehaviour
 
     [Header("Story Progress")]
     [SerializeField] private List<StoryChapterSO> allChapters;
+    [SerializeField] private StoryChapterSO currStoryChapter;
     private int ChapterIndex;
     private int StepIndex;
 
@@ -31,6 +32,8 @@ public class StoryManager : MonoBehaviour
 
     public void SelectedChapter(string chapterName)
     {
+        currStoryChapter = allChapters[ChapterIndex];
+
         if (allChapters == null || allChapters.Count == 0)
         {
             Debug.LogWarning("No allChapters assigned!");
@@ -51,8 +54,8 @@ public class StoryManager : MonoBehaviour
     {
         StoryStep step = currentStep;
 
-        Debug.Log($"Total Step is {allChapters[ChapterIndex].chapterSteps.Count}");
-        Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
+        //Debug.Log($"Total Step is {allChapters[ChapterIndex].chapterSteps.Count}");
+        //Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
 
         if (currentStep.quests.Count > 0)
             QuestManager.instance.FillQuest(step.quests);
@@ -63,24 +66,28 @@ public class StoryManager : MonoBehaviour
 
     public void CheckChapter()
     {
-        StoryStep step = currentStep;
-
-        step.QuestChecker();
-        step.DialogueChecker();
-
-        if (step.GetAllQuestDone() && step.GetAllDialogueDone())
+        if (currStoryChapter != null)
         {
-            NextStep();
+            StoryStep step = currentStep;
+
+            step.QuestChecker();
+            step.DialogueChecker();
+
+            if (step.GetAllQuestDone() && step.GetAllDialogueDone())
+            {
+                NextStep();
+            }
         }
     }
 
     private void NextStep()
     {
         Debug.Log($"Proceed to next step");
+
         StoryChapterSO chapter = allChapters[ChapterIndex];
 
         StepIndex++;
-        Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
+        //Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
         
         // If still inside this chapter
         if (StepIndex < chapter.chapterSteps.Count)

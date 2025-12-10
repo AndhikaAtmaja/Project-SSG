@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
   m_Name: Chapter-1
   m_EditorClassIdentifier: 
-  nameChapter: Chapter-0
+  nameChapter: Chapter-1
   chapterSteps:
   - nameStep: Notif Friend
     setpID: FN-00
@@ -28,5 +28,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: abdbe323e2dd5bf46aea570c8dd250ce, type: 2}
     dialogues: []
     AllQuestDone: 0
-    AllDialogueDone: 0
+    AllDialogueDone: 1
   isChapterDone: 0
