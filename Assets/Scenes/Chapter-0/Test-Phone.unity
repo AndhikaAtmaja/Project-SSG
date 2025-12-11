@@ -16326,18 +16326,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
-      propertyPath: allChapters.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
-      propertyPath: allChapters.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: b6db2f03ca4ab3c4a854818faea55d40, type: 2}
-    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
-      propertyPath: allChapters.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: b73064eecb9737b448ebcba4bffeb2d2, type: 2}
     - target: {fileID: 7994167330922607079, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

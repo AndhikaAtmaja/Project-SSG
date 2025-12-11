@@ -28,6 +28,7 @@ public class SceneManagement : MonoBehaviour
         string targetScene = string.IsNullOrEmpty(sceneName) ? SceneManager.GetActiveScene().name : $"Test-{sceneName}";
 
         SceneManager.LoadScene(targetScene);
+        GameManager.instance.StartGame();
     }
 
     public string GetNextSpawn()

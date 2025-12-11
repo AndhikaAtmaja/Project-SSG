@@ -28,6 +28,12 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    //start from chpater 0 or from save file
+    public void StartChapter()
+    {
+
+    }
+
     public StoryStep currentStep => allChapters[ChapterIndex].chapterSteps[StepIndex];
 
     public void SelectedChapter(string chapterName)
@@ -97,10 +103,10 @@ public class StoryManager : MonoBehaviour
         }
 
         // If last step, move chapter
-        NextChapter();
+        //NextChapter();
     }
 
-    private void NextChapter()
+/*    private void NextChapter()
     {
         Debug.Log("Proceed to next NextChapter");
 
@@ -114,5 +120,5 @@ public class StoryManager : MonoBehaviour
 
         StepIndex = 0;
         LoadCurrentStep();
-    }
+    }*/
 }
