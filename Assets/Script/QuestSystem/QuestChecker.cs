@@ -38,7 +38,6 @@ public class QuestChecker : MonoBehaviour
             currentQuest.IsCompleted = true;
             Debug.Log($"Quest '{currentQuest.questName}' completed!");
             questList.OnCheckQuest(currentQuest.questID ,currentQuest.IsCompleted);
-            StoryManager.instance.CheckChapter();
         }
     }
 
@@ -74,7 +73,6 @@ public class QuestChecker : MonoBehaviour
             currentQuest.IsCompleted = true;
             Debug.Log($"Quest '{currentQuest.questName}' completed!");
             questList.OnCheckQuest(currentQuest.questID, currentQuest.IsCompleted);
-            StoryManager.instance.CheckChapter();
         }
     }
 

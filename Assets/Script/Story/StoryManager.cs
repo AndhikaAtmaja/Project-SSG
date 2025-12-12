@@ -28,30 +28,46 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    //start from chpater 0 or from save file
+   
     public void StartChapter()
     {
-
+        //start from chpater 0 or from save file
+        ChapterIndex = 0;
+        StepIndex = 0;
+        currStoryChapter = allChapters[ChapterIndex];
+        LoadCurrentStep();
     }
 
     public StoryStep currentStep => allChapters[ChapterIndex].chapterSteps[StepIndex];
 
     public void SelectedChapter(string chapterName)
     {
-        currStoryChapter = allChapters[ChapterIndex];
-
         if (allChapters == null || allChapters.Count == 0)
         {
             Debug.LogWarning("No allChapters assigned!");
             return;
         }
 
-        if (ChapterIndex < 0)
+        string find = chapterName.ToLower();
+        currStoryChapter = null;
+
+        for (int i = 0; i < allChapters.Count; i++)
+        {
+            if (allChapters[i].nameChapter.ToLower() == find)
+            {
+                ChapterIndex = i;
+                currStoryChapter = allChapters[ChapterIndex];
+                break;    // STOP searching when found
+            }
+        }
+
+        if (currStoryChapter == null)
         {
             Debug.LogError("Chapter not found: " + chapterName);
             return;
         }
 
+        // Success load step 0
         StepIndex = 0;
         LoadCurrentStep();
     }
@@ -63,11 +79,21 @@ public class StoryManager : MonoBehaviour
         //Debug.Log($"Total Step is {allChapters[ChapterIndex].chapterSteps.Count}");
         //Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
 
-        if (currentStep.quests.Count > 0)
-            QuestManager.instance.FillQuest(step.quests);
-
         if (currentStep.dialogues.Count > 0)
+        {
+            Debug.Log("Get Called");
             DialogueManager.instance.ChangeCurrentDialogue(step.dialogues[0]);
+        }
+        else
+        {
+            Debug.Log("No dialogues in step!");
+        }
+
+        if (currentStep.quests.Count > 0)
+        {
+            Debug.Log("Get Called");
+            QuestManager.instance.FillQuest(step.quests);
+        }
     }
 
     public void CheckChapter()

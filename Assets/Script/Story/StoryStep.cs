@@ -33,6 +33,7 @@ public class StoryStep
 
     public void DialogueChecker()
     {
+        Debug.Log("Get Called");
         bool Alldone = true;
         foreach (DialogueSO s in dialogues)
         {

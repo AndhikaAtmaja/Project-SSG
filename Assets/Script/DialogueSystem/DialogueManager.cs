@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ChangeCurrentDialogue(DialogueSO dialogue)
     {
+        Debug.Log($"dialogue name {dialogue.name}");
         currDialogue = dialogue;
         isDialogueActive = false;
         totalLines = currDialogue.lines.Length;

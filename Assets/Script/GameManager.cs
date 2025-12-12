@@ -33,12 +33,15 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        //instance the story manager
         //instance the quest manager
-        //instance the dialogue manager
-        storyManagerInstance = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
         questManagerInstance = Instantiate(questManagerPrefab).GetComponent<QuestManager>();
+
+        //instance the dialogue manager
         dialogueManagerInstance = Instantiate(dialogueManagerPrefab).GetComponent<DialogueManager>();
+
+        //instance the story manager
+        storyManagerInstance = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
+        storyManagerInstance.StartChapter();
     }
 
     public string GetCurrentScene()
