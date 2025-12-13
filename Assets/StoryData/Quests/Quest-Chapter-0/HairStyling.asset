@@ -15,6 +15,5 @@ MonoBehaviour:
   questID: HS-00
   questName: Hairstyling
   questImage: {fileID: 0}
-  nextScene: 
   objectives: []
   IsCompleted: 1

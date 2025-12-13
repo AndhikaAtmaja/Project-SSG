@@ -8279,6 +8279,7 @@ MonoBehaviour:
   isCorrect: 0
   _playerPattern: {fileID: 672552874}
   _nextScreenPhone: {fileID: 953874550}
+  quest: {fileID: 11400000, guid: 84f71c9f40ce3654e8d076b27700de76, type: 2}
 --- !u!4 &897994047
 Transform:
   m_ObjectHideFlags: 0
@@ -13305,6 +13306,10 @@ PrefabInstance:
     - target: {fileID: 2312184671217036725, guid: 9909a8941419b3a42a4b2a5da0be672b, type: 3}
       propertyPath: m_Name
       value: Chapter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533333428027747370, guid: 9909a8941419b3a42a4b2a5da0be672b, type: 3}
+      propertyPath: chapter
+      value: After Prologue
       objectReference: {fileID: 0}
     - target: {fileID: 3533333428027747370, guid: 9909a8941419b3a42a4b2a5da0be672b, type: 3}
       propertyPath: notification

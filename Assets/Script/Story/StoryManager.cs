@@ -154,7 +154,8 @@ public class StoryManager : MonoBehaviour
     private void OnDialogueFinished()
     {
         if (isTransitioning) return;
-        //CheckChapter();
+        if (currentStep.autoStartDialogueAfterScene)
+            CheckChapter();
     }
 
     /*    private void NextChapter()

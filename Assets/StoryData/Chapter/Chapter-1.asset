@@ -21,13 +21,17 @@ MonoBehaviour:
     dialogues:
     - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
     - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Go to Bed
     setpID: FN-00
     quests:
     - {fileID: 11400000, guid: abdbe323e2dd5bf46aea570c8dd250ce, type: 2}
     dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

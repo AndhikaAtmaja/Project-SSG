@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,8 @@ public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement instance;
     private string nextSpawn;
+
+    public static event Action<string> OnSuccesChangeScene;
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class SceneManagement : MonoBehaviour
             string targetScene = string.IsNullOrEmpty(sceneName) ? SceneManager.GetActiveScene().name : $"Test-{sceneName}";
 
             SceneManager.LoadScene(targetScene);
+            OnSuccesChangeScene?.Invoke(sceneName);
         }
     }
 

@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questList: {fileID: 1030518202666236211}
+  _questData: {fileID: 6963933548759459947}
   questBox: {fileID: 0}
   currQuest: {fileID: 0}
 --- !u!1 &3942081424930945751

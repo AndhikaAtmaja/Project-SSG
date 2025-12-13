@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
-  m_Name: Toothbrusing
+  m_Name: Open Phone
   m_EditorClassIdentifier: 
-  questID: 
-  questName: 
+  questID: OP-00
+  questName: Open Phone
   questImage: {fileID: 0}
-  objectives: []
+  objectives:
+  - description: 
+    type: 5
+    targetSceneName: Phone
+    isCompleted: 1
   IsCompleted: 1

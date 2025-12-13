@@ -41,8 +41,10 @@ public class QuestChecker : MonoBehaviour
         }
     }
 
-    private void CheckObjectiveChangeScene(QuestObjectiveType type, string nameScene)
+    private void CheckObjectiveChangeScene(string loadedSceneName)
     {
+        Debug.Log("Get Called");
+        
         if (questList == null)
         {
             Debug.LogWarning("QuestList not found!");
@@ -50,6 +52,8 @@ public class QuestChecker : MonoBehaviour
         }
 
         var currentQuest = questList.GetCurrentQuest();
+        
+
         if (currentQuest == null)
         {
             Debug.Log("No active quest found.");
@@ -57,17 +61,34 @@ public class QuestChecker : MonoBehaviour
         }
 
         bool updated = false;
+
         foreach (var obj in currentQuest.objectives)
         {
-            if (obj.type == type && !obj.isCompleted)
+            Debug.Log($"Objective type: {obj.type}");
+            Debug.Log($"Target scene: '{obj.targetSceneName}'");
+            Debug.Log($"Loaded scene: '{loadedSceneName}'");
+
+            if (obj.type != QuestObjectiveType.ChangeScene)
+                continue;
+
+            if (obj.isCompleted)
+                continue;
+
+            if (string.IsNullOrEmpty(obj.targetSceneName))
+            {
+                Debug.LogWarning("ChangeScene objective has EMPTY targetSceneName!");
+                continue;
+            }
+
+            if (obj.targetSceneName.ToLower() == loadedSceneName.ToLower())
             {
                 obj.isCompleted = true;
                 updated = true;
-                Debug.Log($"Objective '{obj.description}' completed!");
+                Debug.Log("ChangeScene objective MATCHED and completed");
             }
         }
 
-        // Check if all objectives in this quest are done
+
         if (updated && currentQuest.objectives.TrueForAll(o => o.isCompleted))
         {
             currentQuest.IsCompleted = true;
@@ -79,12 +100,12 @@ public class QuestChecker : MonoBehaviour
     private void OnEnable()
     {
         PhoneApplication.OnApplicationOpenned += HandleAppOpened;
-        ChangeScene.OnChangeScene += HandleChangeScene;
+        SceneManagement.OnSuccesChangeScene += CheckObjectiveChangeScene;
     }
     private void OnDisable()
     {
         PhoneApplication.OnApplicationOpenned -= HandleAppOpened;
-        ChangeScene.OnChangeScene -= HandleChangeScene;
+        SceneManagement.OnSuccesChangeScene -= CheckObjectiveChangeScene;
     }
     private void HandleAppOpened(string appName)
     {
@@ -113,17 +134,6 @@ public class QuestChecker : MonoBehaviour
         //Trim name if nameScene
         string name = nameScene.Split('-')[0].ToLower();
 
-        //Debug.Log($"Scene name before trim : {nameScene}" + $"Scene name after trim  : {name}");
-
-        switch (name.ToLower())
-        {
-            case "bedroom":
-                CheckObjectiveChangeScene(QuestObjectiveType.ChangeScene, name);
-                break;
-
-
-            default:
-                break;
-        }
+        CheckObjectiveChangeScene(nameScene);
     }
 }

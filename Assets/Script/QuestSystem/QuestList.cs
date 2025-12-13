@@ -91,6 +91,8 @@ public class QuestList : MonoBehaviour
 
     private void ResetAllQuests()
     {
+        currQuestID = 0;
+
         foreach (var quest in listOfQuests)
         {
             quest.IsCompleted = false;

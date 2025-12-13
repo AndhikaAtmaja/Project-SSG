@@ -10,6 +10,7 @@ public class PatternMGManager : MonoBehaviour
     [SerializeField] private bool isCorrect;
     [SerializeField] private PlayerPattern _playerPattern;
     [SerializeField] private GameObject _nextScreenPhone;
+    [SerializeField] private QuestSO quest;
 
     public static PatternMGManager Instance;
 
@@ -44,7 +45,7 @@ public class PatternMGManager : MonoBehaviour
         {
             //Debug.Log("Change to Home page Phone");
             PhoneManager.Instance.ChangePhoneScreen(_nextScreenPhone.name);
-            QuestManager.instance.GetCheckQuest("OP-1", isCorrect);
+            QuestManager.instance.GetCheckQuest(quest.questID, isCorrect);
             ResetPatternPassword();
         }
         else

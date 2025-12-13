@@ -6,6 +6,7 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance;
     [SerializeField] private QuestList _questList;
+    [SerializeField] private QuestDataBase _questData;
     [SerializeField] private GameObject questBox;
     [SerializeField] private QuestSO currQuest;
 
@@ -39,6 +40,7 @@ public class QuestManager : MonoBehaviour
         }
 
         _questList.SetQuestDataByChapter(quests);
+        _questData.FillWithNewQuest(quests);
     }
 
     public void ShowQuets()

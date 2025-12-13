@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
-  m_Name: Chapter-0
+  m_Name: Before Prologue
   m_EditorClassIdentifier: 
-  nameChapter: chapter-0
+  nameChapter: Before Prologue
   chapterSteps:
   - nameStep: Turn of Alarm
     setpID: 
@@ -36,18 +36,31 @@ MonoBehaviour:
   - nameStep: Take A Bath
     setpID: 
     quests:
+    - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
     - {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After take a bath
     setpID: 
-    quests: []
+    quests:
+    - {fileID: 11400000, guid: fc6cbbd3082592b43ba1833a642365e5, type: 2}
     dialogues:
     - {fileID: 11400000, guid: f7f73b99f35c0a1488e442fc018767d4, type: 2}
     autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Inside Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 84f71c9f40ce3654e8d076b27700de76, type: 2}
+    - {fileID: 11400000, guid: 9f75a806af6283f49bc6618b3fd49b69, type: 2}
+    - {fileID: 11400000, guid: 9a6e9c3d89e4f8540a03a33fc6b0f4b5, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
     nextSceneName: 
     AllQuestDone: 0
     AllDialogueDone: 0

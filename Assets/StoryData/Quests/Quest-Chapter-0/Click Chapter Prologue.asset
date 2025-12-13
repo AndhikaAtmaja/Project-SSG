@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
-  m_Name: Toothbrusing
+  m_Name: Click Chapter Prologue
   m_EditorClassIdentifier: 
-  questID: 
+  questID: CC-00
   questName: 
   questImage: {fileID: 0}
   objectives: []
-  IsCompleted: 1
+  IsCompleted: 0

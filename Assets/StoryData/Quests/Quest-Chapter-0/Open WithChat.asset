@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
-  m_Name: Toothbrusing
+  m_Name: Open WithChat
   m_EditorClassIdentifier: 
-  questID: 
-  questName: 
+  questID: OM-00
+  questName: Open WithChat
   questImage: {fileID: 0}
-  objectives: []
-  IsCompleted: 1
+  objectives:
+  - description: 
+    type: 4
+    targetSceneName: 
+    isCompleted: 0
+  IsCompleted: 0

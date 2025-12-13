@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Bedroom-1
+  nextScene: Bedroom
   spawn: MakeUp
 --- !u!114 &1928053819
 MonoBehaviour:

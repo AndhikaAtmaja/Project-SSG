@@ -16,6 +16,8 @@ public class QuestObjective
 {
     public string description;
     public QuestObjectiveType type;
+    public string targetSceneName;
+
     public bool isCompleted;
 }
 
@@ -25,7 +27,6 @@ public class QuestSO : ScriptableObject
     public string questID;
     public string questName; 
     public Sprite questImage;
-    public string nextScene;
     public List<QuestObjective> objectives = new List<QuestObjective>();
     public bool IsCompleted;
 }
