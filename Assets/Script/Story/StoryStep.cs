@@ -10,6 +10,9 @@ public class StoryStep
     public List<QuestSO> quests;
     public List<DialogueSO> dialogues;
 
+    public bool autoStartDialogueAfterScene;
+    public string nextSceneName;
+
     [SerializeField] private bool AllQuestDone;
     [SerializeField] private bool AllDialogueDone;
 

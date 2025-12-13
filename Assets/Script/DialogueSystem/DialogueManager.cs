@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueChatBox _dialogueChatBox;
     [SerializeField] private DialogueBubble _dialogueBubble;
 
+    public static event System.Action OnDialogueFinished;
+
     private void Awake()
     {
         if (instance == null)
@@ -123,7 +125,7 @@ public class DialogueManager : MonoBehaviour
         currDialogue.isDialogueDone= true;
         isDialogueActive = false;
         totalLines = 0;
-        StoryManager.instance.CheckChapter();
+        OnDialogueFinished?.Invoke();
     }
 
     public bool isActive() => isDialogueActive;

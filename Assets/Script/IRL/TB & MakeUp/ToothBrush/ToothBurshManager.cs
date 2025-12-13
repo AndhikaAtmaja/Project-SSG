@@ -9,7 +9,7 @@ public class ToothBurshManager : MonoBehaviour
     [Header("Config ToothBrush Minigame")]
     [SerializeField] private int totalStroke;
     [SerializeField] private int playerStroke;
-    [SerializeField] private ChangeScene _changeScene;
+    [SerializeField] private GameObject changeButton;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class ToothBurshManager : MonoBehaviour
     {
         if (playerStroke >= totalStroke & !ToothBrush.instance.GetIsPickUp())
         {
-            _changeScene.GetChangeScene();
+            changeButton.SetActive(true);
         }
     }
 

@@ -11,6 +11,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] private StoryChapterSO currStoryChapter;
     [SerializeField] private int ChapterIndex;
     [SerializeField] private int StepIndex;
+    private bool isTransitioning;
 
     [Header("Refences")]
     [SerializeField] private QuestList _questList;
@@ -98,53 +99,77 @@ public class StoryManager : MonoBehaviour
 
     public void CheckChapter()
     {
-        if (currStoryChapter != null)
+        if (isTransitioning) return;
+        if (currStoryChapter == null) return;
+
+        StoryStep step = currentStep;
+        if (step == null) return;
+
+        step.QuestChecker();
+        step.DialogueChecker();
+
+        if (step.GetAllQuestDone() && step.GetAllDialogueDone())
         {
-            StoryStep step = currentStep;
-
-            step.QuestChecker();
-            step.DialogueChecker();
-
-            if (step.GetAllQuestDone() && step.GetAllDialogueDone())
-            {
-                NextStep();
-            }
+            NextStep();
         }
     }
 
     private void NextStep()
     {
         //Debug.Log($"Proceed to next step");
+        if (isTransitioning) return;
 
         StoryChapterSO chapter = allChapters[ChapterIndex];
-
         StepIndex++;
+
         //Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
         
         // If still inside this chapter
-        if (StepIndex < chapter.chapterSteps.Count)
+        if (StepIndex >= chapter.chapterSteps.Count)
         {
-            LoadCurrentStep();
+            Debug.Log("Chapter finished!");
             return;
         }
 
+        LoadCurrentStep();
         // If last step, move chapter
         //NextChapter();
     }
 
-/*    private void NextChapter()
+    public void LockStory()
     {
-        Debug.Log("Proceed to next NextChapter");
+        isTransitioning = true;
+    }
 
-        ChapterIndex++;
+    private void OnEnable()
+    {
+        DialogueManager.OnDialogueFinished += OnDialogueFinished;
+    }
 
-        if (ChapterIndex >= allChapters.Count)
+    private void OnDisable()
+    {
+        DialogueManager.OnDialogueFinished -= OnDialogueFinished;
+    }
+
+    private void OnDialogueFinished()
+    {
+        if (isTransitioning) return;
+        //CheckChapter();
+    }
+
+    /*    private void NextChapter()
         {
-            Debug.Log("All Chapters Complete! Story Finished.");
-            return;
-        }
+            Debug.Log("Proceed to next NextChapter");
 
-        StepIndex = 0;
-        LoadCurrentStep();
-    }*/
+            ChapterIndex++;
+
+            if (ChapterIndex >= allChapters.Count)
+            {
+                Debug.Log("All Chapters Complete! Story Finished.");
+                return;
+            }
+
+            StepIndex = 0;
+            LoadCurrentStep();
+        }*/
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: groans heavily
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "\u2026 what time is it\u2026?"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: check the alarm
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "ah it\u2019s st\u2014"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "IT\u2019S ALREADY 10.42 AM?!"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: ' this must be because I stayed up late last night!'
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: sniff sniff
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: uhh?!
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "\u2026better take a shower right now!"
     imageChar: {fileID: 0}
     hasChoice: 0
