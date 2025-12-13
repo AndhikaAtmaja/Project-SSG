@@ -21,14 +21,16 @@ public class SceneManagement : MonoBehaviour
 
     public void OnChangeScene(string sceneName, string spawnArea)
     {
-        // Store where to go next
-        nextSpawn = spawnArea;
+        if (!DialogueManager.instance.isActive())
+        {
+            // Store where to go next
+            nextSpawn = spawnArea;
 
-        // Decide which scene to load
-        string targetScene = string.IsNullOrEmpty(sceneName) ? SceneManager.GetActiveScene().name : $"Test-{sceneName}";
+            // Decide which scene to load
+            string targetScene = string.IsNullOrEmpty(sceneName) ? SceneManager.GetActiveScene().name : $"Test-{sceneName}";
 
-        SceneManager.LoadScene(targetScene);
-        GameManager.instance.StartGame();
+            SceneManager.LoadScene(targetScene);
+        }
     }
 
     public string GetNextSpawn()

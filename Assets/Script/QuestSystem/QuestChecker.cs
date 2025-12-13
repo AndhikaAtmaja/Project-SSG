@@ -113,8 +113,7 @@ public class QuestChecker : MonoBehaviour
         //Trim name if nameScene
         string name = nameScene.Split('-')[0].ToLower();
 
-        Debug.Log($"Scene name before trim : {nameScene}" +
-                  $"Scene name after trim  : {name}");
+        //Debug.Log($"Scene name before trim : {nameScene}" + $"Scene name after trim  : {name}");
 
         switch (name.ToLower())
         {

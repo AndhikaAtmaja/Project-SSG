@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
   m_Name: After Bath
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - speakerName: Selene
+    dialogueType: 1
+    dialogueLine: ' i wonder what''s going on today?'
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Selene
+    dialogueType: 1
+    dialogueLine: ' let''s see~'
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
   isDialogueDone: 0

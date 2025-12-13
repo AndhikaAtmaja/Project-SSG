@@ -9,8 +9,8 @@ public class StoryManager : MonoBehaviour
     [Header("Story Progress")]
     [SerializeField] private List<StoryChapterSO> allChapters;
     [SerializeField] private StoryChapterSO currStoryChapter;
-    private int ChapterIndex;
-    private int StepIndex;
+    [SerializeField] private int ChapterIndex;
+    [SerializeField] private int StepIndex;
 
     [Header("Refences")]
     [SerializeField] private QuestList _questList;
@@ -76,12 +76,12 @@ public class StoryManager : MonoBehaviour
     {
         StoryStep step = currentStep;
 
-        //Debug.Log($"Total Step is {allChapters[ChapterIndex].chapterSteps.Count}");
+        Debug.Log($"current Step is {currentStep.nameStep}");
         //Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
 
         if (currentStep.dialogues.Count > 0)
         {
-            Debug.Log("Get Called");
+            //Debug.Log("Get Called");
             DialogueManager.instance.ChangeCurrentDialogue(step.dialogues[0]);
         }
         else
@@ -91,7 +91,7 @@ public class StoryManager : MonoBehaviour
 
         if (currentStep.quests.Count > 0)
         {
-            Debug.Log("Get Called");
+            //Debug.Log("Get Called");
             QuestManager.instance.FillQuest(step.quests);
         }
     }
@@ -114,7 +114,7 @@ public class StoryManager : MonoBehaviour
 
     private void NextStep()
     {
-        Debug.Log($"Proceed to next step");
+        //Debug.Log($"Proceed to next step");
 
         StoryChapterSO chapter = allChapters[ChapterIndex];
 

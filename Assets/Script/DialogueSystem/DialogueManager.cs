@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Refencee")]
     [SerializeField] private DialogueLineChecker _dialogueLineChecker;
     [SerializeField] private DialogueChatBox _dialogueChatBox;
+    [SerializeField] private DialogueBubble _dialogueBubble;
 
     private void Awake()
     {
@@ -37,7 +38,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogueChatBox()
+    public void StartDialogue()
     {
         if (currDialogue == null)
         {
@@ -51,13 +52,16 @@ public class DialogueManager : MonoBehaviour
 
     public void ChangeCurrentDialogue(DialogueSO dialogue)
     {
-        Debug.Log($"dialogue name {dialogue.name}");
+        //Debug.Log($"dialogue name {dialogue.name}");
         currDialogue = dialogue;
         isDialogueActive = false;
         totalLines = currDialogue.lines.Length;
         _currentIndexDialogue = 0;
 
-        SetDialogueData(dialogue);
+        if (DialogueSO.DialogueType.ChatBox == dialogue.lines[_currentIndexDialogue].dialogueType)
+        {
+            SetDialogueData(dialogue);
+        }
     }
 
     public void SetDialogueData(DialogueSO dialogue)
@@ -101,6 +105,7 @@ public class DialogueManager : MonoBehaviour
                 break;
 
             case DialogueSO.DialogueType.BubbleChat:
+                _dialogueBubble.ShowLine(currentLine);
                 break;
 
             case DialogueSO.DialogueType.DialogueBox:
@@ -121,5 +126,5 @@ public class DialogueManager : MonoBehaviour
         StoryManager.instance.CheckChapter();
     }
 
-    public bool GetsDialogueActive() => isDialogueActive;
+    public bool isActive() => isDialogueActive;
 }

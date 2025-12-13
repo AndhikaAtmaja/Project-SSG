@@ -41,7 +41,7 @@ public class QuestList : MonoBehaviour
 
         if (currQuestID >= listOfQuests.Count)
         {
-            Debug.Log("All quest Chapter are done!");
+            //Debug.Log("All quest Chapter are done!");
             StoryManager.instance.CheckChapter();
             UpdateQuestList?.Invoke();
             return;

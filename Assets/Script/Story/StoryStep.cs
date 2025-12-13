@@ -33,7 +33,7 @@ public class StoryStep
 
     public void DialogueChecker()
     {
-        Debug.Log("Get Called");
+        //Debug.Log("Get Called");
         bool Alldone = true;
         foreach (DialogueSO s in dialogues)
         {
@@ -51,12 +51,12 @@ public class StoryStep
 
     public bool GetAllDialogueDone()
     {
-        Debug.Log("Get Called GetAllDialogueDone");
+        //Debug.Log("Get Called GetAllDialogueDone");
         return AllDialogueDone;
     }
     public bool GetAllQuestDone()
     {
-        Debug.Log("Get Called GetAllQuestDone");
+        //Debug.Log("Get Called GetAllQuestDone");
         return AllQuestDone;
     }
 }

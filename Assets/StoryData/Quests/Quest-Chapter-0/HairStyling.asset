@@ -17,4 +17,4 @@ MonoBehaviour:
   questImage: {fileID: 0}
   nextScene: 
   objectives: []
-  IsCompleted: 0
+  IsCompleted: 1

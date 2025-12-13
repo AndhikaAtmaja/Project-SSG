@@ -20,8 +20,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
     dialogues:
     - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: Go to Bed
     setpID: FN-00
     quests:

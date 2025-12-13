@@ -6,9 +6,9 @@ public class ButtonDilaoge : MonoBehaviour
 {
     public void OnButtonClick()
     {
-        if (!DialogueManager.instance.GetsDialogueActive())
+        if (!DialogueManager.instance.isActive())
         {
-            DialogueManager.instance.StartDialogueChatBox();
+            DialogueManager.instance.StartDialogue();
         }
         else
         {

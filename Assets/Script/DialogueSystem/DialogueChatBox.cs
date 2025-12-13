@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueChatBox : MonoBehaviour
+public class DialogueChatBox : Dialogue
 {
     [SerializeField] private GenerateChatBox _generateChatBox;
     [SerializeField] private GenerateLine _generateLine;
     [SerializeField] private GenerateChoiceButton _generateChoiceButton;
     private bool waitingForChoice = false;
 
-    public void ShowLine(DialogueSO.DialogueLines line)
+    public override void ShowLine(DialogueSO.DialogueLines line)
     {
         if (waitingForChoice) 
             return;          // don't skip a choice
@@ -32,13 +32,13 @@ public class DialogueChatBox : MonoBehaviour
         }
     }
 
-    public void OnPlayerChoose(DialogueSO.ChoiceData choice)
+    public override void OnPlayerChoose(DialogueSO.ChoiceData choice)
     {
         waitingForChoice = false;
         if (choice.nextDialogue != null)
         {
             DialogueManager.instance.ChangeCurrentDialogue(choice.nextDialogue);
-            DialogueManager.instance.StartDialogueChatBox();
+            DialogueManager.instance.StartDialogue();
         }
         else
         {
