@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter-0/Test-Bedroom.unity
     guid: e752af8954a6c404a9372aee6965abc0
+  - enabled: 1
+    path: Assets/Scenes/Chapter-1/Test-Bedroom-1.unity
+    guid: 3cba04e0fc4b0644b951f3e788921bad
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b047acd7f3422ae40b6f00a73d96daa4, type: 3}
