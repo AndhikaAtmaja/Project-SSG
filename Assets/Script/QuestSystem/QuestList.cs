@@ -89,6 +89,25 @@ public class QuestList : MonoBehaviour
         CheckListQuest();
     }
 
+    public QuestSO SearchQuestByID(string questID)
+    {
+        for (int i = 0;i < listOfQuests.Count; i++)
+        {
+            string questPrefix = listOfQuests[i].questID.Split('-')[0];
+
+            if (questPrefix == questID)
+            {
+                //Debug.Log($"Find quest : {listOfQuests[i]}");
+                return listOfQuests[i];
+            }
+            else
+            {
+                Debug.Log($"Not find quest by ID of {questID}");
+            }
+        }
+        return null;
+    }
+
     private void ResetAllQuests()
     {
         currQuestID = 0;

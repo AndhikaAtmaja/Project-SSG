@@ -29,4 +29,4 @@ MonoBehaviour:
     choices: []
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 1
+  isDialogueDone: 0

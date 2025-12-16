@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allChapters:
   - {fileID: 11400000, guid: b6db2f03ca4ab3c4a854818faea55d40, type: 2}
+  - {fileID: 11400000, guid: bcc7874833a75f243ad756de608b87ed, type: 2}
   - {fileID: 11400000, guid: b73064eecb9737b448ebcba4bffeb2d2, type: 2}
   currStoryChapter: {fileID: 0}
+  ChapterIndex: 0
+  StepIndex: 0
   _questList: {fileID: 0}

@@ -10,6 +10,17 @@ public class DialogueChatBox : Dialogue
     [SerializeField] private GenerateChoiceButton _generateChoiceButton;
     private bool waitingForChoice = false;
 
+    public void SetMassageArea(Transform area)
+    {
+        _generateChatBox.SetConatinerChatBox(area);
+        
+    }
+
+    public void SetInputMassageArea(Transform inputArea)
+    {
+        _generateChoiceButton.SetChoiceContainer(inputArea);
+    }
+
     public override void ShowLine(DialogueSO.DialogueLines line)
     {
         if (waitingForChoice) 

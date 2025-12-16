@@ -29,7 +29,6 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-   
     public void StartChapter()
     {
         //start from chpater 0 or from save file
@@ -48,6 +47,8 @@ public class StoryManager : MonoBehaviour
             Debug.LogWarning("No allChapters assigned!");
             return;
         }
+
+        CompleteChapterQuest();
 
         string find = chapterName.ToLower();
         currStoryChapter = null;
@@ -71,6 +72,17 @@ public class StoryManager : MonoBehaviour
         // Success load step 0
         StepIndex = 0;
         LoadCurrentStep();
+    }
+
+    private void CompleteChapterQuest()
+    {
+        StoryChapterSO chapter = allChapters[ChapterIndex];
+        StepIndex++;
+
+        if (StepIndex >= chapter.chapterSteps.Count)
+        {   
+            chapter.isChapterDone = true;
+        }
     }
 
     private void LoadCurrentStep()
@@ -128,7 +140,13 @@ public class StoryManager : MonoBehaviour
         if (StepIndex >= chapter.chapterSteps.Count)
         {
             Debug.Log("Chapter finished!");
+            chapter.isChapterDone = true;
             return;
+        }
+
+        if (InteractManager.instance != null)
+        {
+            InteractManager.instance.ActiveInteract();
         }
 
         LoadCurrentStep();
@@ -154,23 +172,6 @@ public class StoryManager : MonoBehaviour
     private void OnDialogueFinished()
     {
         if (isTransitioning) return;
-        if (currentStep.autoStartDialogueAfterScene)
-            CheckChapter();
+        CheckChapter();
     }
-
-    /*    private void NextChapter()
-        {
-            Debug.Log("Proceed to next NextChapter");
-
-            ChapterIndex++;
-
-            if (ChapterIndex >= allChapters.Count)
-            {
-                Debug.Log("All Chapters Complete! Story Finished.");
-                return;
-            }
-
-            StepIndex = 0;
-            LoadCurrentStep();
-        }*/
 }

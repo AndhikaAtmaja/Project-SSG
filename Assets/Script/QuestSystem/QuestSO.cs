@@ -8,7 +8,8 @@ public enum QuestObjectiveType
     TakePhoto,
     OpenSosialMedia,
     OpenMessage,
-    ChangeScene
+    ChangeScene,
+    ClickChapter
 }
 
 [System.Serializable]

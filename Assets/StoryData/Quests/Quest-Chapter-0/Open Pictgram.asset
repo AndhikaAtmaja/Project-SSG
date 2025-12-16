@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
-  m_Name: Open Phone
+  m_Name: Open Pictgram
   m_EditorClassIdentifier: 
   questID: OP-00
-  questName: Open Phone
+  questName: Open Pictgram
   questImage: {fileID: 0}
   objectives:
-  - description: 
-    type: 5
-    targetSceneName: Phone
-    isCompleted: 1
-  IsCompleted: 1
+  - description: Open Pictgram
+    type: 3
+    targetSceneName: 
+    isCompleted: 0
+  IsCompleted: 0

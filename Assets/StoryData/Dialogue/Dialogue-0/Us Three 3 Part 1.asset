@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
+  m_Name: Us Three 3 Part 1
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Ezera
+    dialogueType: 0
+    dialogueLine: "you can\u2019t keep ignoring us like this moonie."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Liam
+    dialogueType: 0
+    dialogueLine: "yeah, we\u2019re just trying to care about you."
+    imageChar: {fileID: 0}
+    hasChoice: 1
+    choices:
+    - choiceText: '[Ignore them.]'
+      nextDialogue: {fileID: 11400000}
+    - choiceText: '[Just read it.]'
+      nextDialogue: {fileID: 11400000}
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Ezera
+    dialogueType: 0
+    dialogueLine: do you really not want to talk to us anymore? :(
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Liam
+    dialogueType: 0
+    dialogueLine: it's been a month since you ignored us.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Ezera
+    dialogueType: 0
+    dialogueLine: ((cute crying emoji).
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[Remain silent.]'
+      nextDialogue: {fileID: 11400000}
+    - choiceText: "[\u2026..]"
+      nextDialogue: {fileID: 11400000}
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Liam
+    dialogueType: 0
+    dialogueLine: fine. just do what you want.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Ezera
+    dialogueType: 0
+    dialogueLine: " liam\u2026 "
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Liam
+    dialogueType: 0
+    dialogueLine: "we\u2019re just trying to care for her zera, and this is what
+      we got? a complete silence? it feels like we\u2019re talking to a dead object!"
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Ezera
+    dialogueType: 0
+    dialogueLine: ...
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    triggerCutscene: 0
+    cutsceneID: 
+  isDialogueDone: 0

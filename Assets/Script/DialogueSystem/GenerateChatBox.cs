@@ -8,10 +8,15 @@ public class GenerateChatBox : MonoBehaviour
     public GameObject[] prefabsChatBox;
     public Transform conatinerChatBox;
 
+    public void SetConatinerChatBox(Transform massageArea)
+    {
+        conatinerChatBox = massageArea;
+    }
+
     public void OnGenerateChatBox(string speakerName, string dialogue)
     {
         //check if dialogueLine is player or not
-        GameObject preafabtoSpawn = (speakerName == "Player") ?
+        GameObject preafabtoSpawn = (speakerName == "Selene") ?
             prefabsChatBox[0] : prefabsChatBox[1];
        
        //Spawn chatbox in area

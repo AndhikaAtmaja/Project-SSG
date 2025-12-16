@@ -19,5 +19,5 @@ MonoBehaviour:
   - description: 
     type: 5
     targetSceneName: ToothBrush
-    isCompleted: 1
-  IsCompleted: 1
+    isCompleted: 0
+  IsCompleted: 0

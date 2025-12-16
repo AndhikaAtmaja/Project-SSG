@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ButtonChapter : MonoBehaviour
 {
-    [SerializeField] private string chapter;
+    [SerializeField] private StoryChapterSO chapter;
     [SerializeField] private NotificationSO notification;
     [SerializeField] private NotificationAnimation _notificationAnimation;
 
+    public static event Action<string> OnClickButton;
+
    public void OnSelectChapter()
     {
-        StoryManager.instance.SelectedChapter(chapter);
+        OnClickButton?.Invoke(gameObject.name);
+        StoryManager.instance.SelectedChapter(chapter.nameChapter);
 
         if (_notificationAnimation != null && notification != null)
         {

@@ -13,6 +13,8 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private GameObject currPhoneScreen;
     [SerializeField] private GameObject _buttonAccessibility;
     [SerializeField] private GameObject _notification;
+    [SerializeField] private Transform MessageArea;
+    [SerializeField] private Transform MessageInputArea;
 
 
     private void Awake()
@@ -30,6 +32,7 @@ public class PhoneManager : MonoBehaviour
 
     private void Start()
     {
+        SetTransformArea();
         OnGetOpenPhone();
     }
 
@@ -41,6 +44,12 @@ public class PhoneManager : MonoBehaviour
             _buttonAccessibility.SetActive(false);
 
         isPhoneOpen = true;
+    }
+
+    private void SetTransformArea()
+    {
+        DialogueManager.instance.SetMassageArea(MessageArea);
+        DialogueManager.instance.SetMassageInputArea(MessageInputArea);
     }
 
     public void ChangePhoneScreen(string ScreenName)

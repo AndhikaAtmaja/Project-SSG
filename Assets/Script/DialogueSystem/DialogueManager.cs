@@ -82,6 +82,17 @@ public class DialogueManager : MonoBehaviour
         _currentIndexDialogue = resumeIndex;
     }
 
+    public void SetMassageArea(Transform massageArea)
+    {
+        _dialogueChatBox.SetMassageArea(massageArea);
+        _dialogueLineChecker.SetConatinerChatBox(massageArea);
+    }
+
+    public void SetMassageInputArea(Transform massageInputArea)
+    {
+        _dialogueChatBox.SetInputMassageArea(massageInputArea);
+    }
+
     public void NextLine()
     {
         // Move to next line

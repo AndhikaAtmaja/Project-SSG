@@ -23,4 +23,100 @@ MonoBehaviour:
     nextSceneName: 
     AllQuestDone: 0
     AllDialogueDone: 0
+  - nameStep: Chat With Friend
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 2131ffa4ec6074f4ab3825827398cf4b, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After chat with friend
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: c3506259e8c835a4f891e6348c969dd4, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After Turn off phone
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 2c6f92224feae56429f9da06b346fdec, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Do Make Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: c29bb02dbbb673f43ae1577ea2ff5f80, type: 2}
+    - {fileID: 11400000, guid: 83ae6e909b5fa0d48bccddec59d4f2e7, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After Make Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: a68007bc33d472d499a632bb08841f6b, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 51d36e6af1dafb04fa3bed0a62651a2e, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After Turn On Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 3acc00f05e41076419e88b9ddf71d9f0, type: 2}
+    - {fileID: 11400000, guid: 34f38b0a8b9a5ea41a8f1fd53544d0db, type: 2}
+    - {fileID: 11400000, guid: b7c234b4e19165244898506e7be91d16, type: 2}
+    - {fileID: 11400000, guid: 7af42bb0e4ce4b5499592686be05d2b0, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After Turn Off Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: ec7ea398766a187489ea682f72a6bf4c, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 2255a1b92b5636346b8840b07b6941f9, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After buyying Food
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 76a77b4bbb037254487c918e4acd7e49, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After take a bath
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: b6f1484a1d8d455409074744d894dbb8, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 62015a3359cbdcb4ba235ada1ed9f0c8, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: At bed
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
   isChapterDone: 0

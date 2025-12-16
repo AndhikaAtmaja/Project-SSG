@@ -27,6 +27,11 @@ public class PatternMGManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        quest = QuestManager.instance.FindQuestByID("PP");
+    }
+
     public void CheckPatternOrder(List<GameObject> PlayerPattern)
     {
         isCorrect = true;

@@ -6,6 +6,11 @@ public class DialogueLineChecker : MonoBehaviour
 {
     [SerializeField] private Transform areaChat;
 
+    public void SetConatinerChatBox(Transform massageArea)
+    {
+        areaChat = massageArea;
+    }
+
     public List<string> GetExistingDialogueLines()
     {
         List<string> existingLines = new List<string>();

@@ -43,8 +43,18 @@ public class QuestManager : MonoBehaviour
         _questData.FillWithNewQuest(quests);
     }
 
+    public QuestSO FindQuestByID(string questID)
+    {
+        return _questList.SearchQuestByID(questID);
+    }
+
     public void ShowQuets()
     {
         _questList.StartQuest();
+    }
+
+    public QuestSO GetCurrentQuest()
+    {
+        return _questList.GetCurrentQuest();
     }
 }

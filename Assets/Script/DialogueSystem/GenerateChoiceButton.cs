@@ -10,6 +10,11 @@ public class GenerateChoiceButton : MonoBehaviour
 
     [SerializeField] private DialogueChatBox _dialogueChatBox;
 
+    public void SetChoiceContainer(Transform massageInputArea)
+    {
+        choiceContainer = massageInputArea;
+    }
+
     public void OnGenerateChoiceBox(DialogueSO.DialogueLines dailogue)
     {
         // Remove any previous buttons

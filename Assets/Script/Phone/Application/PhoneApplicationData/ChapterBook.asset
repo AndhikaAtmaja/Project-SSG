@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd790396f23e71349abea651b02002ce, type: 3}
   m_Name: ChapterBook
   m_EditorClassIdentifier: 
-  ApplicationIcon: {fileID: 0}
+  ApplicationIcon: {fileID: 21300000, guid: b3d81f7f3439b284b853763fd777905a, type: 3}
   ApplicationName: ChapterBook

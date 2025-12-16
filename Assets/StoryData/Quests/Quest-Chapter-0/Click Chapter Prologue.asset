@@ -15,5 +15,9 @@ MonoBehaviour:
   questID: CC-00
   questName: 
   questImage: {fileID: 0}
-  objectives: []
+  objectives:
+  - description: 
+    type: 6
+    targetSceneName: 
+    isCompleted: 0
   IsCompleted: 0

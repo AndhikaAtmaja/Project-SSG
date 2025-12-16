@@ -8,16 +8,4 @@ public class BathRoom : MonoBehaviour, IInteractable
     {
         SceneManagement.instance.OnChangeScene("ToothBrush", "");
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

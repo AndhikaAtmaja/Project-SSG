@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
   m_Name: Toothbrusing
   m_EditorClassIdentifier: 
-  questID: 
-  questName: 
+  questID: TO-00
+  questName: Tootbrushing
   questImage: {fileID: 0}
   objectives: []
-  IsCompleted: 1
+  IsCompleted: 0

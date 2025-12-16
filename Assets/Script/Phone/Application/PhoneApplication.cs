@@ -17,7 +17,7 @@ public class PhoneApplication : MonoBehaviour
         if (ApplicationData != null)
         {
             appName.text = ApplicationData.ApplicationName;
-            //appIcon = ApplicationData.ApplicationIcon;
+            appIcon.sprite = ApplicationData.ApplicationIcon;
         }
     }
 
