@@ -21,8 +21,8 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: HairStyling
     setpID: 
     quests:
@@ -31,8 +31,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: Take A Bath
     setpID: 
     quests:
@@ -42,7 +42,7 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     AllQuestDone: 0
-    AllDialogueDone: 0
+    AllDialogueDone: 1
   - nameStep: After take a bath
     setpID: 
     quests:

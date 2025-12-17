@@ -50,7 +50,8 @@ public class QuestChecker : MonoBehaviour
         }
 
         var currentQuest = questList.GetCurrentQuest();
-        
+
+        Debug.Log("Get Called");
 
         if (currentQuest == null)
         {
@@ -60,6 +61,7 @@ public class QuestChecker : MonoBehaviour
 
         bool updated = false;
 
+      
         foreach (var obj in currentQuest.objectives)
         {
             Debug.Log($"Objective type: {obj.type}");
@@ -85,7 +87,6 @@ public class QuestChecker : MonoBehaviour
                 Debug.Log("ChangeScene objective MATCHED and completed");
             }
         }
-
 
         if (updated && currentQuest.objectives.TrueForAll(o => o.isCompleted))
         {

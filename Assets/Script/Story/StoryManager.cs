@@ -48,8 +48,6 @@ public class StoryManager : MonoBehaviour
             return;
         }
 
-        CompleteChapterQuest();
-
         string find = chapterName.ToLower();
         currStoryChapter = null;
 
@@ -74,17 +72,6 @@ public class StoryManager : MonoBehaviour
         LoadCurrentStep();
     }
 
-    private void CompleteChapterQuest()
-    {
-        StoryChapterSO chapter = allChapters[ChapterIndex];
-        StepIndex++;
-
-        if (StepIndex >= chapter.chapterSteps.Count)
-        {   
-            chapter.isChapterDone = true;
-        }
-    }
-
     private void LoadCurrentStep()
     {
         StoryStep step = currentStep;
@@ -96,10 +83,6 @@ public class StoryManager : MonoBehaviour
         {
             //Debug.Log("Get Called");
             DialogueManager.instance.ChangeCurrentDialogue(step.dialogues[0]);
-        }
-        else
-        {
-            Debug.Log("No dialogues in step!");
         }
 
         if (currentStep.quests.Count > 0)
@@ -135,18 +118,18 @@ public class StoryManager : MonoBehaviour
         StepIndex++;
 
         //Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
-        
+
+        if (StepIndex >= chapter.chapterSteps.Count)
+        {
+            chapter.isChapterDone = true;
+        }
+
         // If still inside this chapter
         if (StepIndex >= chapter.chapterSteps.Count)
         {
             Debug.Log("Chapter finished!");
             chapter.isChapterDone = true;
-            return;
-        }
-
-        if (InteractManager.instance != null)
-        {
-            InteractManager.instance.ActiveInteract();
+            //return;
         }
 
         LoadCurrentStep();

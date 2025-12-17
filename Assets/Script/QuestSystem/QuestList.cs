@@ -10,15 +10,11 @@ public class QuestList : MonoBehaviour
 
     public UnityEvent UpdateQuestList;
 
-    private void Start()
-    {
-        ResetAllQuests();
-        CheckListQuest();
-    }
+   
 
     public void StartQuest()
     {
-        ResetAllQuests();
+        
         CheckListQuest();
     }
 
