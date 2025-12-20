@@ -5,21 +5,9 @@ public class InteractCharacter : MonoBehaviour
 {
     [SerializeField] private IInteractable _interactable;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void InteractWithObject(InputAction.CallbackContext context)
     {
-        if (context.performed && _interactable != null)
+        if (context.performed && _interactable != null && !GameManager.instance.GetStatus("minigame"))
         {
             _interactable.interact();
         }

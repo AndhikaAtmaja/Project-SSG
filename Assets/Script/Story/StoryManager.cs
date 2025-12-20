@@ -29,6 +29,11 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        LoadCurrentStep();
+    }
+
     public void StartChapter()
     {
         //start from chpater 0 or from save file
@@ -89,6 +94,11 @@ public class StoryManager : MonoBehaviour
         {
             //Debug.Log("Get Called");
             QuestManager.instance.FillQuest(step.quests);
+        }
+
+        if (currentStep.nextSceneName != null)
+        {
+            SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "");
         }
     }
 

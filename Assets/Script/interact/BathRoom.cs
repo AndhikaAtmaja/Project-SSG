@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BathRoom : MonoBehaviour, IInteractable
 {
+    public string nameScene;
+
     public void interact()
     {
-        SceneManagement.instance.OnChangeScene("ToothBrush", "");
+        SceneManagement.instance.OnChangeScene(nameScene, "");
     }
 }

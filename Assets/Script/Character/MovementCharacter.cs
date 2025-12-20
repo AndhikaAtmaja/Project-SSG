@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,9 +19,11 @@ public class MovementCharacter : MonoBehaviour
         direction = context.ReadValue<Vector2>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        rb.velocity = new Vector2 (direction.x * speedMovement, transform.position.y);
+        if (!GameManager.instance.GetStatus("minigame"))
+        {
+            rb.velocity = direction * speedMovement;
+        }
     }
 }

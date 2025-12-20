@@ -9,10 +9,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private string currScene;
 
+    [Header("Game Status")]
+    [SerializeField] private bool isMiniGameActive;
+    [SerializeField] private bool isDoneMakeUp;
+
     [Header("reference")]
     public GameObject storyManagerPrefab;
     public GameObject questManagerPrefab;
     public GameObject dialogueManagerPrefab;
+
+    [Header("Events")]
+    public ActiveDeactiveSREventSO activeDeactiveSREvent;
 
     private StoryManager storyManagerInstance;
     private QuestManager questManagerInstance;
@@ -62,5 +69,38 @@ public class GameManager : MonoBehaviour
     private void OnLoadedScene(Scene scene, LoadSceneMode mode)
     {
         currScene = scene.name;
+    }
+
+    public void SetStatus(string nameEvent, bool condition)
+    {
+        string name = nameEvent.ToLower();
+
+        switch (name)
+        {
+            case "minigame":
+                isMiniGameActive = condition;
+                activeDeactiveSREvent.Raise(!isMiniGameActive);
+                break;
+
+            case "makeup":
+                isDoneMakeUp = condition;
+                break;
+        }
+    }
+
+    public bool GetStatus(string nameEvent)
+    {
+        string name = nameEvent.ToLower();
+
+        switch (name)
+        {
+            case "minigame":
+                return isMiniGameActive;
+
+            case "makeup":
+                return isDoneMakeUp;
+        }
+
+        return false;
     }
 }

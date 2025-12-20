@@ -119,4 +119,12 @@ MonoBehaviour:
     nextSceneName: 
     AllQuestDone: 0
     AllDialogueDone: 0
+  - nameStep: Sleep
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: Bedroom-1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   isChapterDone: 0

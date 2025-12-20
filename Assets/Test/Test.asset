@@ -14,13 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameChapter: 
   chapterSteps:
-  - nameStep: test active Bathroom
+  - nameStep: Go to Sleep
     setpID: 
     quests:
-    - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
+    - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Go to Sleep
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: WakeUp-1
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

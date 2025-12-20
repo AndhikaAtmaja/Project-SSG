@@ -35,7 +35,7 @@ public class SpawnerManager : MonoBehaviour
         {
             for (int i = 0; i < AreaSpawn.Count; i++)
             {
-                if (AreaSpawn[i].name == spawnPosition)
+                if (AreaSpawn[i].name.ToLower() == spawnPosition.ToLower())
                 {
                     //Spawn player on that area
                     SpawnCharacter.instance.SpawningCharacter(AreaSpawn[i].transform.position);
