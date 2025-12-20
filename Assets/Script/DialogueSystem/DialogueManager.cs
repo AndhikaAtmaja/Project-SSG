@@ -48,6 +48,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("Get Called");
+
         HandleDialogueLine();
         isDialogueActive = true;
     }
@@ -80,6 +82,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         _currentIndexDialogue = resumeIndex;
+    }
+
+    public void SetBaloonUI(BubbleUI ballonUI)
+    {
+        _dialogueBubble.SetBubbleUI(ballonUI);
     }
 
     public void SetMassageArea(Transform massageArea)

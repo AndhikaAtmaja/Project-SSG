@@ -29,10 +29,10 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    /*private void Start()
     {
         LoadCurrentStep();
-    }
+    }*/
 
     public void StartChapter()
     {

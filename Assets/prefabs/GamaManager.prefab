@@ -45,3 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currScene: 
+  isMiniGameActive: 0
+  isDoneMakeUp: 0
+  storyManagerPrefab: {fileID: 0}
+  questManagerPrefab: {fileID: 0}
+  dialogueManagerPrefab: {fileID: 0}
+  activeDeactiveSREvent: {fileID: 11400000, guid: 4c987c8c4ef76f94f88f6c925a199c29, type: 2}

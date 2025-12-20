@@ -6,13 +6,13 @@ public class SceneEntryTriggerDialogue : MonoBehaviour
 {
     private void Start()
     {
-        Debug.Log("Get Called");
+        //Debug.Log("Get Called");
         StartCoroutine(TryToAutoTriggerDialogue());
     }
 
     private IEnumerator TryToAutoTriggerDialogue()
     {
-        Debug.Log("Get Called");
+        //Debug.Log("Get Called");
         StoryStep step = StoryManager.instance.currentStep;
         if (step == null) yield break;
 

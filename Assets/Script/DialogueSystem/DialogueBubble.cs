@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class DialogueBubble : Dialogue
 {
+    [SerializeField] private BubbleUI _bubbleUI;
+
+    public void SetBubbleUI(BubbleUI baloonUI)
+    {
+       if (_bubbleUI == null)
+            _bubbleUI = baloonUI;
+    }
+
     public override void ShowLine(DialogueSO.DialogueLines line)
     {
         Debug.Log($"{line.speakerName} : {line.dialogueLine}");
+        _bubbleUI.ActiveBuloonUI(line.dialogueLine);
         DialogueManager.instance.NextLine();
     }
 }

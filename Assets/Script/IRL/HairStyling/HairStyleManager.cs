@@ -8,7 +8,6 @@ public class HairStyleManager : MonoBehaviour
     [Header("Config && status HairStyle MiniGame")]
     private List<GameObject> hairs;
     private int playerCount;
-    [SerializeField] private GameObject dialogueButton;
     [SerializeField] private GameObject ChangeButton;
 
     public static HairStyleManager Instance;
@@ -34,26 +33,26 @@ public class HairStyleManager : MonoBehaviour
 
         if (playerCount >= hairs.Count)
         {
-            dialogueButton.SetActive(true);
+            ChangeButton.SetActive(true);
         }
     }
 
     public void ShowButton()
     {
         Debug.Log("Get Called");
-        ChangeButton.SetActive(true);
+        
     }
 
     #region Automation total hair in-game
     private void OnEnable()
     {
-        DialogueManager.OnDialogueFinished += ShowButton;
+     
         SceneManager.sceneLoaded += OnLoadedScene;
     }
 
     private void OnDisable()
     {
-        DialogueManager.OnDialogueFinished -= ShowButton;
+   
         SceneManager.sceneLoaded -= OnLoadedScene;
     }
 

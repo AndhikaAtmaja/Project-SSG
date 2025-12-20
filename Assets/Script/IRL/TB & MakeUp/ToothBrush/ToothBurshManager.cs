@@ -28,7 +28,7 @@ public class ToothBurshManager : MonoBehaviour
     {
         if (isActive)
         {
-            if (playerStroke >= totalStroke & !ToothBrush.instance.GetIsPickUp())
+            if (playerStroke >= totalStroke)
             {
                 GameManager.instance.SetStatus("minigame", isActive);
                 changeButton.SetActive(true);
