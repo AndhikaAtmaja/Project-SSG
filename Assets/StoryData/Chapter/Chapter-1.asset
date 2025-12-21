@@ -14,15 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameChapter: chapter-1
   chapterSteps:
-  - nameStep: Notif Friend
+  - nameStep: Wak Up
     setpID: FN-00
-    quests:
-    - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
-    dialogues:
-    - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
-    - {fileID: 11400000, guid: 7937e47a2a39ac047a133b4eb32ca85a, type: 2}
+    quests: []
+    dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: 
+    nextSceneName: WakeUp-1
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Go to Bed
@@ -32,6 +30,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

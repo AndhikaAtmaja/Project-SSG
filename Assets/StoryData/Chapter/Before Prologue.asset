@@ -29,7 +29,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
     dialogues:
     - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
-    autoStartDialogueAfterScene: 0
+    autoStartDialogueAfterScene: 1
     nextSceneName: Hairstyel
     AllQuestDone: 0
     AllDialogueDone: 0

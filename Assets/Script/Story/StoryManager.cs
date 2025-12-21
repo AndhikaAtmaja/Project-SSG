@@ -29,10 +29,10 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    /*private void Start()
+    private void Start()
     {
         LoadCurrentStep();
-    }*/
+    }
 
     public void StartChapter()
     {
@@ -96,8 +96,18 @@ public class StoryManager : MonoBehaviour
             QuestManager.instance.FillQuest(step.quests);
         }
 
+        if (currentStep.nextChapter != null)
+        {
+            NextChapter();
+        }
+
         if (currentStep.nextSceneName != null)
         {
+            string scene = currentStep.nextSceneName;
+
+            if (string.IsNullOrEmpty(scene))
+                return;
+
             SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "");
         }
     }
@@ -145,6 +155,33 @@ public class StoryManager : MonoBehaviour
         LoadCurrentStep();
         // If last step, move chapter
         //NextChapter();
+    }
+
+    private void NextChapter()
+    {
+        Debug.Log("get Called");
+
+        if (currentStep.nextChapter != null)
+        {
+            //find chapter in the data 
+            bool found = false;
+
+            if (found == false)
+            {
+                for (int i = 0; i < allChapters.Count; i++)
+                {
+                    if (allChapters[i].nameChapter.ToLower() == currentStep.nextChapter.nameChapter.ToLower())
+                    {
+                        //set the chapter with this
+                        currStoryChapter = allChapters[i];
+                        ChapterIndex = i;
+                        StepIndex = 0;
+                        LoadCurrentStep();
+                    }
+                }
+            }
+
+        }
     }
 
     public void LockStory()

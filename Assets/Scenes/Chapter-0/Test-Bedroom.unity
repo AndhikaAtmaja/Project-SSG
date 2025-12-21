@@ -388,8 +388,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 248001968}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 248001964}
+        m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: GetChangeScene
         m_Mode: 1
         m_Arguments:
@@ -3804,16 +3804,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: ec7ea398766a187489ea682f72a6bf4c, type: 2}
+      objectReference: {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: c3506259e8c835a4f891e6348c969dd4, type: 2}
+      objectReference: {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
     - target: {fileID: 8291751280543238483, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

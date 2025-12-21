@@ -13,17 +13,26 @@ public class DialogueLineChecker : MonoBehaviour
 
     public List<string> GetExistingDialogueLines()
     {
-        List<string> existingLines = new List<string>();
-
-        foreach (Transform child in areaChat)
+        if (areaChat != null)
         {
-            ChatBoxUI chatBoxUI = child.GetComponent<ChatBoxUI>();
-            if (chatBoxUI != null)
+            List<string> existingLines = new List<string>();
+
+            foreach (Transform child in areaChat)
             {
-                existingLines.Add(chatBoxUI.GetMessageText());
+                ChatBoxUI chatBoxUI = child.GetComponent<ChatBoxUI>();
+                if (chatBoxUI != null)
+                {
+                    existingLines.Add(chatBoxUI.GetMessageText());
+                }
             }
+            return existingLines;
         }
 
-        return existingLines;
+        else
+        {
+            Debug.LogWarning("There are NULL refence for areaChat!");
+        }
+
+        return null;
     }
 }

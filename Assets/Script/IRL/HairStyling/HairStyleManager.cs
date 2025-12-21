@@ -9,6 +9,7 @@ public class HairStyleManager : MonoBehaviour
     private List<GameObject> hairs;
     private int playerCount;
     [SerializeField] private GameObject ChangeButton;
+    [SerializeField] private QuestSO quest;
 
     public static HairStyleManager Instance;
     private void Awake()
@@ -24,6 +25,7 @@ public class HairStyleManager : MonoBehaviour
     {
         //GenerateRandomHair.Instance.StartGenerateHair();
         Debug.Log($"There {hairs.Count} need apply to get style!");
+        quest = QuestManager.instance.GetCurrentQuest();
     }
 
     public void AddPlayerCount()
@@ -33,6 +35,7 @@ public class HairStyleManager : MonoBehaviour
 
         if (playerCount >= hairs.Count)
         {
+            QuestManager.instance.GetCheckQuest(quest.questID, true);
             ChangeButton.SetActive(true);
         }
     }

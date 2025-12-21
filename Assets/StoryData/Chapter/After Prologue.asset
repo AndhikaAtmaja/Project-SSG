@@ -21,8 +21,9 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: Chat With Friend
     setpID: 
     quests: []
@@ -30,8 +31,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2131ffa4ec6074f4ab3825827398cf4b, type: 2}
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After chat with friend
     setpID: 
     quests:
@@ -39,8 +41,9 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After Turn off phone
     setpID: 
     quests: []
@@ -48,8 +51,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2c6f92224feae56429f9da06b346fdec, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: Do Make Up
     setpID: 
     quests:
@@ -58,8 +62,9 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After Make Up
     setpID: 
     quests:
@@ -68,8 +73,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 51d36e6af1dafb04fa3bed0a62651a2e, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After Turn On Phone
     setpID: 
     quests:
@@ -80,8 +86,9 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    nextChapter: {fileID: 0}
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After Turn Off Phone
     setpID: 
     quests:
@@ -90,6 +97,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2255a1b92b5636346b8840b07b6941f9, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After buyying Food
@@ -99,6 +107,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After take a bath
@@ -109,14 +118,17 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 62015a3359cbdcb4ba235ada1ed9f0c8, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
-  - nameStep: At bed
+  - nameStep: Sleep
     setpID: 
-    quests: []
+    quests:
+    - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Sleep
@@ -125,6 +137,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: Bedroom-1
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

@@ -12,6 +12,7 @@ public class StoryStep
 
     public bool autoStartDialogueAfterScene;
     public string nextSceneName;
+    public StoryChapterSO nextChapter;
 
     [SerializeField] private bool AllQuestDone;
     [SerializeField] private bool AllDialogueDone;
