@@ -23,7 +23,7 @@ public class GenerateChoiceButton : MonoBehaviour
         foreach (var choice in dailogue.choices)
         {
             GameObject newChoiceBox = Instantiate(choiceBoxPrefabs, choiceContainer);
-            ChoiceButton choiceButton = newChoiceBox.GetComponent<ChoiceButton>();
+            ChoiceButton choiceButton = newChoiceBox.GetComponentInChildren<ChoiceButton>();
 
             choiceButton.SetChoiceButton(choice.choiceText, () => _dialogueChatBox.OnPlayerChoose(choice));
         }

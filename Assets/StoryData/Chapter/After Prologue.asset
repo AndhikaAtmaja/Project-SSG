@@ -22,8 +22,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Chat With Friend
     setpID: 
     quests: []
@@ -32,8 +32,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: After chat with friend
     setpID: 
     quests:
@@ -42,8 +42,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: After Turn off phone
     setpID: 
     quests: []
@@ -52,8 +52,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Do Make Up
     setpID: 
     quests:
@@ -63,8 +63,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: After Make Up
     setpID: 
     quests:
@@ -74,8 +74,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: After Turn On Phone
     setpID: 
     quests:
@@ -87,8 +87,8 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: After Turn Off Phone
     setpID: 
     quests:
@@ -136,7 +136,7 @@ MonoBehaviour:
     quests: []
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: Bedroom-1
+    nextSceneName: WakeUp-1
     nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0

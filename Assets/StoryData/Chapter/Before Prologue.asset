@@ -21,6 +21,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: HairStyling
@@ -31,6 +32,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: Hairstyel
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Take A Bath
@@ -41,6 +43,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After take a bath
@@ -51,6 +54,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f7f73b99f35c0a1488e442fc018767d4, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Inside Phone
@@ -62,6 +66,7 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
+    nextChapter: {fileID: 0}
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0
