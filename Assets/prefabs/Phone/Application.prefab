@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5791569d76d3e644b89ff4276f38b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ApplicationData: {fileID: 11400000, guid: 85067110a9ae188458af23f38c330349, type: 2}
+  ApplicationData: {fileID: 11400000, guid: 9fd2631fdcabb9e4a919a79bed2ef2f7, type: 2}
   appName: {fileID: 6525962723576228610}
   appIcon: {fileID: 9096397920543278767}
 --- !u!114 &466239926220744331
@@ -179,7 +179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: -26.239998}
+  m_AnchoredPosition: {x: 0.000015258789, y: -23.1}
   m_SizeDelta: {x: 0, y: -52.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5079983878422165879
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5079983878422165879}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
