@@ -103,22 +103,17 @@ public class StoryManager : MonoBehaviour
 
         if (currentStep.musicTrack != null)
         {
-            string musicTrack = currentStep.musicTrack;
+            PlayMusic();
+        }
 
-            if (string.IsNullOrEmpty(musicTrack))
-                return;
-
-            MusicManager.instance.PlayMusic(musicTrack);
+        if (currentStep.soundEffect != null)
+        {
+            PlaySound();
         }
 
         if (currentStep.nextSceneName != null)
         {
-            string scene = currentStep.nextSceneName;
-
-            if (string.IsNullOrEmpty(scene))
-                return;
-
-            SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "");
+            ChangeScene();
         }
     }
 
@@ -197,6 +192,36 @@ public class StoryManager : MonoBehaviour
     public void LockStory()
     {
         isTransitioning = true;
+    }
+
+    private void PlaySound()
+    {
+        string soundFX = currentStep.soundEffect;
+
+        if (string.IsNullOrEmpty(soundFX))
+            return;
+
+        SoundManager.instance.PlaySoundFXOneClip(soundFX);
+    }
+
+    private void PlayMusic()
+    {
+        string musicTrack = currentStep.musicTrack;
+
+        if (string.IsNullOrEmpty(musicTrack))
+            return;
+
+        MusicManager.instance.PlayMusic(musicTrack);
+    }
+
+    private void ChangeScene()
+    {
+        string scene = currentStep.nextSceneName;
+
+        if (string.IsNullOrEmpty(scene))
+            return;
+
+        SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "");
     }
 
     private void OnEnable()

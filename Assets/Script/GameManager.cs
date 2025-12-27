@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Status")]
     [SerializeField] private bool isMiniGameActive;
     [SerializeField] private bool isDoneMakeUp;
+    [SerializeField] private bool isDoneTakeABath;
 
     [Header("reference")]
     public GameObject storyManagerPrefab;
@@ -99,8 +100,16 @@ public class GameManager : MonoBehaviour
 
             case "makeup":
                 return isDoneMakeUp;
+
+            case "bath":
+                return isDoneTakeABath;
         }
 
         return false;
+    }
+
+    public void ResetAllGameStatus()
+    {
+        isDoneTakeABath = isDoneMakeUp = false;
     }
 }

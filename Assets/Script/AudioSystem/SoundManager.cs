@@ -28,4 +28,9 @@ public class SoundManager : MonoBehaviour
         _soundSource.PlayOneShot(_soundFXlibrary.GetClipByGroupID(soundName));
     }
 
+    public void StopAllSoundFX()
+    {
+        _soundSource.Stop();
+    }
+
 }

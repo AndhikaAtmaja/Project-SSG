@@ -855,7 +855,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
+    newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -904,12 +904,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c799f60690f2fc4c965e5fe0014c594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c541dc5624828604084c6de08acf0388, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 939328633}
   - component: {fileID: 939328634}
   m_Layer: 0
-  m_Name: serious game_20251216195516
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -988,7 +988,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f100c99e196bb9c41baf3f972a5f3249, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2769f7c07aac3c3498cb0d8585fb4e41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1029,9 +1029,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currScene: 
+  isMiniGameActive: 0
+  isDoneMakeUp: 0
   storyManagerPrefab: {fileID: 0}
   questManagerPrefab: {fileID: 0}
   dialogueManagerPrefab: {fileID: 0}
+  activeDeactiveSREvent: {fileID: 0}
 --- !u!4 &942618535
 Transform:
   m_ObjectHideFlags: 0
@@ -1532,9 +1535,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.x
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.y
+      value: 5.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 41f503652e2ca1643a6a4beace17df0e, type: 3}
+      objectReference: {fileID: 21300000, guid: 1049a81716556cc41ac7308fa49c6452, type: 3}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1548,12 +1559,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 4643305009314145370, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Name
-      value: Make-Up Poweder (3)
+      value: Make-Up Comb
       objectReference: {fileID: 0}
     - target: {fileID: 6707790105411848164, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: brush
@@ -1654,9 +1669,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.x
+      value: 6.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: df1d8c17f7c5be14b89092d39afc19f2, type: 3}
+      objectReference: {fileID: 21300000, guid: 12cb7728db4704041a8edf7db630150a, type: 3}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1667,6 +1690,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
@@ -1889,6 +1916,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3472845639067493248, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.x
+      value: 5.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Size.y
+      value: 5.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 73f87e25571d79b43a252b7a24a41b11, type: 3}
+    - target: {fileID: 3925180082097962013, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4643305009314145370, guid: 9585085d0f6efe64da339e4f95b9fa06, type: 3}
