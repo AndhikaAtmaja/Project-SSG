@@ -19,6 +19,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: 
@@ -28,6 +29,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: Gasp
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: 
@@ -36,6 +38,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  isDialogueDone: 1

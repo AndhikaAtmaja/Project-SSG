@@ -125,7 +125,18 @@ public class DialogueManager : MonoBehaviour
                 break;
 
             case DialogueSO.DialogueType.BubbleChat:
+                
                 _dialogueBubble.ShowLine(currentLine);
+                if (currentLine.SoundFXName != null)
+                {
+                    string soundFX = currentLine.SoundFXName;
+
+                    if (string.IsNullOrEmpty(soundFX))
+                        return;
+
+                    SoundManager.instance.PlaySoundFXOneClip(soundFX);
+                }
+
                 break;
 
             case DialogueSO.DialogueType.DialogueBox:

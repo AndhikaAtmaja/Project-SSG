@@ -101,6 +101,16 @@ public class StoryManager : MonoBehaviour
             NextChapter();
         }
 
+        if (currentStep.musicTrack != null)
+        {
+            string musicTrack = currentStep.musicTrack;
+
+            if (string.IsNullOrEmpty(musicTrack))
+                return;
+
+            MusicManager.instance.PlayMusic(musicTrack);
+        }
+
         if (currentStep.nextSceneName != null)
         {
             string scene = currentStep.nextSceneName;

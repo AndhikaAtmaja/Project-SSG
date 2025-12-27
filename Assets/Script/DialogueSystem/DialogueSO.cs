@@ -25,6 +25,8 @@ public class DialogueSO : ScriptableObject
         public bool hasChoice;
         public ChoiceData[] choices;
 
+        public string SoundFXName;
+
         public bool triggerCutscene;
         public string cutsceneID;
     }

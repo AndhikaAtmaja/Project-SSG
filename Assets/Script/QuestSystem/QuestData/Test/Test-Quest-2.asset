@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: OC-1
   questName: Open Camera
-  questImage: {fileID: 21300000, guid: e922050816de5a34dac188bc68310708, type: 3}
-  nextScene: 
+  questImage: {fileID: 21300000, guid: 156d8085266be1d44a077b22f4bd1331, type: 3}
   objectives:
   - description: Open the camera
     type: 1
+    targetSceneName: 
     isCompleted: 1
   IsCompleted: 1
