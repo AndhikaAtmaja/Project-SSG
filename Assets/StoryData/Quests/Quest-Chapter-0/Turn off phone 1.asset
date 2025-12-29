@@ -19,5 +19,5 @@ MonoBehaviour:
   - description: 
     type: 5
     targetSceneName: Bedroom
-    isCompleted: 1
+    isCompleted: 0
   IsCompleted: 0

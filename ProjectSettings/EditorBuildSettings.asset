@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test-Scene/Test-MiniGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Test-MainMenu.unity
+    guid: 96cfebef8f3b55847a15d5672f72c5e8
+  - enabled: 1
     path: Assets/Scenes/Chapter-0/Test-WakeUp.unity
     guid: d3859f9d86e9c4e4d81c7ba3cd1b318f
   - enabled: 1

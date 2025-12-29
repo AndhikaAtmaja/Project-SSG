@@ -16,18 +16,6 @@ MonoBehaviour:
   chapterSteps:
   - nameStep: Test
     setpID: 
-    quests:
-    - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
-    dialogues: []
-    autoStartDialogueAfterScene: 0
-    nextSceneName: 
-    soundEffect: 
-    musicTrack: 
-    nextChapter: {fileID: 0}
-    AllQuestDone: 0
-    AllDialogueDone: 0
-  - nameStep: Test-2
-    setpID: 
     quests: []
     dialogues:
     - {fileID: 11400000, guid: 53e671345a93a5846a638b8b5c2471ce, type: 2}
@@ -36,6 +24,6 @@ MonoBehaviour:
     soundEffect: 
     musicTrack: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 0
-    AllDialogueDone: 0
-  isChapterDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  isChapterDone: 1

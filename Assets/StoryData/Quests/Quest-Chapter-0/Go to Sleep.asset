@@ -16,4 +16,4 @@ MonoBehaviour:
   questName: 
   questImage: {fileID: 0}
   objectives: []
-  IsCompleted: 1
+  IsCompleted: 0
