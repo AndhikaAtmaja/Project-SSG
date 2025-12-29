@@ -25,7 +25,7 @@ public class SceneManagement : MonoBehaviour
     public void OnChangeScene(string sceneName, string spawnArea)
     {
         Debug.Log($"name scene : {sceneName}");
-        if (!DialogueManager.instance.isActive())
+        if (!DialogueManager.instance.isDialogueActive())
         {
             // Store where to go next
             nextSpawn = spawnArea;

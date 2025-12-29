@@ -23,7 +23,7 @@ public class MovementCharacter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.instance.GetStatus("minigame"))
+        if (!GameManager.instance.GetStatus("minigame") && !DialogueManager.instance.isDialogueActive())
         {
             rb.velocity = direction * speedMovement;
             _animation.WalkAnimation(direction);

@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
  
     [Header("Status & config Dialogue")]
-    [SerializeField] private bool isDialogueActive;
+    [SerializeField] private bool isActive;
     [SerializeField] private int totalLines;
     [SerializeField] private DialogueSO currDialogue;
 
@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
+        if (isActive && Input.GetKeyDown(KeyCode.Space))
         {
             HandleDialogueLine();
         }
@@ -51,14 +51,14 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Get Called");
 
         HandleDialogueLine();
-        isDialogueActive = true;
+        isActive = true;
     }
 
     public void ChangeCurrentDialogue(DialogueSO dialogue)
     {
         //Debug.Log($"dialogue name {dialogue.name}");
         currDialogue = dialogue;
-        isDialogueActive = false;
+        isActive = false;
         totalLines = currDialogue.lines.Length;
         _currentIndexDialogue = 0;
 
@@ -152,10 +152,10 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log($"Dialogue '{currDialogue.name}' completed!");
         currDialogue.isDialogueDone= true;
-        isDialogueActive = false;
+        isActive = false;
         totalLines = 0;
         OnDialogueFinished?.Invoke();
     }
 
-    public bool isActive() => isDialogueActive;
+    public bool isDialogueActive() => isActive;
 }

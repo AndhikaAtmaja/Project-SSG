@@ -6,7 +6,7 @@ public class ButtonDilaoge : MonoBehaviour
 {
     public void OnButtonClick()
     {
-        if (!DialogueManager.instance.isActive())
+        if (!DialogueManager.instance.isDialogueActive())
         {
             DialogueManager.instance.StartDialogue();
         }
