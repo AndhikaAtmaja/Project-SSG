@@ -28,7 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.395101, y: 1.8349898, z: 0.0037074902}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +47,9 @@ MonoBehaviour:
   currScene: 
   isMiniGameActive: 0
   isDoneMakeUp: 0
+  isDoneTakeABath: 0
   storyManagerPrefab: {fileID: 0}
   questManagerPrefab: {fileID: 0}
   dialogueManagerPrefab: {fileID: 0}
   activeDeactiveSREvent: {fileID: 11400000, guid: 4c987c8c4ef76f94f88f6c925a199c29, type: 2}
+  changeAnimationSpriteEvent: {fileID: 11400000, guid: 0128fd90d7c8db948a195c4658bfd3d7, type: 2}

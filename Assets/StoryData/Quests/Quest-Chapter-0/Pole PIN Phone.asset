@@ -16,4 +16,6 @@ MonoBehaviour:
   questName: Unlock PIN
   questImage: {fileID: 21300000, guid: 7c6125690136d284fa4b5b12c4ce2c86, type: 3}
   objectives: []
+  interactType:
+    target: 0
   IsCompleted: 0

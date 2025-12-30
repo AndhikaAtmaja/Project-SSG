@@ -12,6 +12,16 @@ public enum QuestObjectiveType
     ClickChapter
 }
 
+public enum InteractTargetType
+{
+    none,
+    bed,
+    bathroom,
+    outside,
+    makeup,
+    wastafel
+}
+
 [System.Serializable]
 public class QuestObjective
 {
@@ -22,6 +32,12 @@ public class QuestObjective
     public bool isCompleted;
 }
 
+[System.Serializable]
+public class QuestHighlightData
+{
+    public InteractTargetType target;
+}
+
 [CreateAssetMenu(menuName = "Quest")]
 public class QuestSO : ScriptableObject
 {
@@ -29,5 +45,6 @@ public class QuestSO : ScriptableObject
     public string questName; 
     public Sprite questImage;
     public List<QuestObjective> objectives = new List<QuestObjective>();
+    public QuestHighlightData interactType;
     public bool IsCompleted;
 }

@@ -24,6 +24,11 @@ public class ToothBurshManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        QuestManager.instance.HighlightArea();
+    }
+
     private void Update()
     {
         if (isActive)
@@ -57,6 +62,7 @@ public class ToothBurshManager : MonoBehaviour
     {
         isActive = false;
         GameManager.instance.SetStatus("minigame", isActive);
+        GameManager.instance.SetStatus("bath", true);
         if (isActive == !isActive)
         {
             miniGame.SetActive(isActive);

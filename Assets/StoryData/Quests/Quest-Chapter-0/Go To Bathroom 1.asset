@@ -20,4 +20,6 @@ MonoBehaviour:
     type: 5
     targetSceneName: Bathroom
     isCompleted: 0
+  interactType:
+    target: 0
   IsCompleted: 0

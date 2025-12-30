@@ -20,4 +20,6 @@ MonoBehaviour:
     type: 4
     targetSceneName: 
     isCompleted: 0
+  interactType:
+    target: 0
   IsCompleted: 0

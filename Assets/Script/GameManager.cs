@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Events")]
     public ActiveDeactiveSREventSO activeDeactiveSREvent;
+    public ChangeAnimationSpriteEventSO changeAnimationSpriteEvent;
 
     private StoryManager storyManagerInstance;
     private QuestManager questManagerInstance;
@@ -49,8 +50,19 @@ public class GameManager : MonoBehaviour
 
         //instance the story manager
         storyManagerInstance = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
+
+        //SaveSystem.Load();
         storyManagerInstance.StartChapter();
+
     }
+
+/*    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            SaveSystem.Save();
+        }
+    }*/
 
     public string GetCurrentScene()
     {
@@ -85,6 +97,12 @@ public class GameManager : MonoBehaviour
 
             case "makeup":
                 isDoneMakeUp = condition;
+                break;
+
+            case "bath":
+                isDoneTakeABath = condition;
+                //Send Event to change skin
+                changeAnimationSpriteEvent.Raise();
                 break;
         }
     }

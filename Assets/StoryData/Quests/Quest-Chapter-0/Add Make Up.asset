@@ -16,4 +16,6 @@ MonoBehaviour:
   questName: Add Make Up
   questImage: {fileID: 0}
   objectives: []
+  interactType:
+    target: 0
   IsCompleted: 0

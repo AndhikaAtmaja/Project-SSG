@@ -10,11 +10,8 @@ public class QuestList : MonoBehaviour
 
     public UnityEvent UpdateQuestList;
 
-   
-
     public void StartQuest()
     {
-        
         CheckListQuest();
     }
 
@@ -32,18 +29,20 @@ public class QuestList : MonoBehaviour
         // Skip completed questChapter
         while (currQuestID < listOfQuests.Count && listOfQuests[currQuestID].IsCompleted)
         {
-            currQuestID++;
+            currQuestID++;      
         }
 
         if (currQuestID >= listOfQuests.Count)
         {
             //Debug.Log("All quest Chapter are done!");
+            QuestManager.instance.ClearHighlight();
             StoryManager.instance.CheckChapter();
             UpdateQuestList?.Invoke();
             return;
         }
 
         //Debug.Log($"Quest {currQuestID} : {listOfQuests[currQuestID].name}");
+        QuestManager.instance.HighlightArea();
         UpdateQuestList?.Invoke();
     }
 

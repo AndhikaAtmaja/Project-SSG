@@ -19,6 +19,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Liam
@@ -31,6 +32,7 @@ MonoBehaviour:
       nextDialogue: {fileID: 11400000}
     - choiceText: '[Just read it.]'
       nextDialogue: {fileID: 11400000}
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Ezera
@@ -39,6 +41,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Liam
@@ -47,6 +50,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Ezera
@@ -59,6 +63,7 @@ MonoBehaviour:
       nextDialogue: {fileID: 11400000}
     - choiceText: "[\u2026..]"
       nextDialogue: {fileID: 11400000}
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Liam
@@ -67,6 +72,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Ezera
@@ -75,6 +81,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Liam
@@ -84,6 +91,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Ezera
@@ -92,6 +100,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
+    SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
   isDialogueDone: 0

@@ -25,10 +25,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831399151057166563}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2200170201423703487}
   - {fileID: 7462486540552149272}
@@ -50,7 +50,8 @@ MonoBehaviour:
   _questList: {fileID: 1030518202666236211}
   _questData: {fileID: 6963933548759459947}
   questBox: {fileID: 0}
-  currQuest: {fileID: 0}
+  interactHighlight: {fileID: 11400000, guid: 0b13a9cab9d3a2e41a234615c3fb66e0, type: 2}
+  clearHighlight: {fileID: 11400000, guid: b1a0ac1ff99ce8e48aaf10cf17e346d1, type: 2}
 --- !u!1 &3942081424930945751
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,10 +97,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questdData:
-  - {fileID: 11400000, guid: 2089470e3cf432f42804a4dd7200ee76, type: 2}
-  - {fileID: 11400000, guid: 021abae82de2ede4f922d07ab0b2171b, type: 2}
-  - {fileID: 11400000, guid: cca40b625df2af44b92fa8f20871fa3a, type: 2}
-  - {fileID: 11400000, guid: ef6a38ed802c43a4a9b374640c9559bb, type: 2}
+  - {fileID: 11400000, guid: 83ae6e909b5fa0d48bccddec59d4f2e7, type: 2}
+  - {fileID: 11400000, guid: 9a6e9c3d89e4f8540a03a33fc6b0f4b5, type: 2}
+  - {fileID: 11400000, guid: ec7ea398766a187489ea682f72a6bf4c, type: 2}
+  - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
+  - {fileID: 11400000, guid: 76a77b4bbb037254487c918e4acd7e49, type: 2}
+  - {fileID: 11400000, guid: c29bb02dbbb673f43ae1577ea2ff5f80, type: 2}
+  - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
+  - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
+  - {fileID: 11400000, guid: 34f38b0a8b9a5ea41a8f1fd53544d0db, type: 2}
+  - {fileID: 11400000, guid: 9f75a806af6283f49bc6618b3fd49b69, type: 2}
+  - {fileID: 11400000, guid: b7c234b4e19165244898506e7be91d16, type: 2}
+  - {fileID: 11400000, guid: f4b8c31243dca8a46bcc2bcdaec37f29, type: 2}
+  - {fileID: 11400000, guid: 84f71c9f40ce3654e8d076b27700de76, type: 2}
+  - {fileID: 11400000, guid: 3acc00f05e41076419e88b9ddf71d9f0, type: 2}
+  - {fileID: 11400000, guid: 7d8f07dc45754c442bcae03a4df960f7, type: 2}
+  - {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
+  - {fileID: 11400000, guid: 0c6cb4a42a83cc3419aa3532874a8f81, type: 2}
+  - {fileID: 11400000, guid: c3506259e8c835a4f891e6348c969dd4, type: 2}
+  - {fileID: 11400000, guid: 7af42bb0e4ce4b5499592686be05d2b0, type: 2}
+  - {fileID: 11400000, guid: fc6cbbd3082592b43ba1833a642365e5, type: 2}
+  - {fileID: 11400000, guid: a68007bc33d472d499a632bb08841f6b, type: 2}
+  - {fileID: 11400000, guid: 1e63c0d7a462b8b42a240345ccd738bf, type: 2}
 --- !u!1 &6942703033928025065
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,9 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listOfQuests:
-  - {fileID: 11400000, guid: 2089470e3cf432f42804a4dd7200ee76, type: 2}
-  - {fileID: 11400000, guid: 021abae82de2ede4f922d07ab0b2171b, type: 2}
-  - {fileID: 11400000, guid: cca40b625df2af44b92fa8f20871fa3a, type: 2}
+  - {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
   currQuestID: 0
   UpdateQuestList:
     m_PersistentCalls:

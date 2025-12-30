@@ -51,8 +51,6 @@ public class QuestChecker : MonoBehaviour
 
         var currentQuest = questList.GetCurrentQuest();
 
-        Debug.Log("Get Called");
-
         if (currentQuest == null)
         {
             Debug.Log("No active quest found.");
@@ -186,8 +184,8 @@ public class QuestChecker : MonoBehaviour
         //Trim name if nameScene
         string name = nameScene.Split('-')[0].ToLower();
 
-        Debug.Log(nameScene);
-        Debug.Log(name);
+        /*Debug.Log(nameScene);
+        Debug.Log(name);*/
 
         CheckObjectiveChangeScene(nameScene);
     }

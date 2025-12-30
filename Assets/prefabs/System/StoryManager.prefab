@@ -28,7 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6db2f03ca4ab3c4a854818faea55d40, type: 2}
   - {fileID: 11400000, guid: bcc7874833a75f243ad756de608b87ed, type: 2}
   - {fileID: 11400000, guid: b73064eecb9737b448ebcba4bffeb2d2, type: 2}
-  currStoryChapter: {fileID: 0}
-  ChapterIndex: 0
-  StepIndex: 0
+  _currentStoryChapter: {fileID: 0}
+  _chapterIndex: -1
+  _stepIndex: -1
   _questList: {fileID: 0}

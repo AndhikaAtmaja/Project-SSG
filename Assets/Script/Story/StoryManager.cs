@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct StoryGameSaveData
+{
+    public int chapterIndex;
+    public int stepID;
+}
+
 public class StoryManager : MonoBehaviour
 {
     public static StoryManager instance;
 
     [Header("Story Progress")]
     [SerializeField] private List<StoryChapterSO> allChapters;
-    [SerializeField] private StoryChapterSO currStoryChapter;
-    [SerializeField] private int ChapterIndex;
-    [SerializeField] private int StepIndex;
+    [SerializeField] private StoryChapterSO _currentStoryChapter;
+    [SerializeField] private int _chapterIndex;
+    [SerializeField] private int _stepIndex;
     private bool isTransitioning;
 
     [Header("Refences")]
@@ -29,21 +36,38 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        LoadCurrentStep();
-    }
-
     public void StartChapter()
     {
         //start from chpater 0 or from save file
-        ChapterIndex = 0;
-        StepIndex = 0;
-        currStoryChapter = allChapters[ChapterIndex];
+        _chapterIndex = 0;
+        _stepIndex = 0;
+        _currentStoryChapter = allChapters[_chapterIndex];
         LoadCurrentStep();
     }
 
-    public StoryStep currentStep => allChapters[ChapterIndex].chapterSteps[StepIndex];
+    public void Save(ref StoryGameSaveData data)
+    {
+        data.chapterIndex = _chapterIndex;
+        data.stepID       = _stepIndex;
+    }
+
+    public void Load(StoryGameSaveData data)
+    {
+        Debug.Log("Get called!");
+        if (data.chapterIndex < 0)
+        {
+            StartChapter();
+        }
+        else if (data.chapterIndex >= 0)
+        {
+            _chapterIndex = data.chapterIndex;
+            _stepIndex = data.stepID;
+
+            LoadCurrentStep();
+        }
+    }
+
+    public StoryStep currentStep => allChapters[_chapterIndex].chapterSteps[_stepIndex];
 
     public void SelectedChapter(string chapterName)
     {
@@ -54,26 +78,26 @@ public class StoryManager : MonoBehaviour
         }
 
         string find = chapterName.ToLower();
-        currStoryChapter = null;
+        _currentStoryChapter = null;
 
         for (int i = 0; i < allChapters.Count; i++)
         {
             if (allChapters[i].nameChapter.ToLower() == find)
             {
-                ChapterIndex = i;
-                currStoryChapter = allChapters[ChapterIndex];
+                _chapterIndex = i;
+                _currentStoryChapter = allChapters[_chapterIndex];
                 break;    // STOP searching when found
             }
         }
 
-        if (currStoryChapter == null)
+        if (_currentStoryChapter == null)
         {
             Debug.LogError("Chapter not found: " + chapterName);
             return;
         }
 
         // Success load step 0
-        StepIndex = 0;
+        _stepIndex = 0;
         LoadCurrentStep();
     }
 
@@ -115,12 +139,14 @@ public class StoryManager : MonoBehaviour
         {
             ChangeScene();
         }
+
+        //QuestManager.instance.HighlightArea();
     }
 
     public void CheckChapter()
     {
         if (isTransitioning) return;
-        if (currStoryChapter == null) return;
+        if (_currentStoryChapter == null) return;
 
         StoryStep step = currentStep;
         if (step == null) return;
@@ -139,18 +165,18 @@ public class StoryManager : MonoBehaviour
         //Debug.Log($"Proceed to next step");
         if (isTransitioning) return;
 
-        StoryChapterSO chapter = allChapters[ChapterIndex];
-        StepIndex++;
+        StoryChapterSO chapter = allChapters[_chapterIndex];
+        _stepIndex++;
 
-        //Debug.Log($"name step {allChapters[ChapterIndex].chapterSteps[StepIndex].nameStep}");
+        //Debug.Log($"name step {allChapters[_chapterIndex].chapterSteps[_stepIndex].nameStep}");
 
-        if (StepIndex >= chapter.chapterSteps.Count)
+        if (_stepIndex >= chapter.chapterSteps.Count)
         {
             chapter.isChapterDone = true;
         }
 
         // If still inside this chapter
-        if (StepIndex >= chapter.chapterSteps.Count)
+        if (_stepIndex >= chapter.chapterSteps.Count)
         {
             Debug.Log("Chapter finished!");
             chapter.isChapterDone = true;
@@ -178,9 +204,9 @@ public class StoryManager : MonoBehaviour
                     if (allChapters[i].nameChapter.ToLower() == currentStep.nextChapter.nameChapter.ToLower())
                     {
                         //set the chapter with this
-                        currStoryChapter = allChapters[i];
-                        ChapterIndex = i;
-                        StepIndex = 0;
+                        _currentStoryChapter = allChapters[i];
+                        _chapterIndex = i;
+                        _stepIndex = 0;
                         LoadCurrentStep();
                     }
                 }

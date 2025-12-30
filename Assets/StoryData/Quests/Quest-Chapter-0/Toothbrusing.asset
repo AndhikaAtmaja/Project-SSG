@@ -16,4 +16,6 @@ MonoBehaviour:
   questName: Tootbrushing
   questImage: {fileID: 0}
   objectives: []
-  IsCompleted: 0
+  interactType:
+    target: 5
+  IsCompleted: 1

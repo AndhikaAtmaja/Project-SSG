@@ -6,7 +6,7 @@ public class Phone : MonoBehaviour, IChangeScene
 {
     public void GetChangeScene()
     {
-        if (GameManager.instance.GetCurrentScene() == "Test-Bedroom")
+        if (GameManager.instance.GetCurrentScene() == "Bedroom")
         {
             SceneManagement.instance.OnChangeScene("Phone", "");
         }

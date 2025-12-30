@@ -8,7 +8,10 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private QuestList _questList;
     [SerializeField] private QuestDataBase _questData;
     [SerializeField] private GameObject questBox;
-    [SerializeField] private QuestSO currQuest;
+
+    [Header("Events")]
+    public InteractHighlightEventSO interactHighlight;
+    public ClearHighlightEventSO clearHighlight;
 
     private void Awake()
     {
@@ -23,7 +26,7 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        _questList = GameObject.FindGameObjectWithTag("QuestList").GetComponent<QuestList>();
+       HighlightArea();
     }
 
     public void GetCheckQuest(string questID, bool isDone)
@@ -51,6 +54,17 @@ public class QuestManager : MonoBehaviour
     public void ShowQuets()
     {
         _questList.StartQuest();
+    }
+
+    public void HighlightArea()
+    {
+        if (_questList.GetCurrentQuest() != null)
+            interactHighlight.RaiseHighlight(_questList.GetCurrentQuest().interactType.target, _questList.GetCurrentQuest().IsCompleted);
+    }
+
+    public void ClearHighlight()
+    {
+        clearHighlight.RaiseClearHighlight();
     }
 
     public QuestSO GetCurrentQuest()
