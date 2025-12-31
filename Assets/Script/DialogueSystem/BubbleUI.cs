@@ -17,6 +17,9 @@ public class BubbleUI : MonoBehaviour
     {
         if (dialogueBubble != null)
         {
+            if (!dialogueBubble.activeSelf)
+                SoundManager.instance.PlaySoundFXOneClip("Open bubble");
+
             dialogueBubble.SetActive(true);
             dialogue.text = dialogueLine;
         }

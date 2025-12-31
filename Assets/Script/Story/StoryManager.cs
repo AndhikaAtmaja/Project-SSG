@@ -36,6 +36,11 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        StartChapter();
+    }
+
     public void StartChapter()
     {
         //start from chpater 0 or from save file

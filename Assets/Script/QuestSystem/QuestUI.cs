@@ -51,7 +51,8 @@ public class QuestUI : MonoBehaviour
                 //questBackGround.SetActive(true);
                 if (questImage != null)
                     questImage.sprite = quest.questImage;
-                questDesc.text = quest.questName;
+                if (questDesc != null)
+                    questDesc.text = quest.questName;
             }
         }
         else

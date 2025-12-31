@@ -23,6 +23,7 @@ public class PhoneApplication : MonoBehaviour
 
     public void OpenApplication()
     {
+        SoundManager.instance.PlaySoundFXOneClip("Application");
         PhoneManager.Instance.ChangePhoneScreen($"New-Phone-{ApplicationData.ApplicationName}");
         OnApplicationOpenned?.Invoke(ApplicationData.ApplicationName);
     }

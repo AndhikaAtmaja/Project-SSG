@@ -80,10 +80,12 @@ public class ToothBurshManager : MonoBehaviour
         if (playerStroke >= totalStroke)
         {
             Debug.Log("Done cleaning");
+            SoundManager.instance.StopLoopSFX();
         }
         else if (playerStroke < totalStroke)
         {
             playerStroke++;
+            SoundManager.instance.PlayLoopSound("Brushing");
             Debug.Log($"{playerStroke} / {totalStroke}");
         }
     }

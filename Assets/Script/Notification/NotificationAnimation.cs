@@ -26,13 +26,14 @@ public class NotificationAnimation : MonoBehaviour
 
     public void ShowNotification(string name, string message, string emotion)
     {
-        Debug.Log($"{name} : {message}");
 
         nameText.text = name;
         messageText.text = message;
 
         // Kill existing tween if any
         currentTween?.Kill();
+
+        SoundManager.instance.PlaySoundFXOneClip("Notification");
 
         Sequence seq = DOTween.Sequence();
         seq.Append(panel.DOAnchorPosY(visibleY, slideDuration).SetEase(Ease.OutBack))

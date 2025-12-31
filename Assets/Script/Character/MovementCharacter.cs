@@ -23,10 +23,36 @@ public class MovementCharacter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.instance.GetStatus("minigame") && !DialogueManager.instance.isDialogueActive())
+        if (GameManager.instance.GetStatus("minigame") ||
+            DialogueManager.instance.isDialogueActive())
         {
-            rb.velocity = direction * speedMovement;
-            _animation.WalkAnimation(direction);
+            StopWalkingSound();
+            rb.velocity = Vector2.zero;
+            return;
         }
+
+        rb.velocity = direction * speedMovement;
+
+        bool currentlyWalking = Mathf.Abs(direction.x) > 0.1f;
+
+        if (currentlyWalking)
+        {
+            StartWalkingSound();
+        }
+        else if (!currentlyWalking)
+        {
+            StopWalkingSound();
+        }
+        _animation.WalkAnimation(direction);
+    }
+
+    private void StartWalkingSound()
+    {
+        SoundManager.instance.PlayLoopSound("Walking");
+    }
+
+    private void StopWalkingSound()
+    {
+        SoundManager.instance.StopLoopSFX();
     }
 }

@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5500674405836271620}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -188,3 +188,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9226ec64b949b4b8a15063b2886e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundFXs:
+  - groupID: Open bubble
+    clipSoundFXs:
+    - {fileID: 8300000, guid: ed2a99fc7b2e0514fafe9dcbb9385b34, type: 3}
+  - groupID: Walking
+    clipSoundFXs:
+    - {fileID: 8300000, guid: f030bd951a3659244be2d7dfea29b1eb, type: 3}
+  - groupID: Phone
+    clipSoundFXs:
+    - {fileID: 8300000, guid: c854c72d6f660dc4ca68cd068f747446, type: 3}
+  - groupID: Application
+    clipSoundFXs:
+    - {fileID: 8300000, guid: 1060e4b9644a49e4ba0bf6c8a1d755f2, type: 3}
+  - groupID: Brushing
+    clipSoundFXs:
+    - {fileID: 8300000, guid: 2790a175253e4be40b0b57cfc0af3cb9, type: 3}

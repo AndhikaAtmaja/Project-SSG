@@ -10,6 +10,7 @@ public class TakePicture : MonoBehaviour
     public void OnTakePicture()
     {
         //Take screenshot inside Capture Area
+        SoundManager.instance.PlaySoundFXOneClip("Camera");
         //The Save Picture
         StartCoroutine(CaptureScreenshot());
     }
