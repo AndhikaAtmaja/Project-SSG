@@ -21,7 +21,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 53e671345a93a5846a638b8b5c2471ce, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
-    soundEffect: 
+    soundEffect: Brushing
     musicTrack: 
     nextChapter: {fileID: 0}
     AllQuestDone: 1

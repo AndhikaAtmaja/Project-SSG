@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BathRoom : MonoBehaviour, IInteractable
+public class BathRoom : Interact, IInteractable
 {
     public string nameScene;
 

@@ -17,5 +17,5 @@ MonoBehaviour:
   questImage: {fileID: 0}
   objectives: []
   interactType:
-    target: 5
-  IsCompleted: 1
+    target: 6
+  IsCompleted: 0

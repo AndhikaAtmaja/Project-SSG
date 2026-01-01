@@ -17,6 +17,7 @@ public enum InteractTargetType
     none,
     bed,
     bathroom,
+    bedroom,
     outside,
     makeup,
     wastafel

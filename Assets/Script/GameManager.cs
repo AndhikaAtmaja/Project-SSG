@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     public ActiveDeactiveSREventSO activeDeactiveSREvent;
     public ChangeAnimationSpriteEventSO changeAnimationSpriteEvent;
 
-    private StoryManager storyManagerInstance;
-    private QuestManager questManagerInstance;
-    private DialogueManager dialogueManagerInstance;
+    private StoryManager _storyManager;
+    private QuestManager _questManager;
+    private DialogueManager _dialogueManager;
 
     private void Awake()
     {
@@ -43,16 +43,16 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         //instance the quest manager
-        questManagerInstance = Instantiate(questManagerPrefab).GetComponent<QuestManager>();
+        _questManager = Instantiate(questManagerPrefab).GetComponent<QuestManager>();
 
         //instance the dialogue manager
-        dialogueManagerInstance = Instantiate(dialogueManagerPrefab).GetComponent<DialogueManager>();
+        _dialogueManager = Instantiate(dialogueManagerPrefab).GetComponent<DialogueManager>();
 
         //instance the story manager
-        storyManagerInstance = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
+        _storyManager = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
 
-        //SaveSystem.Load();
-        storyManagerInstance.StartChapter();
+        SaveSystem.Load();
+        //_storyManager.StartChapter();
 
     }
 

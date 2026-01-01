@@ -27,7 +27,7 @@ public class ToothBrush : MonoBehaviour, IPickable
 
     public void OnPickUp()
     {
-
+        
     }
 
     public void OnDrag(Vector2 newPosition)

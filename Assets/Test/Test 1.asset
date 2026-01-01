@@ -29,7 +29,7 @@ MonoBehaviour:
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
-    SoundFXName: Gasp
+    SoundFXName: Brushing
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: 

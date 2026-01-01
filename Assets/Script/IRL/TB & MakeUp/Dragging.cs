@@ -11,8 +11,11 @@ public class Dragging : MonoBehaviour
     {
         if (isHolding)
         {
+            Cursor.visible = false;
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        else
+            Cursor.visible = true;
     }
 
     private void OnMouseDown()

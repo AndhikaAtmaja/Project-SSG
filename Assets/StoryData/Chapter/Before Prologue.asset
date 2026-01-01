@@ -24,8 +24,8 @@ MonoBehaviour:
     soundEffect: 
     musicTrack: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: HairStyling
     setpID: 
     quests:
@@ -37,8 +37,8 @@ MonoBehaviour:
     soundEffect: 
     musicTrack: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Take A Bath
     setpID: 
     quests:
