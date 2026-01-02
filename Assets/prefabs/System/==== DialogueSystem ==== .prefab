@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25e0bb051bab764db579af2785d74ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choiceBoxPrefabs: {fileID: 1448170991261072478, guid: f893cb5e39ed0cb43ac7b9c569fd5191, type: 3}
+  choiceBoxPrefabs: {fileID: 5246329031360130279, guid: f893cb5e39ed0cb43ac7b9c569fd5191, type: 3}
   choiceContainer: {fileID: 0}
   _dialogueChatBox: {fileID: 7007943798592232524}
 --- !u!1 &4426581003519057605
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d899424b8b803b44eb748b44f0d345af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bubbleUI: {fileID: 0}
 --- !u!1 &6433912407467819661
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c81e5d4ad01e984e83a5d201faa7a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDialogueActive: 0
+  isActive: 0
   totalLines: 0
   currDialogue: {fileID: 0}
   _currentIndexDialogue: 0
