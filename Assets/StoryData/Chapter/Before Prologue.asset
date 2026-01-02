@@ -24,15 +24,14 @@ MonoBehaviour:
     soundEffect: 
     musicTrack: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: HairStyling
     setpID: 
     quests:
     - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
-    dialogues:
-    - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
-    autoStartDialogueAfterScene: 1
+    dialogues: []
+    autoStartDialogueAfterScene: 0
     nextSceneName: Hairstyel
     soundEffect: 
     musicTrack: 
@@ -44,8 +43,9 @@ MonoBehaviour:
     quests:
     - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
     - {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
-    dialogues: []
-    autoStartDialogueAfterScene: 0
+    dialogues:
+    - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
+    autoStartDialogueAfterScene: 1
     nextSceneName: 
     soundEffect: 
     musicTrack: 

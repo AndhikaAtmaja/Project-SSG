@@ -41,7 +41,13 @@ public class SaveSystem : MonoBehaviour
 
     public static void Load()
     {
-        string saveData = File.ReadAllText(SaveFileName());
+        string filePath = SaveFileName();
+        if (!File.Exists(filePath))
+        {
+            Save();
+        }
+
+        string saveData = File.ReadAllText(filePath);
         _saveData = JsonUtility.FromJson<GameSaveData>(saveData);
         HandelLoadData();
     }

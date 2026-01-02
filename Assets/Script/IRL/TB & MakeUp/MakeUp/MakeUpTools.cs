@@ -6,6 +6,13 @@ public class MakeUpTools : MonoBehaviour, IPickable
 {
     public GameObject brush;
 
+    private SpriteRenderer _sr;
+
+    private void Start()
+    {
+        _sr = GetComponent<SpriteRenderer>();
+    }
+
     public void OnPickUp()
     {
         Debug.Log($"Player pick {gameObject.name}");
@@ -13,6 +20,14 @@ public class MakeUpTools : MonoBehaviour, IPickable
         Cursor.visible = false;
         if (brush != null)
         {
+            if (brush != null)
+            {
+                MakeUpBrush makeUpBrush = brush.GetComponent<MakeUpBrush>();
+                if (makeUpBrush != null)
+                {
+                    makeUpBrush.ChangeMakeUpBrush(_sr.sprite);
+                }
+            }
             brush.SetActive(true);
         }
     }

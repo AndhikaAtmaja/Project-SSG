@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd790396f23e71349abea651b02002ce, type: 3}
   m_Name: Camera
   m_EditorClassIdentifier: 
-  ApplicationIcon: {fileID: 21300000, guid: f35ef88478d45a04db4a097cf0358edb, type: 3}
+  ApplicationIcon: {fileID: 556312316, guid: a2319d1826c84e7428f57c2e622657cd, type: 3}
   ApplicationName: Camera

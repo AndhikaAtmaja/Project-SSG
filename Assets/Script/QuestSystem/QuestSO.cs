@@ -9,7 +9,10 @@ public enum QuestObjectiveType
     OpenSosialMedia,
     OpenMessage,
     ChangeScene,
-    ClickChapter
+    ClickChapter,
+    ClickAdd,
+    ClickAnyPicture,
+    ClickUpload
 }
 
 public enum InteractTargetType

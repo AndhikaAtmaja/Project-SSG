@@ -37,7 +37,7 @@ public class QuestList : MonoBehaviour
             //Debug.Log("All quest Chapter are done!");
             QuestManager.instance.ClearHighlight();
             StoryManager.instance.CheckChapter();
-            UpdateQuestList?.Invoke();
+            UpdateQuestList?.Invoke();  
             return;
         }
 

@@ -36,10 +36,10 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    private void Start()
+/*    private void Start()
     {
         StartChapter();
-    }
+    }*/
 
     public void StartChapter()
     {

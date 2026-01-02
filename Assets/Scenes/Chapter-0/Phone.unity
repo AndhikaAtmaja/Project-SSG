@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 75692437}
   - component: {fileID: 75692436}
   - component: {fileID: 75692435}
+  - component: {fileID: 75692438}
   m_Layer: 5
   m_Name: UploadButton
   m_TagString: Untagged
@@ -855,6 +856,18 @@ MonoBehaviour:
           m_StringArgument: Upload
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 75692438}
+        m_TargetAssemblyTypeName: QuestCheckButton, Assembly-CSharp
+        m_MethodName: CompletedQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75692436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +906,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75692433}
   m_CullTransparentMesh: 1
+--- !u!114 &75692438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75692433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d30ae0b4f4f6844a4cb63d1a9a0b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 0}
+  questID: CU
 --- !u!1 &95638415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1229,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111956033}
   m_CullTransparentMesh: 1
+--- !u!114 &113433458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2696949618609949927, guid: 19d6f8d394bc5c4428639befed9f1a8c, type: 3}
+  m_PrefabInstance: {fileID: 594344250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &132221674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,6 +4904,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.59999084
       objectReference: {fileID: 0}
+    - target: {fileID: 7648151263502722728, guid: 19d6f8d394bc5c4428639befed9f1a8c, type: 3}
+      propertyPath: appIcon
+      value: 
+      objectReference: {fileID: 113433458}
     - target: {fileID: 7648151263502722728, guid: 19d6f8d394bc5c4428639befed9f1a8c, type: 3}
       propertyPath: ApplicationData
       value: 
@@ -12753,7 +12795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900355929}
   m_Layer: 5
-  m_Name: New-Phone-Message
+  m_Name: New-Phone-Massage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15808,9 +15850,17 @@ PrefabInstance:
       value: '==== QuestSystem ==== '
       objectReference: {fileID: 0}
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
+      propertyPath: listOfQuests.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 84f71c9f40ce3654e8d076b27700de76, type: 2}
+      objectReference: {fileID: 11400000, guid: a9dd602c0c727b945ae8ef7e15efb758, type: 2}
+    - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
+      propertyPath: listOfQuests.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: fe2d61b6fef1646408946663db8326b5, type: 2}
     - target: {fileID: 8291751280543238483, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
