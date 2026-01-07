@@ -33,7 +33,7 @@ public class SceneManagement : MonoBehaviour
             _currentScene = scene.name;
     }
 
-    public void OnChangeScene(string sceneName, string spawnArea)
+    public void OnChangeScene(string sceneName, string spawnArea, string transitionName)
     {
         //Debug.Log($"name scene : {sceneName}");
         _lastScene = _currentScene;
@@ -41,11 +41,13 @@ public class SceneManagement : MonoBehaviour
         {
             // Store where to go next
             nextSpawn = spawnArea;
-
             // Decide which scene to load
             string targetScene = string.IsNullOrEmpty(sceneName) ? SceneManager.GetActiveScene().name : sceneName;
 
-            SceneManager.LoadScene(targetScene);
+            string transition = string.IsNullOrEmpty(transitionName) ? "CrossFade" : transitionName;
+
+            TransitionManager.instance.LoadSceneTransition(targetScene, transition);
+            //SceneManager.LoadScene(targetScene);
             _currentScene = sceneName;
             OnSuccesChangeScene?.Invoke(sceneName);
         }
@@ -59,9 +61,9 @@ public class SceneManagement : MonoBehaviour
     public void Load(SceneGameSaveData data)
     {
         if (!string.IsNullOrEmpty(data.currentScene))
-            OnChangeScene(data.currentScene, "");
+            OnChangeScene(data.currentScene, "", "");
         else
-            OnChangeScene("WakeUp", "");
+            OnChangeScene("WakeUp", "", "");
     }
 
     public string GetNextSpawn()

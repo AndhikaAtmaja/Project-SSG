@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MakeUp : Interact, IInteractable
 {
+    public string transition;
+
     public void interact()
     {
-        SceneManagement.instance.OnChangeScene("MakeUp", "");
+        SceneManagement.instance.OnChangeScene("MakeUp", "", transition);
     }
 }

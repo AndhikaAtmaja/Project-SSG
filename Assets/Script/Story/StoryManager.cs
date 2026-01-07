@@ -248,11 +248,12 @@ public class StoryManager : MonoBehaviour
     private void ChangeScene()
     {
         string scene = currentStep.nextSceneName;
+        string transition = currentStep.transition;
 
         if (string.IsNullOrEmpty(scene))
             return;
 
-        SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "");
+        SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "", transition);
     }
 
     private void OnEnable()

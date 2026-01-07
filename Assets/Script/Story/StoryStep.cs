@@ -12,6 +12,7 @@ public class StoryStep
 
     public bool autoStartDialogueAfterScene;
     public string nextSceneName;
+    public string transition;
     public string soundEffect;
     public string musicTrack;
     public StoryChapterSO nextChapter;

@@ -7,9 +7,10 @@ public class ChangeScene : MonoBehaviour, IChangeScene
 {
     [SerializeField] private string nextScene;
     [SerializeField] private string spawn;
+    public string transition;
 
     public void GetChangeScene()
     {
-        SceneManagement.instance.OnChangeScene(nextScene, spawn);
+        SceneManagement.instance.OnChangeScene(nextScene, spawn, transition);
     }
 }
