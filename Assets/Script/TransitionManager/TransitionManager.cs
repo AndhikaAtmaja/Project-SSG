@@ -31,6 +31,15 @@ public class TransitionManager : MonoBehaviour
         sceneTransitions = TransitionContainer.GetComponentsInChildren<SceneTransition>();
     }
 
+    public void PlayTransitionIn()
+    {
+
+    }
+    public void PlayTransitionOut()
+    {
+
+    }
+
     public void LoadSceneTransition(string sceneName, string transitionName)
     {
         StartCoroutine(LoadSceneAsync(sceneName, transitionName));

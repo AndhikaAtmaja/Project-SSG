@@ -212,6 +212,7 @@ public class StoryManager : MonoBehaviour
                         _currentStoryChapter = allChapters[i];
                         _chapterIndex = i;
                         _stepIndex = 0;
+                        GameManager.instance.ResetAllGameStatus();
                         LoadCurrentStep();
                     }
                 }

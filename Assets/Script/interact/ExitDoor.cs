@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitDoor : MonoBehaviour, IInteractable
+public class ExitDoor : Interact, IInteractable
 {
     public QuestSO quest;
 

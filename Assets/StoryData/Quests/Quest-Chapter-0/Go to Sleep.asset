@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a453d7ea9c6344cace129c57e21398, type: 3}
   m_Name: Go to Sleep
   m_EditorClassIdentifier: 
-  questID: 
-  questName: 
+  questID: GTS-00
+  questName: Go to bed
   questImage: {fileID: 0}
   objectives: []
   interactType:
