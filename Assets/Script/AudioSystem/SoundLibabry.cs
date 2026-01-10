@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct SoundFX
+public struct SoundEffect
 {
     public string groupID;
     public AudioClip[] clipSoundFXs;
@@ -11,7 +11,7 @@ public struct SoundFX
 
 public class SoundLibabry : MonoBehaviour
 {
-    public SoundFX[] soundFXs;
+    public SoundEffect[] soundFXs;
 
     public AudioClip GetClipByGroupID(string group)
     {

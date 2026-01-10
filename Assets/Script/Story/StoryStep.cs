@@ -9,14 +9,17 @@ public class StoryStep
     public string setpID;
     public List<QuestSO> quests;
     public List<DialogueSO> dialogues;
-
     public bool autoStartDialogueAfterScene;
     public string nextSceneName;
     public string transition;
-    public string soundEffect;
-    public string musicTrack;
     public StoryChapterSO nextChapter;
 
+    [Header("Sound Config")]
+    public string soundEffect;
+    public bool isSoundEffectLoop;
+    public string musicTrack;
+    
+    [Header("Chapter Step Status")]
     [SerializeField] private bool AllQuestDone;
     [SerializeField] private bool AllDialogueDone;
 
@@ -65,5 +68,10 @@ public class StoryStep
     {
         //Debug.Log("Get Called GetAllQuestDone");
         return AllQuestDone;
+    }
+
+    public void ResetStoryProgress()
+    {
+        AllDialogueDone = AllQuestDone = false;
     }
 }

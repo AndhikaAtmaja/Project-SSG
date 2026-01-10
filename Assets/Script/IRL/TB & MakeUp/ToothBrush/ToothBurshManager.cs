@@ -77,11 +77,11 @@ public class ToothBurshManager : MonoBehaviour
 
     public void BrushingTooth()
     {
-        SoundManager.instance.PlayLoopSound("Brushing");
+        SoundManager.instance.PlayLoopSoundEffect("Brushing");
 
         if (playerStroke >= totalStroke)
         {
-            SoundManager.instance.StopLoopSFX();
+            SoundManager.instance.StopLoopSoundEffect();
             Debug.Log("Done cleaning");
         }
         else if (playerStroke < totalStroke)

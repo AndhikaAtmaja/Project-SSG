@@ -7,8 +7,10 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
 
     [Header("Reference")]
-    [SerializeField] private SoundLibabry _soundFXlibrary;
+    [SerializeField] private SoundLibabry _soundEffectlibrary;
     [SerializeField] private AudioSource _soundSource;
+    [SerializeField] private AudioSource _loopSoundEffectSource;
+    [SerializeField] private AudioSource _walkingSoundEffectSource;
 
     private void Awake()
     {
@@ -25,25 +27,40 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySoundFXOneClip(string soundName)
     {
-        _soundSource.PlayOneShot(_soundFXlibrary.GetClipByGroupID(soundName));
+        _soundSource.PlayOneShot(_soundEffectlibrary.GetClipByGroupID(soundName));
     }
 
-    public void PlayLoopSound(string soundName)
+    public void PlayLoopSoundEffect(string soundName)
     {
-        if (_soundSource.isPlaying) return;
-
-        AudioClip clip = _soundFXlibrary.GetClipByGroupID(soundName);
-        if (clip == null) return;
-
-        _soundSource.clip = clip;
-        _soundSource.loop = true;
-        _soundSource.Play();
+        AudioClip clip = _soundEffectlibrary.GetClipByGroupID(soundName);
+        Debug.Log(clip.name);
+ 
+        _loopSoundEffectSource.clip = clip;
+        _loopSoundEffectSource.loop = true;
+        _loopSoundEffectSource.Play();
     }
 
-    public void StopLoopSFX()
+    public void StopLoopSoundEffect()
     {
-        _soundSource.Stop();
-        _soundSource.loop = false;
+        _loopSoundEffectSource.Stop();
+        //_loopSoundEffectSource.clip = null;
+        _loopSoundEffectSource.loop = false;
+    }
+
+    public void PlayWalkingSoundEffect(string soundName)
+    {
+        AudioClip clip = _soundEffectlibrary.GetClipByGroupID(soundName);
+        Debug.Log(clip.name);
+
+        _walkingSoundEffectSource.clip = clip;
+        _walkingSoundEffectSource.loop = true;
+        _walkingSoundEffectSource.Play();
+    }
+
+    public void StopWalkingSoundEffect()
+    {
+        _walkingSoundEffectSource.Stop();
+        _walkingSoundEffectSource.loop = false;
     }
 
     public void StopAllSoundFX()
@@ -51,4 +68,8 @@ public class SoundManager : MonoBehaviour
         _soundSource.Stop();
     }
 
+    public bool GetIsLoopSoundEffect()
+    {
+        return _soundSource.isPlaying;
+    }
 }

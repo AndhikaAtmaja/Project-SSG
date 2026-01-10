@@ -6,7 +6,10 @@ public class MovementCharacter : MonoBehaviour
     [SerializeField] private float speedMovement;
     [SerializeField] private Vector2 direction;
 
+    public string walkingSoundEffect;
+
     private AnimationCharacter _animation;
+    private bool isWalkingSoundPlaying;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -48,11 +51,15 @@ public class MovementCharacter : MonoBehaviour
 
     private void StartWalkingSound()
     {
-        SoundManager.instance.PlayLoopSound("Walking");
+        if (isWalkingSoundPlaying) return;
+
+        SoundManager.instance.PlayWalkingSoundEffect(walkingSoundEffect);
+        isWalkingSoundPlaying = true;
     }
 
     private void StopWalkingSound()
     {
-        SoundManager.instance.StopLoopSFX();
+        isWalkingSoundPlaying = false;
+        SoundManager.instance.StopWalkingSoundEffect();
     }
 }

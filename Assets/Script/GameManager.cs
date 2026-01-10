@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        //instance all Manager
         //instance the quest manager
         _questManager = Instantiate(questManagerPrefab).GetComponent<QuestManager>();
 
@@ -50,19 +51,15 @@ public class GameManager : MonoBehaviour
 
         //instance the story manager
         _storyManager = Instantiate(storyManagerPrefab).GetComponent<StoryManager>();
-
         SaveSystem.Load();
-        //_storyManager.StartChapter();
-
     }
 
-/*    private void Update()
+    public void NewGame()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            SaveSystem.Save();
-        }
-    }*/
+        StoryManager.instance.ResetAllStoryProgress();
+        SaveSystem.Save();
+        StartGame();
+    }
 
     public string GetCurrentScene()
     {

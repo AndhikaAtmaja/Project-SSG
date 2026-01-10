@@ -21,21 +21,25 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    soundEffect: 
-    musicTrack: 
+    transition: 
     nextChapter: {fileID: 0}
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    soundEffect: Alarm
+    isSoundEffectLoop: 1
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: HairStyling
     setpID: 
     quests:
     - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: Hairstyel
-    soundEffect: 
-    musicTrack: 
+    nextSceneName: Hairstyle
+    transition: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Take A Bath
@@ -47,9 +51,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
-    soundEffect: 
-    musicTrack: 
+    transition: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After take a bath
@@ -60,9 +66,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f7f73b99f35c0a1488e442fc018767d4, type: 2}
     autoStartDialogueAfterScene: 1
     nextSceneName: 
-    soundEffect: 
-    musicTrack: 
+    transition: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Inside Phone
@@ -74,9 +82,11 @@ MonoBehaviour:
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
-    soundEffect: 
-    musicTrack: 
+    transition: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

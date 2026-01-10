@@ -36,10 +36,11 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-/*    private void Start()
+    private void Start()
     {
-        StartChapter();
-    }*/
+        /*ResetAllStoryProgress();
+        StartChapter();*/
+    }
 
     public void StartChapter()
     {
@@ -58,7 +59,7 @@ public class StoryManager : MonoBehaviour
 
     public void Load(StoryGameSaveData data)
     {
-        Debug.Log("Get called!");
+        //Debug.Log("Get called!");
         if (data.chapterIndex < 0)
         {
             StartChapter();
@@ -108,26 +109,22 @@ public class StoryManager : MonoBehaviour
 
     private void LoadCurrentStep()
     {
-        StoryStep step = currentStep;
-
         Debug.Log($"current Step is {currentStep.nameStep}");
         //Debug.Log($"Total Quest of {step.nameStep} is {step.quests.Count}");
+
+        if (currentStep.nameStep.ToLower() == "ending")
+            EndStory();
 
         if (currentStep.dialogues.Count > 0)
         {
             //Debug.Log("Get Called");
-            DialogueManager.instance.ChangeCurrentDialogue(step.dialogues[0]);
+            DialogueManager.instance.ChangeCurrentDialogue(currentStep.dialogues[0]);
         }
 
         if (currentStep.quests.Count > 0)
         {
             //Debug.Log("Get Called");
-            QuestManager.instance.FillQuest(step.quests);
-        }
-
-        if (currentStep.nextChapter != null)
-        {
-            NextChapter();
+            QuestManager.instance.FillQuest(currentStep.quests);
         }
 
         if (currentStep.musicTrack != null)
@@ -140,12 +137,21 @@ public class StoryManager : MonoBehaviour
             PlaySound();
         }
 
+        if (currentStep.nextChapter != null)
+        {
+            ChangeChapterbyStep();
+        }
+
         if (currentStep.nextSceneName != null)
         {
             ChangeScene();
         }
+    }
 
-        //QuestManager.instance.HighlightArea();
+    private void EndStory()
+    {
+        CheckChapter();
+        Debug.Log("This is the ending!");
     }
 
     public void CheckChapter()
@@ -168,56 +174,58 @@ public class StoryManager : MonoBehaviour
     private void NextStep()
     {
         //Debug.Log($"Proceed to next step");
-        if (isTransitioning) return;
-
         StoryChapterSO chapter = allChapters[_chapterIndex];
-        _stepIndex++;
-
-        //Debug.Log($"name step {allChapters[_chapterIndex].chapterSteps[_stepIndex].nameStep}");
-
-        if (_stepIndex >= chapter.chapterSteps.Count)
-        {
-            chapter.isChapterDone = true;
-        }
-
+        
         // If still inside this chapter
-        if (_stepIndex >= chapter.chapterSteps.Count)
+        if (_stepIndex >= _currentStoryChapter.chapterSteps.Count)
         {
             Debug.Log("Chapter finished!");
+
+            StoryStep step = currentStep;
+            if (step == null) return;
+
+            step.QuestChecker();
+            step.DialogueChecker();
+
             chapter.isChapterDone = true;
-            //return;
+            return;
         }
 
+        _stepIndex++;
         LoadCurrentStep();
-        // If last step, move chapter
-        //NextChapter();
     }
 
-    private void NextChapter()
+    private void ChangeChapterbyStep()
     {
         Debug.Log("get Called");
-
         if (currentStep.nextChapter != null)
         {
-            //find chapter in the data 
-            bool found = false;
-
-            if (found == false)
+            for (int i = 0; i < allChapters.Count; i++)
             {
-                for (int i = 0; i < allChapters.Count; i++)
+                if (currentStep.nextChapter.name.ToLower() == allChapters[i].name.ToLower())
                 {
-                    if (allChapters[i].nameChapter.ToLower() == currentStep.nextChapter.nameChapter.ToLower())
-                    {
-                        //set the chapter with this
-                        _currentStoryChapter = allChapters[i];
-                        _chapterIndex = i;
-                        _stepIndex = 0;
-                        GameManager.instance.ResetAllGameStatus();
-                        LoadCurrentStep();
-                    }
+                    //set the chapter with this
+                    _currentStoryChapter = allChapters[i];
+                    _chapterIndex = i;
+                    _stepIndex = 0;
+                    GameManager.instance.ResetAllGameStatus();
+                    LoadCurrentStep();
                 }
             }
+        }
+    }
 
+    public void ResetAllStoryProgress()
+    {
+        _chapterIndex = -1;
+        _stepIndex = -1;
+        foreach(StoryChapterSO chapter in allChapters)
+        {
+            for(int i = 0; i < chapter.chapterSteps.Count; i++)
+            {
+                chapter.chapterSteps[i].ResetStoryProgress();
+            }
+            chapter.isChapterDone = false;
         }
     }
 
@@ -233,7 +241,13 @@ public class StoryManager : MonoBehaviour
         if (string.IsNullOrEmpty(soundFX))
             return;
 
-        SoundManager.instance.PlaySoundFXOneClip(soundFX);
+        if (currentStep.isSoundEffectLoop)
+        {
+            Debug.Log("Sound Effect Loop Get Called");
+            SoundManager.instance.PlayLoopSoundEffect(soundFX);
+        }
+        else
+            SoundManager.instance.PlaySoundFXOneClip(soundFX);
     }
 
     private void PlayMusic()

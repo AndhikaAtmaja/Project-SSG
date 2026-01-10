@@ -57,4 +57,12 @@ public class SaveSystem : MonoBehaviour
         SceneManagement.instance.Load(_saveData.sceneData);
         StoryManager.instance.Load(_saveData.storyData);
     }
+
+    public static bool SaveFileChecker()
+    {
+        string filePath = SaveFileName();
+        bool isHaveSaveFile = File.Exists(filePath);
+
+        return isHaveSaveFile;
+    }
 }

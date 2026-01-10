@@ -16,5 +16,7 @@ public class QuestCheckButton : MonoBehaviour
     public void CompletedQuest()
     {
         QuestManager.instance.GetCheckQuest(quest.questID, true);
+        if (SoundManager.instance.GetIsLoopSoundEffect())
+            SoundManager.instance.StopLoopSoundEffect();
     }
 }

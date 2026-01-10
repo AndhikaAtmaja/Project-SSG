@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: bedroom
   nextSpawnArea: Bathroom
+  transition: 
 --- !u!1 &426535940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3555,10 @@ PrefabInstance:
     - target: {fileID: 6724737355578681432, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040024604698773090, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

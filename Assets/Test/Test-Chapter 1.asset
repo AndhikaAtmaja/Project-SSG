@@ -10,34 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
-  m_Name: Test-Chapter
+  m_Name: Test-Chapter 1
   m_EditorClassIdentifier: 
-  nameChapter: Test-1
+  nameChapter: Test-2
   chapterSteps:
-  - nameStep: Go to Sleep
+  - nameStep: Wake Up
     setpID: 
     quests:
-    - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
+    - {fileID: 11400000, guid: 1e63c0d7a462b8b42a240345ccd738bf, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: Bedroom
+    nextSceneName: WakeUp
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
-    isSoundEffectLoop: 0
-    musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
-  - nameStep: Sleeping
-    setpID: 
-    quests: []
-    dialogues: []
-    autoStartDialogueAfterScene: 0
-    nextSceneName: 
-    transition: 
-    nextChapter: {fileID: 11400000, guid: 183a8fa2db005964b975f389267e8e27, type: 2}
-    soundEffect: 
-    isSoundEffectLoop: 0
+    soundEffect: Alarm
+    isSoundEffectLoop: 1
     musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0

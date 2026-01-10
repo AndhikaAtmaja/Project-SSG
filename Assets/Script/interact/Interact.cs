@@ -23,7 +23,7 @@ public class Interact : MonoBehaviour
 
     private void Highlight(InteractTargetType interactType, bool isComplete)
     {
-        Debug.Log("get Called");
+        //Debug.Log("get Called");
         if (interactType == this.interactType && !isComplete)
         {
             _sr.sprite = highlightSprite;

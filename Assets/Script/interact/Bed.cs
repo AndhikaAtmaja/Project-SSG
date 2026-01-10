@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Bed : Interact, IInteractable
 {
+    public string questID;
     public QuestSO quest;
 
     private void Start()
     {
-        quest = QuestManager.instance.FindQuestByID("GTS");
+        quest = QuestManager.instance.FindQuestByID(questID);
     }
 
     public void interact()
