@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
+  m_Name: Chat With Unknown
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: good morning, selene~
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[Why are you still texting me?]'
+      nextDialogue: {fileID: 0}
+    - choiceText: '[What do you want?]'
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: nothing much.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: just checking in.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: just checking in.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[Stop watching me.]'
+      nextDialogue: {fileID: 0}
+    - choiceText: "[\u2026i\u2019m fine.]"
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: if you say so.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: when i think more about it, you like being watched right?
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: "getting attention from all people that you don\u2019t even know."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: "[\u2026..]"
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  isDialogueDone: 0

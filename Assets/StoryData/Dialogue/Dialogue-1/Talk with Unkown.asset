@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
+  m_Name: Talk with Unkown
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: hello, selene.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[How do you know my name?]'
+      nextDialogue: {fileID: 0}
+    - choiceText: '[Who are you..?]'
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: well~ i just someone who knows your secret.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[Secret..?]'
+      nextDialogue: {fileID: 0}
+    - choiceText: '[What are you talking about?]'
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: The one behind all those fake persona you show on PictGram.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  isDialogueDone: 0

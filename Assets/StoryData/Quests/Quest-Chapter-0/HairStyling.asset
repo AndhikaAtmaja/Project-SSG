@@ -18,4 +18,4 @@ MonoBehaviour:
   objectives: []
   interactType:
     target: 0
-  IsCompleted: 0
+  IsCompleted: 1

@@ -17,7 +17,7 @@ MonoBehaviour:
   questImage: {fileID: 0}
   objectives:
   - description: 
-    type: 5
+    type: 6
     targetSceneName: Bedroom
     isCompleted: 0
   interactType:

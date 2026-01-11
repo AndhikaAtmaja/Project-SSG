@@ -59,7 +59,7 @@ public class PhoneData : MonoBehaviour
 
                     //  Pass the full file path
                     generatePhotoBox.OnGeneratePhotoBox(sprite, file);
-                    Debug.Log($"Loaded new screenshot: {file}");
+                    //Debug.Log($"Loaded new screenshot: {file}");
 
                     //  Mark this file as loaded
                     loadedFiles.Add(file);

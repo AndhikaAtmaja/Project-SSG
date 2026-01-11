@@ -12,8 +12,8 @@ public class ButtonChapter : MonoBehaviour
 
    public void OnSelectChapter()
     {
-        OnClickButton?.Invoke(gameObject.name);
         StoryManager.instance.SelectedChapter(chapter.nameChapter);
+        OnClickButton?.Invoke(gameObject.name);
 
         if (_notificationAnimation != null && notification != null)
         {

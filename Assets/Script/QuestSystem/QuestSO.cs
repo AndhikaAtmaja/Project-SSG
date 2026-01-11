@@ -7,6 +7,7 @@ public enum QuestObjectiveType
     OpenCamera,
     TakePhoto,
     OpenSosialMedia,
+    OpenMessageApp,
     OpenMessage,
     ChangeScene,
     ClickChapter,

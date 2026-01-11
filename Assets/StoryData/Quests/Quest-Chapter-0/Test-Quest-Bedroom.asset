@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: BTB-01
   questName: Back to Bedroom
-  questImage: {fileID: 0}
+  questImage: {fileID: 21300000, guid: c4258546bfc473840b284f7d71990075, type: 3}
   objectives:
   - description: Switch to Bedroom
     type: 5

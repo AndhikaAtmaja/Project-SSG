@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
+  m_Name: Chat With Unknown
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: blocking me, huh?
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: '[Stop messaging me.]'
+      nextDialogue: {fileID: 0}
+    - choiceText: '[What do you want from me?]'
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: relax~
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: "i just want to\u2026 talk with you."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: "after all, i know things you don\u2019t want anyone else to see."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices:
+    - choiceText: "[You don\u2019t know anything.]"
+      nextDialogue: {fileID: 0}
+    - choiceText: '[Leave me alone.]'
+      nextDialogue: {fileID: 0}
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: oh?
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: is that so?
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Unknown
+    dialogueType: 0
+    dialogueLine: "then maybe\u2026 you should check your PictGram right now."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  isDialogueDone: 0

@@ -146,6 +146,8 @@ public class StoryManager : MonoBehaviour
         {
             ChangeScene();
         }
+
+        QuestManager.instance.ShowQuets();
     }
 
     private void EndStory()
@@ -175,7 +177,8 @@ public class StoryManager : MonoBehaviour
     {
         //Debug.Log($"Proceed to next step");
         StoryChapterSO chapter = allChapters[_chapterIndex];
-        
+        _stepIndex++;
+
         // If still inside this chapter
         if (_stepIndex >= _currentStoryChapter.chapterSteps.Count)
         {
@@ -190,8 +193,7 @@ public class StoryManager : MonoBehaviour
             chapter.isChapterDone = true;
             return;
         }
-
-        _stepIndex++;
+ 
         LoadCurrentStep();
     }
 

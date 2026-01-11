@@ -133,12 +133,14 @@ public class QuestChecker : MonoBehaviour
     {
         PhoneApplication.OnApplicationOpenned += HandleAppOpened;
         ButtonChapter.OnClickButton += HandleClikcButton;
+        ButtonDilaoge.OnClickButton += HandleClikcButton;
         SceneManagement.OnSuccesChangeScene += HandleChangeScene;
     }
     private void OnDisable()
     {
         PhoneApplication.OnApplicationOpenned -= HandleAppOpened;
         ButtonChapter.OnClickButton -= HandleClikcButton;
+        ButtonDilaoge.OnClickButton -= HandleClikcButton;
         SceneManagement.OnSuccesChangeScene -= HandleChangeScene;
     }
     private void HandleAppOpened(string appName)
@@ -154,7 +156,7 @@ public class QuestChecker : MonoBehaviour
                 break;
 
             case "massage":
-                CheckObjectivePhone(QuestObjectiveType.OpenMessage); 
+                CheckObjectivePhone(QuestObjectiveType.OpenMessageApp); 
                 break;
 
             case "pictgram":
@@ -167,11 +169,14 @@ public class QuestChecker : MonoBehaviour
     {
         string name = nameButton.Split('-')[0].ToLower();
 
-
         switch (name)
         {
             case "chapter":
                 CheckObjectiveClick(QuestObjectiveType.ClickChapter);
+                break;
+
+            case "massage":
+                CheckObjectiveClick(QuestObjectiveType.OpenMessage);
                 break;
 
             default:

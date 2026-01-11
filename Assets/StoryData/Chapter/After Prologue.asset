@@ -22,22 +22,25 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Chat With Friend
     setpID: 
-    quests: []
+    quests:
+    - {fileID: 11400000, guid: 15ef2177e5a02fa44ac41cf659768c7a, type: 2}
     dialogues:
     - {fileID: 11400000, guid: 2131ffa4ec6074f4ab3825827398cf4b, type: 2}
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After chat with friend
@@ -48,9 +51,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After Turn off phone
@@ -61,9 +65,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Do Make Up
@@ -75,9 +80,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After Make Up
@@ -89,9 +95,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After Turn On Phone
@@ -105,9 +112,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After Turn Off Phone
@@ -119,9 +127,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After buyying Food
@@ -132,9 +141,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After take a bath
@@ -146,9 +156,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 1
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Go to Sleep
@@ -159,9 +170,10 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Sleep
@@ -169,11 +181,12 @@ MonoBehaviour:
     quests: []
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: WakeUp-1
+    nextSceneName: 
     transition: 
-    soundEffect: 
-    musicTrack: 
     nextChapter: {fileID: 11400000, guid: b73064eecb9737b448ebcba4bffeb2d2, type: 2}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0

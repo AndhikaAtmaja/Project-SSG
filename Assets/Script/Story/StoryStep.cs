@@ -73,5 +73,17 @@ public class StoryStep
     public void ResetStoryProgress()
     {
         AllDialogueDone = AllQuestDone = false;
+
+        foreach (QuestSO quest in quests)
+        {
+            quest.IsCompleted = false;
+            foreach (QuestObjective questObj in quest.objectives)
+                questObj.isCompleted = false;
+        }
+
+        foreach(DialogueSO dialogue in dialogues)
+        {
+            dialogue.isDialogueDone = false;
+        }
     }
 }

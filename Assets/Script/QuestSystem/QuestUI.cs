@@ -10,14 +10,11 @@ public class QuestUI : MonoBehaviour
 
     //data base
     [SerializeField] private QuestList _questList;
-    [SerializeField] private QuestDataBase _questDB;
 
     private void Start()
     {
         _questList = GameObject.FindGameObjectWithTag("QuestList").GetComponent<QuestList>();
     
-        _questDB = GameObject.FindGameObjectWithTag("QuestDB").GetComponent<QuestDataBase>();
-
         _questList.UpdateQuestList.AddListener(UpdateQuestUI);
         QuestManager.instance.ShowQuets();
     }
@@ -31,35 +28,31 @@ public class QuestUI : MonoBehaviour
         {
             questBackGround.SetActive(false);
             questImage.sprite = null;
-            Debug.Log("QuestUI: All questChapter completed, hiding quest UI.");
+            Debug.Log("QuestUI: All questChapter completed, hiding currentQuest UI.");
             return;
         }
 
-        QuestSO quest = _questDB.FindQuestData(_questList.GetCurrentQuest().questID);
-
-        if (quest != null)
+        if (currentQuest != null)
         {
-            if (quest.IsCompleted)
+            if (currentQuest.IsCompleted)
             {
                 //questBackGround.SetActive(false);
                 questImage.sprite = null;
-                Debug.Log($"QuestUI: Quest '{quest.questName}' is done, hiding UI.");
+                Debug.Log($"QuestUI: Quest '{currentQuest.questName}' is done, hiding UI.");
             }
             else
             {
-                // Show the current quest info
-                //questBackGround.SetActive(true);
+                // Show the current currentQuest info
+                if (questBackGround != null)
+                    questBackGround.SetActive(true);
                 if (questImage != null)
-                    questImage.sprite = quest.questImage;
+                    questImage.sprite = currentQuest.questImage;
                 if (questDesc != null)
-                    questDesc.text = quest.questName;
+                    questDesc.text = currentQuest.questName;
             }
         }
         else
         {
-            // If quest data not found in DB, hide UI
-            //questBackGround.SetActive(false);
-            //questImage.sprite = null;
             Debug.LogWarning("QuestUI: Quest data not found in database!");
         }
     }

@@ -17,9 +17,9 @@ MonoBehaviour:
   questImage: {fileID: 0}
   objectives:
   - description: 
-    type: 5
+    type: 6
     targetSceneName: Phone
-    isCompleted: 1
+    isCompleted: 0
   interactType:
     target: 0
   IsCompleted: 0

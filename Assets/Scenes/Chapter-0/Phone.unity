@@ -2259,7 +2259,6 @@ MonoBehaviour:
   questImage: {fileID: 1490125168}
   questDesc: {fileID: 0}
   _questList: {fileID: 0}
-  _questDB: {fileID: 1236028890}
 --- !u!1 &231832204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4118d6cdb03b1cb4e98d7e78718f7fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: 
 --- !u!114 &249024065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,6 +2812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Bedroom
   spawn: 
+  transition: 
 --- !u!1 &251774792
 GameObject:
   m_ObjectHideFlags: 0
@@ -9305,17 +9306,6 @@ RectTransform:
   m_AnchoredPosition: {x: 82.46, y: -14.835}
   m_SizeDelta: {x: 158.92, y: 23.67}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1236028890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6963933548759459947, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
-  m_PrefabInstance: {fileID: 9141905375574949946}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e99a806ef2c1754c9f49d3aae2a08f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1239083838
 GameObject:
   m_ObjectHideFlags: 0
@@ -10736,15 +10726,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 657295634, guid: 554b29642273eab46b53df3bac728fd6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -15361,7 +15351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453021088161424273, guid: 0599cf4044299f046912aebe47b06880, type: 3}
       propertyPath: m_Name
-      value: PersonContact
+      value: Massage-PersonContact
       objectReference: {fileID: 0}
     - target: {fileID: 1684678170862340356, guid: 0599cf4044299f046912aebe47b06880, type: 3}
       propertyPath: m_Type
@@ -15856,11 +15846,19 @@ PrefabInstance:
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: a9dd602c0c727b945ae8ef7e15efb758, type: 2}
+      objectReference: {fileID: 11400000, guid: 84f71c9f40ce3654e8d076b27700de76, type: 2}
     - target: {fileID: 1030518202666236211, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: listOfQuests.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: fe2d61b6fef1646408946663db8326b5, type: 2}
+    - target: {fileID: 6963933548759459947, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
+      propertyPath: questdData.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963933548759459947, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
+      propertyPath: questdData.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: 15ef2177e5a02fa44ac41cf659768c7a, type: 2}
     - target: {fileID: 8291751280543238483, guid: 7ce143301572a2e48ae270b10f09f393, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

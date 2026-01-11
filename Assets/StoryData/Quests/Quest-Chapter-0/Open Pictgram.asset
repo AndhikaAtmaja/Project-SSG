@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: OP-00
   questName: Open Pictgram
-  questImage: {fileID: 0}
+  questImage: {fileID: 21300000, guid: 746f2962fe1887a4389d9dcdb41f625e, type: 3}
   objectives:
   - description: Open Pictgram
     type: 3
