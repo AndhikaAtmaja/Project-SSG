@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour
         _soundSource.PlayOneShot(_soundEffectlibrary.GetClipByGroupID(soundName));
     }
 
+    #region Manage Loop Sound Effect 
     public void PlayLoopSoundEffect(string soundName)
     {
         AudioClip clip = _soundEffectlibrary.GetClipByGroupID(soundName);
@@ -46,6 +47,12 @@ public class SoundManager : MonoBehaviour
         //_loopSoundEffectSource.clip = null;
         _loopSoundEffectSource.loop = false;
     }
+
+    public bool GetIsLoopSoundEffect()
+    {
+        return _loopSoundEffectSource.isPlaying;
+    }
+    #endregion
 
     public void PlayWalkingSoundEffect(string soundName)
     {
@@ -66,10 +73,5 @@ public class SoundManager : MonoBehaviour
     public void StopAllSoundFX()
     {
         _soundSource.Stop();
-    }
-
-    public bool GetIsLoopSoundEffect()
-    {
-        return _soundSource.isPlaying;
     }
 }

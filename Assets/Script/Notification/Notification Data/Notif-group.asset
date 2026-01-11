@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationID: NMSG-1
   notificationName: Us Three <3
-  emotion: 3
+  emotion: 2
   notifications:
   - notificationName: 
     notificationMassage: 

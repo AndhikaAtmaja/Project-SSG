@@ -287,7 +287,6 @@ GameObject:
   - component: {fileID: 124773284}
   - component: {fileID: 124773283}
   - component: {fileID: 124773288}
-  - component: {fileID: 124773286}
   - component: {fileID: 124773287}
   m_Layer: 5
   m_Name: Alarm
@@ -360,7 +359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 124773286}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: GetChangeScene
         m_Mode: 1
@@ -422,21 +421,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124773281}
   m_CullTransparentMesh: 1
---- !u!114 &124773286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124773281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e9f51bf8de4f54e88f554cd9dcb122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: Hairstyle
-  spawn: 
-  transition: 
 --- !u!114 &124773287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,8 +450,9 @@ MonoBehaviour:
   hoverColor: {r: 0.81886786, g: 0.7763002, b: 0.39398354, a: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 0}
   durationTween: 0
-  soundEffect: UI
   isHovering: 0
+  soundEffectHovering: 
+  soundEffectClick: 
   onClick:
     m_PersistentCalls:
       m_Calls:

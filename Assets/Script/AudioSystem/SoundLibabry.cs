@@ -23,7 +23,7 @@ public class SoundLibabry : MonoBehaviour
             }
         }
 
-        Debug.Log($"there are no sound library with {group}");
+        Debug.Log($"there are no isSoundMuted  library with {group}");
         return null;
     }
 

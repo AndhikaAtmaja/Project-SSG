@@ -10,8 +10,11 @@ public class CustomizeButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
     public Color hoverColor;
     public Color defaultColor;
     public float durationTween;
-    public string soundEffect;
     [SerializeField] private bool isHovering;
+
+    [Header("Button Sound")]
+    public string soundEffectHovering;
+    public string soundEffectClick;
 
     [Header("Button Events")]
     public UnityEvent onClick;
@@ -63,7 +66,8 @@ public class CustomizeButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
 
     private void OnClick()
     {
-        SoundManager.instance.PlaySoundFXOneClip(soundEffect);
+        SoundManager.instance.PlaySoundFXOneClip(soundEffectClick);
+        OnHoverExit();
         onClick?.Invoke();
     }
 

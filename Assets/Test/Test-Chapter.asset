@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameChapter: Test-1
   chapterSteps:
-  - nameStep: Go to Sleep
+  - nameStep: 
     setpID: 
     quests:
     - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: Bedroom
+    nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
     soundEffect: 
