@@ -10,79 +10,59 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
-  m_Name: Chat With Unknown
+  m_Name: Chat with Unknown (After Wake Up)
   m_EditorClassIdentifier: 
   lines:
-  - speakerName: Unknown
+  - speakerName: Unknown 1
     dialogueType: 0
-    dialogueLine: good morning, Selene~
+    dialogueLine: blocking me, huh?
     imageChar: {fileID: 0}
     hasChoice: 0
     choices:
-    - choiceText: '[Why are you still texting me?]'
+    - choiceText: '[Stop messaging me.]'
       nextDialogue: {fileID: 0}
-    - choiceText: '[What do you want?]'
+    - choiceText: '[What do you want from me?]'
       nextDialogue: {fileID: 0}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown
+  - speakerName: Unknown 2
     dialogueType: 0
-    dialogueLine: nothing much.
+    dialogueLine: "relax~\nI just want to\u2026 talk with you."
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown
+  - speakerName: Unknown 3
     dialogueType: 0
-    dialogueLine: just checking in.
-    imageChar: {fileID: 0}
-    hasChoice: 0
-    choices: []
-    SoundFXName: 
-    triggerCutscene: 0
-    cutsceneID: 
-  - speakerName: Unknown
-    dialogueType: 0
-    dialogueLine: just checking in.
+    dialogueLine: "after all, I know things you don\u2019t want anyone else to see."
     imageChar: {fileID: 0}
     hasChoice: 0
     choices:
-    - choiceText: '[Stop watching me.]'
+    - choiceText: "[You don\u2019t know anything.]"
       nextDialogue: {fileID: 0}
-    - choiceText: "[\u2026i\u2019m fine.]"
+    - choiceText: '[Leave me alone.]'
       nextDialogue: {fileID: 0}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown
+  - speakerName: Unknown 3
     dialogueType: 0
-    dialogueLine: if you say so.
+    dialogueLine: oh? Is that so?
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown
+  - speakerName: Unknown 4
     dialogueType: 0
-    dialogueLine: when i think more about it, you like being watched right?
+    dialogueLine: "then maybe\u2026 you should check your PictGram right now."
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
-    SoundFXName: 
-    triggerCutscene: 0
-    cutsceneID: 
-  - speakerName: Unknown
-    dialogueType: 0
-    dialogueLine: "getting attention from all people that you don\u2019t even know."
-    imageChar: {fileID: 0}
-    hasChoice: 0
-    choices:
-    - choiceText: "[\u2026..]"
-      nextDialogue: {fileID: 0}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
