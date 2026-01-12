@@ -13,6 +13,9 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager instance;
 
+    [Header("Config ")]
+    public bool isAutoStartPlayEnable;
+
     [Header("Story Progress")]
     [SerializeField] private List<StoryChapterSO> allChapters;
     [SerializeField] private StoryChapterSO _currentStoryChapter;
@@ -38,8 +41,11 @@ public class StoryManager : MonoBehaviour
 
     private void Start()
     {
-        /*ResetAllStoryProgress();
-        StartChapter();*/
+        if (isAutoStartPlayEnable)
+        {
+            ResetAllStoryProgress();
+            StartChapter();
+        }
     }
 
     public void StartChapter()

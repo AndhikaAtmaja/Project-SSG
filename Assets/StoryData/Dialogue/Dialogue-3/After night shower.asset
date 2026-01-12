@@ -12,5 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a623a4033f25a134987fe8ba318916b5, type: 3}
   m_Name: After night shower
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - speakerName: 
+    dialogueType: 1
+    dialogueLine: "okay\u2026"
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: 
+    dialogueType: 1
+    dialogueLine: i can breathe a bit.
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
   isDialogueDone: 0

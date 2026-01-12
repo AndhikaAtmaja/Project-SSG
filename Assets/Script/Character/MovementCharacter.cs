@@ -8,6 +8,9 @@ public class MovementCharacter : MonoBehaviour
 
     public string walkingSoundEffect;
 
+    [Header("Event")]
+    public AnimtionPlayingEventSO animtionPlayingEvent;
+
     private AnimationCharacter _animation;
     private bool isWalkingSoundPlaying;
     private Rigidbody2D rb;
@@ -26,8 +29,7 @@ public class MovementCharacter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.instance.GetStatus("minigame") ||
-            DialogueManager.instance.isDialogueActive())
+        if (GameManager.instance.GetStatus("minigame") || DialogueManager.instance.isDialogueActive() || AnimationManager.instance.isAnimtionPlaying())
         {
             StopWalkingSound();
             rb.velocity = Vector2.zero;

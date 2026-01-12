@@ -24,7 +24,7 @@ MonoBehaviour:
     cutsceneID: 
   - speakerName: 
     dialogueType: 1
-    dialogueLine: "\ni\u2019m\u2026 tired."
+    dialogueLine: "i\u2019m\u2026 tired."
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
