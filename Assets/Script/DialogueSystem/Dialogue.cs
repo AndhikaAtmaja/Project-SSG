@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
-    public virtual void ShowLine(DialogueSO.DialogueLines line)
+    public virtual void ShowPersonalDialogueChat(DialogueSO.DialogueLines line)
+    {
+
+    }
+
+    public virtual void ShowGroupDialogueChat(DialogueSO.DialogueLines line)
     {
 
     }

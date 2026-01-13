@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         //instance all Manager
-        //instance the quest manager
+        //instance the currentQuest manager
         _questManager = Instantiate(questManagerPrefab).GetComponent<QuestManager>();
 
         //instance the dialogue manager

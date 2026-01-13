@@ -1213,6 +1213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6703333411482212766, guid: 0fe51645cde68ff40b4c3708c1198be3, type: 3}
+      propertyPath: tracks.Array.data[0].nameTrack
+      value: BGM-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2371,7 +2375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.size
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[0]
@@ -2388,11 +2392,23 @@ PrefabInstance:
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 183a8fa2db005964b975f389267e8e27, type: 2}
+      objectReference: {fileID: 11400000, guid: af140d702158ce441941046ad83798cf, type: 2}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: cde9e173bc5214f4493afd806926e2c9, type: 2}
+      objectReference: {fileID: 11400000, guid: 89d3715e1ffd6064ea74bfe23a6a9718, type: 2}
+    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
+      propertyPath: allChapters.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: c0293855442593a428199b5c1386013f, type: 2}
+    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
+      propertyPath: allChapters.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c1a0016ba8752f74eba295511bd30258, type: 2}
+    - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
+      propertyPath: allChapters.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 64b28dce60add5b429f8680ee0e1eb3a, type: 2}
     - target: {fileID: 7994167330922607079, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

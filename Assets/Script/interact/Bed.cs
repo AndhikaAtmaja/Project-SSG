@@ -5,19 +5,39 @@ using UnityEngine;
 public class Bed : Interact, IInteractable
 {
     public string questID;
-    public QuestSO quest;
+    public QuestSO currentQuest;
 
     private void Start()
     {
-        quest = QuestManager.instance.FindQuestByID(questID);
+        currentQuest = QuestManager.instance.FindQuestByID(questID);
+    }
+
+    private void SetQuest(QuestSO quest)
+    {
+        string prefix = quest.questID.Split('-')[0];
+
+        if (prefix == questID)
+        {
+            currentQuest = quest;
+        }
     }
 
     public void interact()
     {
-        if (quest != null)
+        if (currentQuest != null)
         {
-            QuestManager.instance.GetCheckQuest(quest.questID, true);
+            QuestManager.instance.GetCheckQuest(currentQuest.questID, true);
         }
         Debug.Log($"there to use {gameObject.name}");
+    }
+
+    private void OnEnable()
+    {
+        QuestManager.instance.SetQuestEvent += SetQuest;
+    }
+
+    private void OnDisable()
+    {
+        QuestManager.instance.SetQuestEvent -= SetQuest;
     }
 }

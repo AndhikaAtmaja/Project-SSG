@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class QuestManager : MonoBehaviour
     [Header("Events")]
     public InteractHighlightEventSO interactHighlight;
     public ClearHighlightEventSO clearHighlight;
+    public UnityAction<QuestSO> SetQuestEvent;
 
     private void Awake()
     {
@@ -32,6 +34,11 @@ public class QuestManager : MonoBehaviour
     public void GetCheckQuest(string questID, bool isDone)
     {
         _questList.OnCheckQuest(questID,isDone);
+    }
+
+    public void RaiseSetQuestEvent(QuestSO quest)
+    {
+        SetQuestEvent?.Invoke(quest);
     }
 
     public void FillQuest(List<QuestSO> quests)

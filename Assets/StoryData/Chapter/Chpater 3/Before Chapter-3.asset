@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
-  m_Name: Chapter-1
+  m_Name: Before Chapter-3
   m_EditorClassIdentifier: 
-  nameChapter: chapter-1
+  nameChapter: 
   chapterSteps:
   - nameStep: Wake Up
-    setpID: FN-00
-    quests:
-    - {fileID: 11400000, guid: 1e63c0d7a462b8b42a240345ccd738bf, type: 2}
+    setpID: 
+    quests: []
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: WakeUp
+    nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
     soundEffect: 
@@ -30,11 +29,24 @@ MonoBehaviour:
     AllDialogueDone: 0
   - nameStep: Hairstyle
     setpID: 
-    quests:
-    - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
+    quests: []
     dialogues: []
     autoStartDialogueAfterScene: 0
-    nextSceneName: Hairstyle
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Open Chapter 3
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: d9f87c9a64272dd4f8c747c462cb7e99, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
     soundEffect: 

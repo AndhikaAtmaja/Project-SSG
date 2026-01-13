@@ -22,7 +22,6 @@ public class SaveSystem : MonoBehaviour
     public static string SaveFileName()
     {
         string saveFile = Application.persistentDataPath + "/GameData" + ".save";
-        Debug.Log("Name file" + saveFile);
         return saveFile;
     }
 

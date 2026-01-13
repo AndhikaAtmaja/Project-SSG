@@ -19,7 +19,7 @@ public class QuestList : MonoBehaviour
     {
         if (listOfQuests.Count == 0)
         {
-            Debug.LogWarning($"there are no list of quest at QuestManager");
+            Debug.LogWarning($"there are no list of currentQuest at QuestManager");
             return;
         }
 
@@ -29,12 +29,12 @@ public class QuestList : MonoBehaviour
         // Skip completed questChapter
         while (currQuestID < listOfQuests.Count && listOfQuests[currQuestID].IsCompleted)
         {
-            currQuestID++;      
+            currQuestID++;
         }
 
         if (currQuestID >= listOfQuests.Count)
         {
-            //Debug.Log("All quest Chapter are done!");
+            //Debug.Log("All currentQuest Chapter are done!");
             QuestManager.instance.ClearHighlight();
             StoryManager.instance.CheckChapter();
             UpdateQuestList?.Invoke();  
@@ -42,6 +42,7 @@ public class QuestList : MonoBehaviour
         }
 
         //Debug.Log($"Quest {currQuestID} : {listOfQuests[currQuestID].name}");
+        QuestManager.instance.RaiseSetQuestEvent(listOfQuests[currQuestID]);
         QuestManager.instance.HighlightArea();
         UpdateQuestList?.Invoke();
     }
@@ -50,7 +51,7 @@ public class QuestList : MonoBehaviour
     {
         if (listOfQuests == null || currQuestID < 0 || currQuestID >= listOfQuests.Count)
         {
-            Debug.LogWarning("No valid current quest to update.");
+            Debug.LogWarning("No valid current currentQuest to update.");
             return;
         }
 
@@ -92,12 +93,12 @@ public class QuestList : MonoBehaviour
 
             if (questPrefix == questID)
             {
-                //Debug.Log($"Find quest : {listOfQuests[i]}");
+                //Debug.Log($"Find currentQuest : {listOfQuests[i]}");
                 return listOfQuests[i];
             }
             else
             {
-                Debug.Log($"Not find quest by ID of {questID}");
+                Debug.Log($"Not find currentQuest by ID of {questID}");
             }
         }
         return null;

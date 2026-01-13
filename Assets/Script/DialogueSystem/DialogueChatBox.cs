@@ -21,13 +21,13 @@ public class DialogueChatBox : Dialogue
         _generateChoiceButton.SetChoiceContainer(inputArea);
     }
 
-    public override void ShowLine(DialogueSO.DialogueLines line)
+    public override void ShowPersonalDialogueChat(DialogueSO.DialogueLines line)
     {
         if (waitingForChoice) 
             return;          // don't skip a choice
         
         _generateLine.OnGenerateLine(line);
-        _generateChatBox.OnGenerateChatBox(line.speakerName, line.dialogueLine);
+        _generateChatBox.OnGeneratePersonalChatBox(line.speakerName, line.dialogueLine);
 
         if (line.choices.Length > 0)
         {
@@ -41,6 +41,11 @@ public class DialogueChatBox : Dialogue
             _generateChoiceButton.ResetGenerateChoiceBox();
             DialogueManager.instance.NextLine(); // Continue automatically
         }
+    }
+
+    public override void ShowGroupDialogueChat(DialogueSO.DialogueLines line)
+    {
+        
     }
 
     public override void OnPlayerChoose(DialogueSO.ChoiceData choice)

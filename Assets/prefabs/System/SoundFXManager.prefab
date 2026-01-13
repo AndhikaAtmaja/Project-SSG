@@ -342,6 +342,9 @@ MonoBehaviour:
   - groupID: Alarm
     clipSoundFXs:
     - {fileID: 8300000, guid: a1e16c483d8d5774bb9c283922ece399, type: 3}
+  - groupID: Notification
+    clipSoundFXs:
+    - {fileID: 8300000, guid: 006e8662e745e144aa4007c8ab8ce352, type: 3}
 --- !u!1 &6210550649635163245
 GameObject:
   m_ObjectHideFlags: 0

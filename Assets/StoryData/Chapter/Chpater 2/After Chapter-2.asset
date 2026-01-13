@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
+  m_Name: After Chapter-2
+  m_EditorClassIdentifier: 
+  nameChapter: 
+  chapterSteps:
+  - nameStep: Chat with Unknown
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 50323418873f0ef4eb6a17a3133ff015, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After encouter with HImself
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 121fb04565f22a744a916b3ee3fd274a, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Take a bath
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: a7f257fc9977e974d9e35cfe82ca9d65, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Take a Make Up
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 7c3f010a75f67aa4687699156222b06d, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Chat with Unknown 2
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 3539aed50e75fcd49a844b7b6d025d8f, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After chat with Unknown 2
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Buy Food
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: 847d69cd1e6850048a2faf6595510148, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Take A Bath 2
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: d5c4545056083094ea5aa601e7c6ca01, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Go to Sleep
+    setpID: 
+    quests: []
+    dialogues:
+    - {fileID: 11400000, guid: c1c4cd57548896a41ad14016eb01f2f0, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: Sleep
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 11400000, guid: c1a0016ba8752f74eba295511bd30258, type: 2}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  isChapterDone: 0

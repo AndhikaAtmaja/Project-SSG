@@ -30,10 +30,11 @@ public class NotificationAnimation : MonoBehaviour
         nameText.text = name;
         messageText.text = message;
 
-        // Kill existing tween if any
-        currentTween?.Kill();
 
         SoundManager.instance.PlaySoundFXOneClip("Notification");
+
+        // Kill existing tween if any
+        currentTween?.Kill();
 
         Sequence seq = DOTween.Sequence();
         seq.Append(panel.DOAnchorPosY(visibleY, slideDuration).SetEase(Ease.OutBack))

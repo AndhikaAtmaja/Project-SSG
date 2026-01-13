@@ -12,7 +12,7 @@ public class DialogueBubble : Dialogue
             _bubbleUI = baloonUI;
     }
 
-    public override void ShowLine(DialogueSO.DialogueLines line)
+    public override void ShowPersonalDialogueChat(DialogueSO.DialogueLines line)
     {
         Debug.Log($"{line.speakerName} : {line.dialogueLine}");
         _bubbleUI.ActiveBuloonUI(line.dialogueLine);

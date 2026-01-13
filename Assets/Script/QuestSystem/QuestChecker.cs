@@ -17,7 +17,7 @@ public class QuestChecker : MonoBehaviour
         var currentQuest = questList.GetCurrentQuest();
         if (currentQuest == null)
         {
-            Debug.Log("No active quest found.");
+            Debug.Log("No active currentQuest found.");
             return;
         }
 
@@ -32,7 +32,7 @@ public class QuestChecker : MonoBehaviour
             }
         }
 
-        // Check if all objectives in this quest are done
+        // Check if all objectives in this currentQuest are done
         if (updated && currentQuest.objectives.TrueForAll(o => o.isCompleted))
         {
             currentQuest.IsCompleted = true;
@@ -53,7 +53,7 @@ public class QuestChecker : MonoBehaviour
 
         if (currentQuest == null)
         {
-            Debug.Log("No active quest found.");
+            Debug.Log("No active currentQuest found.");
             return;
         }
 
@@ -105,7 +105,7 @@ public class QuestChecker : MonoBehaviour
         var currentQuest = questList.GetCurrentQuest();
         if (currentQuest == null)
         {
-            Debug.Log("No active quest found.");
+            Debug.Log("No active currentQuest found.");
             return;
         }
 
@@ -120,7 +120,7 @@ public class QuestChecker : MonoBehaviour
             }
         }
 
-        // Check if all objectives in this quest are done
+        // Check if all objectives in this currentQuest are done
         if (updated && currentQuest.objectives.TrueForAll(o => o.isCompleted))
         {
             currentQuest.IsCompleted = true;

@@ -13,7 +13,7 @@ public class GenerateChatBox : MonoBehaviour
         conatinerChatBox = massageArea;
     }
 
-    public void OnGenerateChatBox(string speakerName, string dialogue)
+    public void OnGeneratePersonalChatBox(string speakerName, string dialogue)
     {
         //check if dialogueLine is player or not
         GameObject preafabtoSpawn = (speakerName == "Selene") ?

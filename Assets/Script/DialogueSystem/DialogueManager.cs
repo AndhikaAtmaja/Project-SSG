@@ -121,12 +121,12 @@ public class DialogueManager : MonoBehaviour
         switch (currentLine.dialogueType)
         {
             case DialogueSO.DialogueType.ChatBox:
-                _dialogueChatBox.ShowLine(currentLine);
+                _dialogueChatBox.ShowPersonalDialogueChat(currentLine);
                 break;
 
             case DialogueSO.DialogueType.BubbleChat:
                 
-                _dialogueBubble.ShowLine(currentLine);
+                _dialogueBubble.ShowPersonalDialogueChat(currentLine);
                 if (currentLine.SoundFXName != null)
                 {
                     string soundFX = currentLine.SoundFXName;
