@@ -54,7 +54,7 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: test
     AllQuestDone: 1
     AllDialogueDone: 1
   - nameStep: After take a bath
@@ -69,7 +69,7 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: test
     AllQuestDone: 1
     AllDialogueDone: 1
   - nameStep: Inside Phone
@@ -85,7 +85,7 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: test
     AllQuestDone: 0
     AllDialogueDone: 0
   isChapterDone: 0
