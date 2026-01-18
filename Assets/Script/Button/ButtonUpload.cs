@@ -14,6 +14,16 @@ public class ButtonUpload : MonoBehaviour
     [SerializeField] private bool isPhotoBeenFill;
     [SerializeField] private bool isCaptionBeenFill;
 
+    public QuestSO quest;
+    public string questID;
+
+    private void Start()
+    {
+        if (quest == null)
+            quest = QuestManager.instance.FindQuestByID(questID);
+    }
+
+
     private void HandlePhotoFillChanged(bool filled)
     {
         isPhotoBeenFill = filled;
@@ -28,6 +38,7 @@ public class ButtonUpload : MonoBehaviour
     {
         if (isPhotoBeenFill && isCaptionBeenFill)
         {
+            QuestManager.instance.GetCheckQuest(quest.questID, true);   
             _uploadFeed.OnUploadPhoto(_captionInput.CaptionText.ToString());
             _captionInput.OnSubmit();
             SosialMediaManager.instance.UpdateSosialMedia();

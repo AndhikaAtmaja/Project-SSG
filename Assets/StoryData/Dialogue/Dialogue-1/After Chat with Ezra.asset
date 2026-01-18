@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: After Chat with Ezra
   m_EditorClassIdentifier: 
   lines:
-  - speakerName: 
+  - speakerName: Selene
     dialogueType: 1
     dialogueLine: " hmm\u2026"
     imageChar: {fileID: 0}
@@ -22,7 +22,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: 
+  - speakerName: Selene
     dialogueType: 1
     dialogueLine: today is my scheduled day to post photos.
     imageChar: {fileID: 0}
@@ -31,7 +31,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: 
+  - speakerName: Selene
     dialogueType: 1
     dialogueLine: "guess it\u2019s time for make up..!"
     imageChar: {fileID: 0}
@@ -40,4 +40,4 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  isDialogueDone: 1

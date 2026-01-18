@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
+  m_Name: Chapter 1
+  m_EditorClassIdentifier: 
+  nameChapter: 
+  chapterSteps:
+  - nameStep: Wake Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: d70a85ce29225494d8acf47d16133e10, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: WakeUp
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: HairStyle
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 2f76d1f1e8c75144eba86c093300db7d, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: HairStyle
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Open Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 6929bc2924aa0974590df2ac20cf8b23, type: 2}
+    - {fileID: 11400000, guid: d5459177b49e53f46bdd9b776e144575, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: Phone
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Chat With Ezra
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: e3795b0dc80aa5049a9b06d29d158173, type: 2}
+    - {fileID: 11400000, guid: 2dba0a6613d872244a3b355ac9e2bc38, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: ed1bfbfc8048fc943abd641da1fbf0fc, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Take a Bath
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: e8fff6bad48f4d54f8df477bb6aeca9b, type: 2}
+    - {fileID: 11400000, guid: dbb2aa03669264a4598891d682291266, type: 2}
+    - {fileID: 11400000, guid: 6a96f7f1235dffc4b98ce8528f0208d5, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 44852df25c834f14f8fe03654e18c68c, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Take Make Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 9465e3da24373494dbf0d96d4dbd4fea, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 1068fb1e22a46dc449aedb98304e8e81, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Open Phone & Take Photo
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 6929bc2924aa0974590df2ac20cf8b23, type: 2}
+    - {fileID: 11400000, guid: d5459177b49e53f46bdd9b776e144575, type: 2}
+    - {fileID: 11400000, guid: c82a794271863e647ad3eed292cbb946, type: 2}
+    - {fileID: 11400000, guid: 3e8e25eddb9ed5d439d81da4fd240035, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: fca9267e87a39db49890fe2d05b40c21, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Chat With Unknown
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: b333cdb0cd1ca5c41aca7cd1aacd81c6, type: 2}
+    - {fileID: 11400000, guid: 53c7e2b360675b04bb44b4de1990dfd8, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 5724944978aa3474ba556eb88c2b8582, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Buyying Food
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: a312dd8e784a851418c005496ccca3f9, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 4980b5d83d16e1b40966e75c41d0a7c2, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Take a Bath 2
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 404adb14c54394144bc748fd1a4fb9ef, type: 2}
+    - {fileID: 11400000, guid: cda11326a2e936f4187d4cc7591fb91f, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: f8800cb4dd3e5904eb6bf070a70ba76e, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Go to Sleep
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 53b1e29ef1060214da9769cbee366e16, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Next Chapter
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 11400000, guid: 336be1d4687e62344b43b435e754baa5, type: 2}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  isChapterDone: 0

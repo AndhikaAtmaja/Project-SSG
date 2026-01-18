@@ -32,9 +32,8 @@ MonoBehaviour:
     setpID: 
     quests:
     - {fileID: 11400000, guid: fd2a9b72f5400074b949bc21a8ce028e, type: 2}
-    dialogues:
-    - {fileID: 11400000, guid: c6d7c23e892a48645954f676c6e6319d, type: 2}
-    autoStartDialogueAfterScene: 1
+    dialogues: []
+    autoStartDialogueAfterScene: 0
     nextSceneName: Hairstyle
     transition: 
     nextChapter: {fileID: 0}
@@ -45,16 +44,18 @@ MonoBehaviour:
     AllDialogueDone: 1
   - nameStep: Take A Bath
     setpID: 
-    quests: []
+    quests:
+    - {fileID: 11400000, guid: 61e380ada4c938f4fa2287f87051d4db, type: 2}
+    - {fileID: 11400000, guid: 6afd6014d543b8d4a89fc72a9cd548a8, type: 2}
     dialogues:
-    - {fileID: 11400000, guid: 2025ec8a9d702f14894c6ef8746c758b, type: 2}
+    - {fileID: 11400000, guid: 3dc2759e1481311498c5011c9fce0a7f, type: 2}
     autoStartDialogueAfterScene: 1
-    nextSceneName: 
+    nextSceneName: Bedroom
     transition: 
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: test
+    musicTrack: 
     AllQuestDone: 1
     AllDialogueDone: 1
   - nameStep: After take a bath
@@ -69,7 +70,7 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: test
+    musicTrack: 
     AllQuestDone: 1
     AllDialogueDone: 1
   - nameStep: Inside Phone

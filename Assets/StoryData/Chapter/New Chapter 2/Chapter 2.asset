@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
+  m_Name: Chapter 2
+  m_EditorClassIdentifier: 
+  nameChapter: 
+  chapterSteps:
+  - nameStep: Wake Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 7a767189f5002e64cbaf465dbca81213, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: WakeUp
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: HairStyle
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: b74264ae213366043a710575ffa7971a, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: HairStyle
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Open Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: a94deaa375622bc49b0836eb72ab4793, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: Phone
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Chat With Unknown
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 7a80c4b3bd565ee43b93ebaad4c6a368, type: 2}
+    - {fileID: 11400000, guid: 0bd0e0441dc6de749ae1cf6e2268308d, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 0914eb129dbf71f4a9c169b2de332289, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Take Make Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 2209ccad666676d48833ab683ba9e26f, type: 2}
+    - {fileID: 11400000, guid: 37388fcfd42cf8e4aa10bc31e292cee5, type: 2}
+    - {fileID: 11400000, guid: 83ae6e909b5fa0d48bccddec59d4f2e7, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Posting PictGram
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 7f7fd687de517fe4aa4c24f17a9ec483, type: 2}
+    - {fileID: 11400000, guid: 0581324fa17c5c840ba7621e53e74f10, type: 2}
+    - {fileID: 11400000, guid: 9f07c4ee9e590ba43a03303674e54f4c, type: 2}
+    - {fileID: 11400000, guid: 738684edd8372174e8583650fbd129a8, type: 2}
+    - {fileID: 11400000, guid: 108d3a11ccdebfd47bf52fb56010819b, type: 2}
+    - {fileID: 11400000, guid: 826d47809f71e264e8c5b12eea85b27b, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Next Chapter
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 11400000, guid: 45e3e5709462647468a577aa7f07d7c3, type: 2}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  - nameStep: After upload
+    setpID: 
+    quests:
+    - {fileID: 0}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 0
+    AllDialogueDone: 0
+  isChapterDone: 0

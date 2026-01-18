@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameChapter: Test-1
   chapterSteps:
-  - nameStep: Dialogue
+  - nameStep: test Upload Quest
     setpID: 
-    quests: []
-    dialogues:
-    - {fileID: 11400000, guid: 53e671345a93a5846a638b8b5c2471ce, type: 2}
-    autoStartDialogueAfterScene: 1
+    quests:
+    - {fileID: 11400000, guid: 50c7b134ef74369499317342fdc15e84, type: 2}
+    - {fileID: 11400000, guid: 722f4cc9ec9e60b49b5076d241ca49c5, type: 2}
+    - {fileID: 11400000, guid: 79f8ad9bec8943048b5cbb30697c5948, type: 2}
+    - {fileID: 11400000, guid: 725463bee9471004584bf58928f0fa3a, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
@@ -30,8 +33,7 @@ MonoBehaviour:
     AllDialogueDone: 1
   - nameStep: Sleep
     setpID: 
-    quests:
-    - {fileID: 11400000, guid: 5ff6b6fc47575fd4f85403b9047e0900, type: 2}
+    quests: []
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
@@ -40,6 +42,6 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   isChapterDone: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class ButtonDilaoge : MonoBehaviour
 {
     public static event Action<string> OnClickButton;
+    public string nameStep;
     public void OnButtonClick()
     {
         OnClickButton?.Invoke(gameObject.name);

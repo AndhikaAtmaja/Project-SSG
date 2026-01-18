@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Unknown
   m_EditorClassIdentifier: 
   lines:
-  - speakerName: Unknown 1
+  - speakerName: Unknown
     dialogueType: 0
     dialogueLine: what if someone posted the real you?
     imageChar: {fileID: 0}
@@ -22,7 +22,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown 2
+  - speakerName: 'Unknown '
     dialogueType: 0
     dialogueLine: someone asked about you today.
     imageChar: {fileID: 0}
@@ -31,7 +31,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown 3
+  - speakerName: Unknown
     dialogueType: 0
     dialogueLine: "maybe next time\u2026 who knows?"
     imageChar: {fileID: 0}

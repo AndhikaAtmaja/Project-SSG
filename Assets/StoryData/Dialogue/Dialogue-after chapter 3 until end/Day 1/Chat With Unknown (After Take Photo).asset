@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chat With Unknown (After Take Photo)
   m_EditorClassIdentifier: 
   lines:
-  - speakerName: Unknown 1
+  - speakerName: Unknown
     dialogueType: 0
     dialogueLine: feeling pretty?
     imageChar: {fileID: 0}
@@ -26,7 +26,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown 2
+  - speakerName: 'Unknown '
     dialogueType: 0
     dialogueLine: "let\u2019s just say\u2026"
     imageChar: {fileID: 0}
@@ -35,7 +35,7 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  - speakerName: Unknown 3
+  - speakerName: Unknown
     dialogueType: 0
     dialogueLine: "you\u2019re more exposed than you think."
     imageChar: {fileID: 0}

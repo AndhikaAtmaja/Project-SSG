@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "w-what is that\u2026?\nno\u2026"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "this is getting weird.\r\n\rWay too weird\u2026"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "I\u2026 should take a quick shower\u2026"
     imageChar: {fileID: 0}
     hasChoice: 0

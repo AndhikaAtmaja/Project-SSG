@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2d7ebab99b4024898bdd0d66122d72, type: 3}
+  m_Name: Chapter 3
+  m_EditorClassIdentifier: 
+  nameChapter: 
+  chapterSteps:
+  - nameStep: Wake Up
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: 96177cd6cc6df3044bcfc91c71cca276, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: WakeUp
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Change Scene to Phone
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: c756f0e2cf78bba488501673f9fc3674, type: 2}
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: Phone
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Chat With Unknown
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: b99e5dcf255332e4abe7ba9e2cd0d97f, type: 2}
+    - {fileID: 11400000, guid: 536bc4c7d7f28f2428693f551731b081, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 60011de95a6eaee48943cf9c9f506096, type: 2}
+    autoStartDialogueAfterScene: 0
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Go to Sleep
+    setpID: 
+    quests:
+    - {fileID: 11400000, guid: aa3ad13e3133a104a871cc906acecc1f, type: 2}
+    dialogues:
+    - {fileID: 11400000, guid: 08b4c9d25ead196469ae4b6886362731, type: 2}
+    autoStartDialogueAfterScene: 1
+    nextSceneName: 
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  - nameStep: Ending
+    setpID: 
+    quests: []
+    dialogues: []
+    autoStartDialogueAfterScene: 0
+    nextSceneName: MainMenu
+    transition: 
+    nextChapter: {fileID: 0}
+    soundEffect: 
+    isSoundEffectLoop: 0
+    musicTrack: 
+    AllQuestDone: 1
+    AllDialogueDone: 1
+  isChapterDone: 1

@@ -10,6 +10,7 @@ public class HairStyleManager : MonoBehaviour
     private int playerCount;
     [SerializeField] private GameObject ChangeButton;
     [SerializeField] private QuestSO quest;
+    public string questID;
 
     public static HairStyleManager Instance;
     private void Awake()
@@ -19,6 +20,11 @@ public class HairStyleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        quest = QuestManager.instance.FindQuestByID(questID);
     }
 
     public void StartMiniGame()
@@ -35,15 +41,9 @@ public class HairStyleManager : MonoBehaviour
 
         if (playerCount >= hairs.Count)
         {
-            QuestManager.instance.GetCheckQuest(quest.questID, true);
+            //QuestManager.instance.GetCheckQuest(quest.questID, true);
             ChangeButton.SetActive(true);
         }
-    }
-
-    public void ShowButton()
-    {
-        Debug.Log("Get Called");
-        
     }
 
     #region Automation total hair in-game

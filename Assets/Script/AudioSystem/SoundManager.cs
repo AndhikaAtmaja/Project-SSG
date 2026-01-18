@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
     public void PlayLoopSoundEffect(string soundName)
     {
         AudioClip clip = _soundEffectlibrary.GetClipByGroupID(soundName);
-        Debug.Log(clip.name);
  
         _loopSoundEffectSource.clip = clip;
         _loopSoundEffectSource.loop = true;

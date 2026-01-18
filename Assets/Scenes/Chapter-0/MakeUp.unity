@@ -1323,6 +1323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Bedroom
   spawn: MakeUp
+  transition: 
 --- !u!114 &1553031555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 83ae6e909b5fa0d48bccddec59d4f2e7, type: 2}
-  questID: 
+  questID: AMU
 --- !u!1001 &1679573028
 PrefabInstance:
   m_ObjectHideFlags: 0

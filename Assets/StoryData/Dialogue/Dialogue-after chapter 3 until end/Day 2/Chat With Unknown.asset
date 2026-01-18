@@ -32,7 +32,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 0
     dialogueLine: ....
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -40,4 +40,4 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  isDialogueDone: 1

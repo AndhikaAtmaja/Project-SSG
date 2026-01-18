@@ -20,9 +20,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: '[Stop messaging me.]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: '[What do you want from me?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
@@ -42,9 +42,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: "[You don\u2019t know anything.]"
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: '[Leave me alone.]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 

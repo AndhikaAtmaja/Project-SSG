@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: " \u2026better."
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: I need to calm down.
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: ...
     imageChar: {fileID: 0}
     hasChoice: 0

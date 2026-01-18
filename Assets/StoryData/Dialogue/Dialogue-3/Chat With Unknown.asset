@@ -20,9 +20,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: '[Why are you still texting me?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: '[What do you want?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
@@ -51,9 +51,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: '[Stop watching me.]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: "[\u2026i\u2019m fine.]"
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
@@ -82,7 +82,7 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: "[\u2026..]"
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 

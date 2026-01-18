@@ -10,7 +10,8 @@ public class QuestCheckButton : MonoBehaviour
     private void Start()
     {
         if (quest == null)
-            quest = QuestManager.instance.GetCurrentQuest();
+            quest = QuestManager.instance.FindQuestByID(questID);
+        //this.gameObject.SetActive(false);
     }
 
     public void CompletedQuest()

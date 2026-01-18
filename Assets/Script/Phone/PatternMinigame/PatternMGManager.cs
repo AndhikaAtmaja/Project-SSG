@@ -12,6 +12,8 @@ public class PatternMGManager : MonoBehaviour
     [SerializeField] private GameObject _nextScreenPhone;
     [SerializeField] private QuestSO quest;
 
+    public string questID;
+
     public static PatternMGManager Instance;
 
     private void Awake()
@@ -29,7 +31,7 @@ public class PatternMGManager : MonoBehaviour
 
     private void Start()
     {
-        quest = QuestManager.instance.FindQuestByID("PP");
+        quest = QuestManager.instance.FindQuestByID(questID);
     }
 
     public void CheckPatternOrder(List<GameObject> PlayerPattern)

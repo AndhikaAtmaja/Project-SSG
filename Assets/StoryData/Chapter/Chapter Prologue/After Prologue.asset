@@ -26,11 +26,12 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: Chat With Friend
     setpID: 
     quests:
+    - {fileID: 11400000, guid: f4b8c31243dca8a46bcc2bcdaec37f29, type: 2}
     - {fileID: 11400000, guid: 15ef2177e5a02fa44ac41cf659768c7a, type: 2}
     dialogues:
     - {fileID: 11400000, guid: 2131ffa4ec6074f4ab3825827398cf4b, type: 2}
@@ -42,24 +43,11 @@ MonoBehaviour:
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 0
-    AllDialogueDone: 0
+    AllDialogueDone: 1
   - nameStep: After chat with friend
     setpID: 
     quests:
     - {fileID: 11400000, guid: c3506259e8c835a4f891e6348c969dd4, type: 2}
-    dialogues: []
-    autoStartDialogueAfterScene: 0
-    nextSceneName: 
-    transition: 
-    nextChapter: {fileID: 0}
-    soundEffect: 
-    isSoundEffectLoop: 0
-    musicTrack: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
-  - nameStep: After Turn off phone
-    setpID: 
-    quests: []
     dialogues:
     - {fileID: 11400000, guid: 2c6f92224feae56429f9da06b346fdec, type: 2}
     autoStartDialogueAfterScene: 1
@@ -137,6 +125,7 @@ MonoBehaviour:
     setpID: 
     quests:
     - {fileID: 11400000, guid: 76a77b4bbb037254487c918e4acd7e49, type: 2}
+    - {fileID: 11400000, guid: 1b1d31a02c70041428e4b809f4bd6794, type: 2}
     dialogues: []
     autoStartDialogueAfterScene: 0
     nextSceneName: 
@@ -183,7 +172,7 @@ MonoBehaviour:
     autoStartDialogueAfterScene: 0
     nextSceneName: 
     transition: 
-    nextChapter: {fileID: 11400000, guid: b73064eecb9737b448ebcba4bffeb2d2, type: 2}
+    nextChapter: {fileID: 11400000, guid: 32e95a167380b604089c0ec769c9495d, type: 2}
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 

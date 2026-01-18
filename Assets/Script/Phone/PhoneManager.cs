@@ -16,6 +16,8 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private Transform MessageArea;
     [SerializeField] private Transform MessageInputArea;
 
+    public GameObject[] ListofButtonChapters;
+    public List<GameObject> ListOfContact;
 
     private void Awake()
     {
@@ -65,6 +67,56 @@ public class PhoneManager : MonoBehaviour
             }
         }
         OnSetButtonAccessibility();
+    }
+
+    public void UpdateListChapter()
+    {
+        //Hide all 
+        foreach (GameObject chapterButton in ListofButtonChapters)
+            chapterButton.SetActive(false);
+
+        string nameChapter = StoryManager.instance.GetCurrentStroy().nameChapter;
+
+        //find the right chapter
+        for (int i = 0;i < ListofButtonChapters.Length; i++)
+        {
+            ButtonChapter chapterButton = ListofButtonChapters[i].GetComponent<ButtonChapter>();
+            if (chapterButton != null)
+            {
+                if (chapterButton.currentChapter.nameChapter == nameChapter)
+                {
+                    ListofButtonChapters[i].SetActive(true);
+                }
+            }
+        }
+    }
+
+    private string NormalizeStepName(string stepName)
+    {
+        // Remove trailing numbers (and spaces before them)
+        return System.Text.RegularExpressions.Regex.Replace(stepName, @"\s*\d+$", "");
+    }
+
+    public void UpdateContactMassage()
+    {
+        //Hide all 
+        foreach (GameObject contactButton in ListOfContact)
+            contactButton.SetActive(false);
+
+        string nameStep = NormalizeStepName(StoryManager.instance.currentStep.nameStep);
+            
+        //find the right chapter
+        for (int i = 0; i < ListOfContact.Count; i++)
+        {
+            ButtonDilaoge contactButton = ListOfContact[i].GetComponent<ButtonDilaoge>();
+            if (contactButton != null)
+            {
+                if (contactButton.nameStep == nameStep)
+                {
+                    ListOfContact[i].SetActive(true);
+                }
+            }
+        }
     }
 
     public void OnSetButtonAccessibility()

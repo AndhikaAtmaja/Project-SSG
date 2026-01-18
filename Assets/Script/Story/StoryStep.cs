@@ -74,16 +74,32 @@ public class StoryStep
     {
         AllDialogueDone = AllQuestDone = false;
 
-        foreach (QuestSO quest in quests)
+        if (quests != null)
         {
-            quest.IsCompleted = false;
-            foreach (QuestObjective questObj in quest.objectives)
-                questObj.isCompleted = false;
+            foreach (QuestSO quest in quests)
+            {
+                if (quest == null) continue;
+
+                quest.IsCompleted = false;
+
+                if (quest.objectives == null) continue;
+
+                foreach (QuestObjective questObj in quest.objectives)
+                {
+                    if (questObj == null) continue;
+                    questObj.isCompleted = false;
+                }
+            }
         }
 
-        foreach(DialogueSO dialogue in dialogues)
+
+        if (dialogues != null)
         {
-            dialogue.isDialogueDone = false;
+            foreach (DialogueSO dialogue in dialogues)
+            {
+                if (dialogue == null) continue;
+                dialogue.isDialogueDone = false;
+            }
         }
     }
 }

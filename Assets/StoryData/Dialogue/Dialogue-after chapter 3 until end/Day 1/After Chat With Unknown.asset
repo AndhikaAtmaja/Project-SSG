@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "no. i don\u2019t want this. This is\u2026"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "\u2026\r\nshould i tell liam and ezera about this? but they can\u2019t
       un\u2014\r\n\r\nSelene: growl."
     imageChar: {fileID: 0}
@@ -33,7 +33,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: growl.
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: huh, i guess i should eat something.
     imageChar: {fileID: 0}
     hasChoice: 0

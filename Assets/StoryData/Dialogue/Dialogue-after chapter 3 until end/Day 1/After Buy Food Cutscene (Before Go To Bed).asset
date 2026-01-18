@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
-    dialogueLine: "okay\u2026\r\nI can breathe a bit."
+    dialogueType: 1
+    dialogueLine: "okay\u2026\r\n"
     imageChar: {fileID: 0}
     hasChoice: 0
     choices: []
@@ -23,7 +23,16 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
+    dialogueLine: "\rI can breathe a bit."
+    imageChar: {fileID: 0}
+    hasChoice: 0
+    choices: []
+    SoundFXName: 
+    triggerCutscene: 0
+    cutsceneID: 
+  - speakerName: Selene
+    dialogueType: 1
     dialogueLine: "my body feels\u2026 heavy."
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -32,7 +41,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: maybe resting is the only thing i can do right now.
     imageChar: {fileID: 0}
     hasChoice: 0

@@ -153,13 +153,18 @@ public class StoryManager : MonoBehaviour
             ChangeScene();
         }
 
+        if (PhoneManager.Instance != null)
+        {
+            PhoneManager.Instance.UpdateListChapter();
+            PhoneManager.Instance.UpdateContactMassage();
+        }
+
         QuestManager.instance.ShowQuets();
     }
 
     private void EndStory()
     {
-        CheckChapter();
-        Debug.Log("This is the ending!");
+        FinishChapter();
     }
 
     public void CheckChapter()
@@ -188,15 +193,7 @@ public class StoryManager : MonoBehaviour
         // If still inside this chapter
         if (_stepIndex >= _currentStoryChapter.chapterSteps.Count)
         {
-            Debug.Log("Chapter finished!");
-
-            StoryStep step = currentStep;
-            if (step == null) return;
-
-            step.QuestChecker();
-            step.DialogueChecker();
-
-            chapter.isChapterDone = true;
+            FinishChapter();
             return;
         }
  
@@ -221,6 +218,20 @@ public class StoryManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void FinishChapter()
+    {
+        StoryChapterSO chapter = allChapters[_chapterIndex];
+        Debug.Log("Chapter finished!");
+
+        StoryStep step = currentStep;
+        if (step == null) return;
+
+        step.QuestChecker();
+        step.DialogueChecker();
+
+        chapter.isChapterDone = true;
     }
 
     public void ResetAllStoryProgress()
@@ -277,6 +288,11 @@ public class StoryManager : MonoBehaviour
             return;
 
         SceneManagement.instance.OnChangeScene(currentStep.nextSceneName, "", transition);
+    }
+
+    public StoryChapterSO GetCurrentStroy()
+    {
+        return _currentStoryChapter;
     }
 
     private void OnEnable()

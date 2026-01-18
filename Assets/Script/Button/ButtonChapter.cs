@@ -7,6 +7,7 @@ public class ButtonChapter : MonoBehaviour
     [SerializeField] private StoryChapterSO chapter;
     [SerializeField] private NotificationSO notification;
     [SerializeField] private NotificationAnimation _notificationAnimation;
+    public StoryChapterSO currentChapter;
 
     public static event Action<string> OnClickButton;
 

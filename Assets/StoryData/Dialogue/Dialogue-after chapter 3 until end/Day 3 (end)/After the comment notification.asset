@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "\u2026I can\u2019t keep this up."
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "but i don\u2019t know what i need to do either."
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "maybe this is a mistake from the start\u2026\r\n\r\u2026"
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "I guess liam and ezera was right about this\u2026\r\n\rI shouldn't
       have done this in the first place\u2026"
     imageChar: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
     triggerCutscene: 0
     cutsceneID: 
   - speakerName: Selene
-    dialogueType: 2
+    dialogueType: 1
     dialogueLine: "huh\u2026 i\u2019m tired.\r\n\rlet\u2019s just sleep."
     imageChar: {fileID: 0}
     hasChoice: 0
@@ -59,4 +59,4 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  isDialogueDone: 1

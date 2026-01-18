@@ -20,9 +20,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: '[How do you know my name?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: '[Who are you..?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
@@ -33,9 +33,9 @@ MonoBehaviour:
     hasChoice: 0
     choices:
     - choiceText: '[Secret..?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     - choiceText: '[What are you talking about?]'
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000}
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
@@ -48,4 +48,4 @@ MonoBehaviour:
     SoundFXName: 
     triggerCutscene: 0
     cutsceneID: 
-  isDialogueDone: 0
+  isDialogueDone: 1
