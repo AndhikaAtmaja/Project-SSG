@@ -203,19 +203,25 @@ public class StoryManager : MonoBehaviour
     private void ChangeChapterbyStep()
     {
         Debug.Log("get Called");
-        if (currentStep.nextChapter != null)
+        if (currentStep.nextChapter == null)
         {
-            for (int i = 0; i < allChapters.Count; i++)
+            Debug.LogWarning("Next chapter is null.");
+            return;
+        }
+
+        for (int i = 0; i < allChapters.Count; i++)
+        {
+            if (allChapters[i] == currentStep.nextChapter)
             {
-                if (currentStep.nextChapter.name.ToLower() == allChapters[i].name.ToLower())
-                {
-                    //set the chapter with this
-                    _currentStoryChapter = allChapters[i];
-                    _chapterIndex = i;
-                    _stepIndex = 0;
-                    GameManager.instance.ResetAllGameStatus();
-                    LoadCurrentStep();
-                }
+                _currentStoryChapter = allChapters[i];
+                _chapterIndex = i;
+                _stepIndex = 0;
+
+                GameManager.instance.ResetAllGameStatus();
+                LoadCurrentStep();
+
+                Debug.Log($"Chapter changed to {_currentStoryChapter.name}");
+                return;
             }
         }
     }

@@ -4766,7 +4766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad3218aee6d27841bf0e054da4d67f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questBackGround: {fileID: 0}
+  questBackGround: {fileID: 706856990}
   questImage: {fileID: 0}
   questDesc: {fileID: 706856992}
   _questList: {fileID: 0}

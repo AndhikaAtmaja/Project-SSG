@@ -24,36 +24,27 @@ public class QuestUI : MonoBehaviour
         QuestSO currentQuest = _questList.GetCurrentQuest();
 
         // If there are no more questChapter, hide everything
-        if (currentQuest == null)
+        if (currentQuest == null || currentQuest.IsCompleted)
         {
-            questBackGround.SetActive(false);
-            questImage.sprite = null;
-            Debug.Log("QuestUI: All questChapter completed, hiding currentQuest UI.");
+            if (questBackGround != null)
+                questBackGround.SetActive(false);
+
+            if (questImage != null)
+                questImage.sprite = null;
+
+            if (questDesc != null)
+                questDesc.text = "";
+
+            Debug.Log("QuestUI: No active quest, hiding UI.");
             return;
         }
+        if (questBackGround != null)
+            questBackGround.SetActive(true);
 
-        if (currentQuest != null)
-        {
-            if (currentQuest.IsCompleted)
-            {
-                //questBackGround.SetActive(false);
-                questImage.sprite = null;
-                Debug.Log($"QuestUI: Quest '{currentQuest.questName}' is done, hiding UI.");
-            }
-            else
-            {
-                // Show the current currentQuest info
-                if (questBackGround != null)
-                    questBackGround.SetActive(true);
-                if (questImage != null)
-                    questImage.sprite = currentQuest.questImage;
-                if (questDesc != null)
-                    questDesc.text = currentQuest.questName;
-            }
-        }
-        else
-        {
-            Debug.LogWarning("QuestUI: Quest data not found in database!");
-        }
+        if (questImage != null)
+            questImage.sprite = currentQuest.questImage;
+
+        if (questDesc != null)
+            questDesc.text = currentQuest.questName;
     }
 }
