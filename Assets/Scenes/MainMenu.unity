@@ -1215,8 +1215,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703333411482212766, guid: 0fe51645cde68ff40b4c3708c1198be3, type: 3}
       propertyPath: tracks.Array.data[0].nameTrack
-      value: BGM-1
+      value: BGM
       objectReference: {fileID: 0}
+    - target: {fileID: 6703333411482212766, guid: 0fe51645cde68ff40b4c3708c1198be3, type: 3}
+      propertyPath: tracks.Array.data[0].musicTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 09e601500018a1c4c9476e18bbd43edf, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1998,6 +2002,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[8].groupID
+      value: Sleep
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[9].groupID
+      value: Makeup
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[10].groupID
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[11].groupID
+      value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[8].clipSoundFXs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[9].clipSoundFXs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[10].clipSoundFXs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[11].clipSoundFXs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[8].clipSoundFXs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ec932e5f5839a0345b9676b090ebc526, type: 3}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[8].clipSoundFXs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 006e8662e745e144aa4007c8ab8ce352, type: 3}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[9].clipSoundFXs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21aa9359fb215c74a8456923e381b833, type: 3}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[10].clipSoundFXs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc1a501486d033f49b2bcda61bdc3ec4, type: 3}
+    - target: {fileID: 944695154535665967, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
+      propertyPath: soundFXs.Array.data[11].clipSoundFXs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ad518bba5f581d4689ed4676bf933c0, type: 3}
     - target: {fileID: 5500674405836271620, guid: 83c4aec977bfb2246b5375acd10635a5, type: 3}
       propertyPath: m_Name
       value: SoundFXManager

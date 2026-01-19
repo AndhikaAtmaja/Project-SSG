@@ -23,8 +23,8 @@ MonoBehaviour:
     nextSceneName: WakeUp
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
-    isSoundEffectLoop: 0
+    soundEffect: Alarm
+    isSoundEffectLoop: 1
     musicTrack: 
     AllQuestDone: 1
     AllDialogueDone: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     nextSceneName: Phone
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Phone
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Notification
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 1
@@ -134,11 +134,11 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Notification
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 1
-    AllDialogueDone: 1
+    AllDialogueDone: 0
   - nameStep: Buyying Food
     setpID: 
     quests:
@@ -149,11 +149,11 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Door
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Take a Bath 2
     setpID: 
     quests:
@@ -168,8 +168,8 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Go to Sleep
     setpID: 
     quests:
@@ -179,11 +179,11 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Sleep
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Next Chapter
     setpID: 
     quests: []

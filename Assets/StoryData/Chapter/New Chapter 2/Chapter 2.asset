@@ -23,11 +23,11 @@ MonoBehaviour:
     nextSceneName: WakeUp
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
-    isSoundEffectLoop: 0
+    soundEffect: Alarm
+    isSoundEffectLoop: 1
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: HairStyle
     setpID: 
     quests:
@@ -40,8 +40,8 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Open Phone
     setpID: 
     quests:
@@ -54,8 +54,8 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Chat With Unknown
     setpID: 
     quests:
@@ -67,11 +67,11 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Notification
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Take Make Up
     setpID: 
     quests:
@@ -83,11 +83,11 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Makeup
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Posting PictGram
     setpID: 
     quests:
@@ -105,8 +105,8 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 1
-    AllDialogueDone: 1
+    AllQuestDone: 0
+    AllDialogueDone: 0
   - nameStep: Next Chapter
     setpID: 
     quests: []
@@ -129,7 +129,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: UI
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 0

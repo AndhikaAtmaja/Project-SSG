@@ -23,7 +23,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Notification
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
     soundEffect: 
     isSoundEffectLoop: 0
     musicTrack: 
-    AllQuestDone: 0
+    AllQuestDone: 1
     AllDialogueDone: 1
   - nameStep: After chat with friend
     setpID: 
@@ -56,7 +56,7 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: BGM
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: Do Make Up
@@ -71,9 +71,9 @@ MonoBehaviour:
     nextChapter: {fileID: 0}
     soundEffect: 
     isSoundEffectLoop: 0
-    musicTrack: 
-    AllQuestDone: 0
-    AllDialogueDone: 0
+    musicTrack: BGM
+    AllQuestDone: 1
+    AllDialogueDone: 1
   - nameStep: After Make Up
     setpID: 
     quests:
@@ -84,7 +84,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Makeup
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Phone
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 0
@@ -116,9 +116,9 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Phone
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: BGM
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After buyying Food
@@ -131,9 +131,9 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 0}
-    soundEffect: 
+    soundEffect: Door
     isSoundEffectLoop: 0
-    musicTrack: 
+    musicTrack: BGM
     AllQuestDone: 0
     AllDialogueDone: 0
   - nameStep: After take a bath
@@ -173,7 +173,7 @@ MonoBehaviour:
     nextSceneName: 
     transition: 
     nextChapter: {fileID: 11400000, guid: 32e95a167380b604089c0ec769c9495d, type: 2}
-    soundEffect: 
+    soundEffect: Sleep
     isSoundEffectLoop: 0
     musicTrack: 
     AllQuestDone: 0
