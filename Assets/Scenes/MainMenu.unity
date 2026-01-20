@@ -2444,15 +2444,15 @@ PrefabInstance:
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b6db2f03ca4ab3c4a854818faea55d40, type: 2}
+      objectReference: {fileID: 11400000, guid: 32e95a167380b604089c0ec769c9495d, type: 2}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: bcc7874833a75f243ad756de608b87ed, type: 2}
+      objectReference: {fileID: 11400000, guid: b6db2f03ca4ab3c4a854818faea55d40, type: 2}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 32e95a167380b604089c0ec769c9495d, type: 2}
+      objectReference: {fileID: 11400000, guid: bcc7874833a75f243ad756de608b87ed, type: 2}
     - target: {fileID: 7838293692747523805, guid: 77bd3793f77b524468efd96031b80e3c, type: 3}
       propertyPath: allChapters.Array.data[3]
       value: 
